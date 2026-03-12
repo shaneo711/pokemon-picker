@@ -1,0 +1,22 @@
+.score-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: #FF3B3B;
+  color: white;
+}
+
+.score-bar__label {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+.score-bar__value {
+  font-size: 1.3rem;
+  font-weight: 800;
+}

@@ -1,0 +1,85 @@
+.answer-btn {
+  width: 100%;
+  min-height: 80px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border: 3px solid transparent;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.1s;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+}
+
+.answer-btn:not(:disabled):hover {
+  transform: scale(1.03);
+}
+
+.answer-btn:not(:disabled):active {
+  transform: scale(0.97);
+}
+
+.answer-btn:disabled {
+  cursor: default;
+}
+
+/* idle — cycle through colorful options via nth-child */
+.answer-btn--idle:nth-child(1) {
+  background: #4A90D9;
+  color: white;
+  border-color: #357abd;
+}
+.answer-btn--idle:nth-child(2) {
+  background: #FFD700;
+  color: #333;
+  border-color: #e6c200;
+}
+.answer-btn--idle:nth-child(3) {
+  background: #FF3B3B;
+  color: white;
+  border-color: #d42e2e;
+}
+
+/* correct */
+.answer-btn--correct {
+  background: #5DBD5A;
+  color: white;
+  border-color: #449941;
+  animation: pokePulse 0.5s ease;
+}
+
+/* wrong */
+.answer-btn--wrong {
+  background: #FF3B3B;
+  color: white;
+  border-color: #d42e2e;
+  animation: pokeShake 0.4s ease;
+}
+
+/* reveal — correct answer shown after wrong pick */
+.answer-btn--reveal {
+  background: #FFD700;
+  color: #333;
+  border-color: #e6c200;
+}
+
+/* dimmed — other buttons after answer selected */
+.answer-btn--idle:disabled {
+  opacity: 0.45;
+}
+
+@keyframes pokePulse {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.08); }
+  60%  { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
+
+@keyframes pokeShake {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-8px); }
+  40%  { transform: translateX(8px); }
+  60%  { transform: translateX(-5px); }
+  80%  { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
