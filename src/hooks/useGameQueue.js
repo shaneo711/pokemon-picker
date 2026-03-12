@@ -20,5 +20,10 @@ export function useGameQueue() {
     });
   }, []);
 
-  return { currentPokemon, advance };
+  const reset = useCallback(() => {
+    setQueue(shuffle(POKEMON.map((p) => p.id)));
+    setIndex(0);
+  }, []);
+
+  return { currentPokemon, advance, reset };
 }

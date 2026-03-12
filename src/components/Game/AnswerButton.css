@@ -63,7 +63,14 @@
   border-color: #e6c200;
 }
 
-/* dimmed — other buttons after answer selected */
+/* dimmed — other wrong buttons after a wrong pick */
+.answer-btn--dimmed {
+  background: #ccc;
+  color: #888;
+  border-color: #bbb;
+}
+
+/* idle buttons disabled after correct answer */
 .answer-btn--idle:disabled {
   opacity: 0.45;
 }

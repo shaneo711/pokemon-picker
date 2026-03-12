@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
 import { POKEMON, getCryUrl } from '../../data/pokemon';
-import { useGameQueue } from '../../hooks/useGameQueue';
 import { useSound } from '../../hooks/useSound';
 import { shuffle } from '../../utils/shuffle';
 import { PokemonCard } from './PokemonCard';
@@ -13,14 +12,12 @@ function pickChoices(correct, allPokemon) {
   return shuffle([correct, ...wrong]);
 }
 
-export function Game({ favorites, onToggleFavorite }) {
-  const { currentPokemon, advance } = useGameQueue();
+export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, score, onScoreUpdate, onNewGame }) {
   const { play } = useSound();
 
   const [choices, setChoices] = useState(() => pickChoices(currentPokemon, POKEMON));
   const [selectedId, setSelectedId] = useState(null);
   const [answerStatus, setAnswerStatus] = useState('unanswered');
-  const [score, setScore] = useState({ correct: 0, total: 0 });
 
   useEffect(() => {
     setChoices(pickChoices(currentPokemon, POKEMON));
@@ -34,7 +31,7 @@ export function Game({ favorites, onToggleFavorite }) {
       const isCorrect = pokemon.id === currentPokemon.id;
       setSelectedId(pokemon.id);
       setAnswerStatus(isCorrect ? 'correct' : 'wrong');
-      setScore((prev) => ({
+      onScoreUpdate((prev) => ({
         correct: prev.correct + (isCorrect ? 1 : 0),
         total: prev.total + 1,
       }));
@@ -42,27 +39,24 @@ export function Game({ favorites, onToggleFavorite }) {
         play(getCryUrl(currentPokemon.id));
       }
     },
-    [answerStatus, currentPokemon, play]
+    [answerStatus, currentPokemon, onScoreUpdate, play]
   );
-
-  const handleNext = useCallback(() => {
-    advance();
-  }, [advance]);
 
   const answered = answerStatus !== 'unanswered';
 
   function getButtonStatus(pokemon) {
     if (!answered) return 'idle';
     if (pokemon.id === currentPokemon.id) {
-      return answerStatus === 'correct' && selectedId === pokemon.id ? 'correct' : 'reveal';
+      return answerStatus === 'correct' ? 'correct' : 'reveal';
     }
     if (pokemon.id === selectedId) return 'wrong';
+    if (answerStatus === 'wrong') return 'dimmed';
     return 'idle';
   }
 
   return (
     <div className="game">
-      <ScoreBar correct={score.correct} total={score.total} />
+      <ScoreBar correct={score.correct} total={score.total} onNewGame={onNewGame} />
 
       <div className="game__content">
         <p className="game__prompt">Who's that Pokémon?</p>
@@ -86,7 +80,7 @@ export function Game({ favorites, onToggleFavorite }) {
         </div>
 
         {answered && (
-          <button className="game__next-btn" onClick={handleNext}>
+          <button className="game__next-btn" onClick={onAdvance}>
             Next →
           </button>
         )}
