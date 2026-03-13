@@ -4,12 +4,15 @@ import { TYPE_COLORS, TYPE_TEXT_COLORS } from '../../data/typeColors';
 import './PokemonCard.css';
 
 function TypeBadge({ type }) {
+  const bg = TYPE_COLORS[type] ?? '#888';
+  const color = TYPE_TEXT_COLORS[type] ?? 'white';
   return (
     <span
       className="pokemon-card__type-badge"
       style={{
-        background: TYPE_COLORS[type] ?? '#888',
-        color: TYPE_TEXT_COLORS[type] ?? 'white',
+        background: bg,
+        color,
+        boxShadow: `0 0 8px ${bg}80, 0 0 2px ${bg}60`,
       }}
     >
       {type.charAt(0).toUpperCase() + type.slice(1)}
@@ -29,7 +32,9 @@ function BackLoading() {
 function BackContent({ pokemon, details }) {
   return (
     <div className="pokemon-card__back-content">
+      <p className="pokemon-card__pokedex-label">Pokédex Data</p>
       <p className="pokemon-card__back-name">{pokemon.name}</p>
+      <div className="pokemon-card__divider" />
 
       <div className="pokemon-card__back-row">
         <span className="pokemon-card__back-label">Type</span>
@@ -48,8 +53,14 @@ function BackContent({ pokemon, details }) {
       <p className="pokemon-card__flavor">{details.flavorText}</p>
 
       <div className="pokemon-card__stats">
-        <span>{(details.height / 10).toFixed(1)} m</span>
-        <span>{(details.weight / 10).toFixed(1)} kg</span>
+        <div className="pokemon-card__stat-chip">
+          <span className="pokemon-card__stat-label">Height</span>
+          <span className="pokemon-card__stat-value">{(details.height / 10).toFixed(1)} m</span>
+        </div>
+        <div className="pokemon-card__stat-chip">
+          <span className="pokemon-card__stat-label">Weight</span>
+          <span className="pokemon-card__stat-value">{(details.weight / 10).toFixed(1)} kg</span>
+        </div>
       </div>
     </div>
   );
