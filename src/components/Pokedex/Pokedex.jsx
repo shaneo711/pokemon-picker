@@ -18,12 +18,35 @@ function PokedexTile({ pokemon, onClick }) {
   );
 }
 
+const MIN_SIZE = 100;
+const MAX_SIZE = 280;
+const STEP = 40;
+
 export function Pokedex() {
   const [selected, setSelected] = useState(null);
+  const [tileSize, setTileSize] = useState(88);
 
   return (
     <div className="pdex">
-      <div className="pdex__grid">
+      <div className="pdex__toolbar">
+        <button
+          className="pdex__size-btn"
+          onClick={() => setTileSize((s) => Math.max(MIN_SIZE, s - STEP))}
+          disabled={tileSize <= MIN_SIZE}
+          aria-label="Smaller cards"
+        >
+          −
+        </button>
+        <button
+          className="pdex__size-btn"
+          onClick={() => setTileSize((s) => Math.min(MAX_SIZE, s + STEP))}
+          disabled={tileSize >= MAX_SIZE}
+          aria-label="Larger cards"
+        >
+          +
+        </button>
+      </div>
+      <div className="pdex__grid" style={{ '--tile-size': `${tileSize}px` }}>
         {POKEMON.map((p) => (
           <PokedexTile key={p.id} pokemon={p} onClick={setSelected} />
         ))}

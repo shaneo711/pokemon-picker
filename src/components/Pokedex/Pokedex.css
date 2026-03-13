@@ -4,9 +4,43 @@
   margin: 0 auto;
 }
 
+.pdex__toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.pdex__size-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  background: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: border-color 0.15s, transform 0.12s;
+}
+
+.pdex__size-btn:hover:not(:disabled) {
+  border-color: #4a90d9;
+  color: #4a90d9;
+  transform: scale(1.1);
+}
+
+.pdex__size-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
 .pdex__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--tile-size, 88px), 1fr));
   gap: 10px;
 }
 
@@ -45,8 +79,8 @@
 }
 
 .pdex-tile__img {
-  width: 60px;
-  height: 60px;
+  width: calc(var(--tile-size, 88px) * 0.68);
+  height: calc(var(--tile-size, 88px) * 0.68);
   image-rendering: pixelated;
 }
 
