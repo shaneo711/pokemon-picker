@@ -269,26 +269,31 @@
   to   { transform: rotate(360deg); }
 }
 
-/* ── Cry button ───────────────────────────────────── */
-.pdex-detail__cry-btn {
+/* ── Action buttons (speak name + play cry) ───────── */
+.pdex-detail__actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.pdex-detail__action-btn {
+  flex: 1;
   background: #4a90d9;
   color: white;
   border: none;
   border-radius: 50px;
-  padding: 12px 32px;
-  font-size: 1rem;
+  padding: 10px 16px;
+  font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
-  align-self: center;
-  margin-top: 4px;
   transition: transform 0.12s, background 0.12s;
 }
 
-.pdex-detail__cry-btn:hover {
+.pdex-detail__action-btn:hover {
   background: #357abd;
   transform: scale(1.04);
 }
 
-.pdex-detail__cry-btn:active {
+.pdex-detail__action-btn:active {
   transform: scale(0.97);
 }

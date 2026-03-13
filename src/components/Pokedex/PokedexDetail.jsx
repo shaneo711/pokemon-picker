@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { getArtworkUrl, getSpriteUrl, getCryUrl } from '../../data/pokemon';
+import { getPronunciation } from '../../data/pronunciations';
 import { usePokemonDetails } from '../../hooks/usePokemonDetails';
 import { useSound } from '../../hooks/useSound';
 import { TYPE_COLORS, TYPE_TEXT_COLORS } from '../../data/typeColors';
@@ -84,6 +85,26 @@ export function PokedexDetail({ pokemon, onClose }) {
           <div className="pdex-detail__body">
             <h2 className="pdex-detail__name">{pokemon.name}</h2>
 
+            <div className="pdex-detail__actions">
+              <button
+                className="pdex-detail__action-btn"
+                onClick={() => {
+                  window.speechSynthesis?.cancel();
+                  const utt = new SpeechSynthesisUtterance(getPronunciation(pokemon.name));
+                  utt.lang = 'en-US';
+                  window.speechSynthesis?.speak(utt);
+                }}
+              >
+                🔤 Speak Name
+              </button>
+              <button
+                className="pdex-detail__action-btn"
+                onClick={() => play(getCryUrl(pokemon.id))}
+              >
+                🔊 Play Cry
+              </button>
+            </div>
+
             {loading && !details && (
               <div className="pdex-detail__loading">
                 <img src="/pokeball.svg" alt="" className="pdex-detail__pokeball" />
@@ -127,12 +148,6 @@ export function PokedexDetail({ pokemon, onClose }) {
               </>
             )}
 
-            <button
-              className="pdex-detail__cry-btn"
-              onClick={() => play(getCryUrl(pokemon.id))}
-            >
-              🔊 Play Cry
-            </button>
           </div>
         </div>
       </div>
