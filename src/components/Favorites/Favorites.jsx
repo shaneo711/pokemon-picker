@@ -1,31 +1,39 @@
-import { POKEMON, getArtworkUrl, getSpriteUrl } from '../../data/pokemon';
+import { useState, useEffect } from 'react';
+import { POKEMON, getSpriteUrl } from '../../data/pokemon';
+import { PokedexDetail } from '../Pokedex/PokedexDetail';
 import './Favorites.css';
 
-function FavoriteTile({ pokemon, onToggle }) {
+function FavTile({ pokemon, onRemove, onClick }) {
   return (
-    <div className="fav-tile">
+    <div className="fav-tile" onClick={() => onClick(pokemon)}>
       <button
         className="fav-tile__remove"
-        onClick={() => onToggle(pokemon.id)}
+        onClick={(e) => { e.stopPropagation(); onRemove(pokemon.id); }}
         aria-label={`Remove ${pokemon.name} from favorites`}
       >
         ❤️
       </button>
+      <span className="fav-tile__num">#{String(pokemon.id).padStart(3, '0')}</span>
       <img
-        src={getArtworkUrl(pokemon.id)}
+        src={getSpriteUrl(pokemon.id)}
         alt={pokemon.name}
         className="fav-tile__img"
-        onError={(e) => {
-          e.currentTarget.src = getSpriteUrl(pokemon.id);
-        }}
+        loading="lazy"
       />
-      <p className="fav-tile__name">{pokemon.name}</p>
+      <span className="fav-tile__name">{pokemon.name}</span>
     </div>
   );
 }
 
 export function Favorites({ favorites, onToggleFavorite }) {
+  const [selected, setSelected] = useState(null);
   const favPokemon = POKEMON.filter((p) => favorites.has(p.id));
+
+  useEffect(() => {
+    if (selected && !favorites.has(selected.id)) {
+      setSelected(null);
+    }
+  }, [favorites, selected]);
 
   if (favPokemon.length === 0) {
     return (
@@ -41,13 +49,22 @@ export function Favorites({ favorites, onToggleFavorite }) {
       <h2 className="favorites__title">My Favorites</h2>
       <div className="favorites__grid">
         {favPokemon.map((pokemon) => (
-          <FavoriteTile
+          <FavTile
             key={pokemon.id}
             pokemon={pokemon}
-            onToggle={onToggleFavorite}
+            onRemove={onToggleFavorite}
+            onClick={setSelected}
           />
         ))}
       </div>
+      {selected && (
+        <PokedexDetail
+          pokemon={selected}
+          onClose={() => setSelected(null)}
+          pokemonList={favPokemon}
+          onNavigate={setSelected}
+        />
+      )}
     </div>
   );
 }

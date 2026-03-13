@@ -43,15 +43,23 @@ function StatBar({ name, value, index }) {
   );
 }
 
-export function PokedexDetail({ pokemon, onClose }) {
+export function PokedexDetail({ pokemon, onClose, pokemonList, onNavigate }) {
   const { details, loading } = usePokemonDetails(pokemon.id, true);
   const { play } = useSound();
 
+  const currentIndex = pokemonList ? pokemonList.findIndex((p) => p.id === pokemon.id) : -1;
+  const prevPokemon = currentIndex > 0 ? pokemonList[currentIndex - 1] : null;
+  const nextPokemon = currentIndex < pokemonList.length - 1 ? pokemonList[currentIndex + 1] : null;
+
   useEffect(() => {
-    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowLeft'  && prevPokemon && onNavigate) onNavigate(prevPokemon);
+      if (e.key === 'ArrowRight' && nextPokemon && onNavigate) onNavigate(nextPokemon);
+    };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [onClose]);
+  }, [onClose, prevPokemon, nextPokemon, onNavigate]);
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -67,6 +75,25 @@ export function PokedexDetail({ pokemon, onClose }) {
         <button className="pdex-detail__close" onClick={onClose} aria-label="Close">
           ×
         </button>
+
+        {prevPokemon && onNavigate && (
+          <button
+            className="pdex-detail__nav pdex-detail__nav--prev"
+            onClick={() => onNavigate(prevPokemon)}
+            aria-label={`Previous: ${prevPokemon.name}`}
+          >
+            ‹
+          </button>
+        )}
+        {nextPokemon && onNavigate && (
+          <button
+            className="pdex-detail__nav pdex-detail__nav--next"
+            onClick={() => onNavigate(nextPokemon)}
+            aria-label={`Next: ${nextPokemon.name}`}
+          >
+            ›
+          </button>
+        )}
 
         <div className="pdex-detail__scroll">
           <div
@@ -147,7 +174,6 @@ export function PokedexDetail({ pokemon, onClose }) {
                 )}
               </>
             )}
-
           </div>
         </div>
       </div>

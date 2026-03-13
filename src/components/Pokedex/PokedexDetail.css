@@ -48,6 +48,39 @@
   to   { opacity: 1; transform: translateY(0)    scale(1);    }
 }
 
+/* ── Prev / Next nav buttons ──────────────────────── */
+.pdex-detail__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1.5px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 2px 0;
+  color: #555;
+  line-height: 1;
+  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+}
+
+.pdex-detail__nav:hover {
+  border-color: #4a90d9;
+  color: #4a90d9;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.pdex-detail__nav--prev { left: 8px; }
+.pdex-detail__nav--next { right: 8px; }
+
 /* ── Close button (always visible above scroll) ───── */
 .pdex-detail__close {
   position: absolute;

@@ -1,7 +1,7 @@
 .favorites {
-  max-width: 600px;
+  padding: 16px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 24px 16px 40px;
 }
 
 .favorites--empty {
@@ -26,61 +26,87 @@
   font-size: 1.6rem;
   font-weight: 800;
   color: #222;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   text-align: center;
 }
 
 .favorites__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
 }
 
+/* ── Tile ─────────────────────────────────────────── */
 .fav-tile {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
   background: white;
-  border-radius: 16px;
-  padding: 12px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.15s;
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 6px 4px 6px;
+  cursor: pointer;
+  transition: transform 0.12s, border-color 0.12s, box-shadow 0.12s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .fav-tile:hover {
   transform: translateY(-3px);
+  border-color: #FF3B3B;
+  box-shadow: 0 6px 16px rgba(255, 59, 59, 0.15);
+}
+
+.fav-tile:active {
+  transform: translateY(0);
 }
 
 .fav-tile__remove {
   position: absolute;
-  top: -6px;
-  right: -6px;
+  top: -8px;
+  right: -8px;
   background: white;
-  border: 2px solid #FF3B3B;
+  border: 2px solid rgba(255, 59, 59, 0.35);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1rem;
+  width: 28px;
+  height: 28px;
+  font-size: 0.72rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  transition: transform 0.15s;
+  transition: transform 0.15s, border-color 0.15s;
+  z-index: 1;
 }
 
 .fav-tile__remove:hover {
-  transform: scale(1.2);
+  transform: scale(1.25);
+  border-color: #FF3B3B;
+}
+
+.fav-tile__num {
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: #bbb;
+  letter-spacing: 0.05em;
+  align-self: flex-end;
+  padding-right: 2px;
+  line-height: 1;
 }
 
 .fav-tile__img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+  width: 68px;
+  height: 68px;
+  image-rendering: pixelated;
 }
 
 .fav-tile__name {
-  margin: 6px 0 0;
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #333;
+  text-align: center;
+  line-height: 1.2;
+  word-break: break-word;
 }

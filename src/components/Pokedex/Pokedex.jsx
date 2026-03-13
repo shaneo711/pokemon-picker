@@ -52,7 +52,12 @@ export function Pokedex() {
         ))}
       </div>
       {selected && (
-        <PokedexDetail pokemon={selected} onClose={() => setSelected(null)} />
+        <PokedexDetail
+          pokemon={selected}
+          onClose={() => setSelected(null)}
+          pokemonList={POKEMON}
+          onNavigate={setSelected}
+        />
       )}
     </div>
   );
