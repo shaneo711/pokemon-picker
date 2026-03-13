@@ -26,7 +26,7 @@ export function usePokemonDetails(id, enabled) {
 
   useEffect(() => {
     if (!enabled || !id) return;
-    if (cache[id]) {
+    if (cache[id]?.stats) {
       setDetails(cache[id]);
       setLoading(false);
       return;
@@ -47,6 +47,7 @@ export function usePokemonDetails(id, enabled) {
         const types = pokemon.types.map((t) => t.type.name);
         const height = pokemon.height;
         const weight = pokemon.weight;
+        const stats = pokemon.stats.map((s) => ({ name: s.stat.name, value: s.base_stat }));
 
         const flavorEntry = species.flavor_text_entries.find(
           (e) => e.language.name === 'en'
@@ -63,7 +64,7 @@ export function usePokemonDetails(id, enabled) {
 
         const weaknesses = calcWeaknesses(typeDataList);
 
-        const result = { types, weaknesses, flavorText, height, weight };
+        const result = { types, weaknesses, flavorText, height, weight, stats };
         cache[id] = result;
         setDetails(result);
       } catch {
@@ -79,7 +80,7 @@ export function usePokemonDetails(id, enabled) {
 
   // Reset when id changes
   useEffect(() => {
-    if (!cache[id]) setDetails(null);
+    if (!cache[id]?.stats) setDetails(null);
   }, [id]);
 
   return { details, loading };

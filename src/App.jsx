@@ -3,6 +3,7 @@ import { useFavorites } from './hooks/useFavorites';
 import { useGameQueue } from './hooks/useGameQueue';
 import { Game } from './components/Game/Game';
 import { Favorites } from './components/Favorites/Favorites';
+import { Pokedex } from './components/Pokedex/Pokedex';
 import { Nav } from './components/Nav/Nav';
 import './App.css';
 
@@ -50,6 +51,7 @@ export default function App() {
       {view === 'favorites' && (
         <Favorites favorites={favorites} onToggleFavorite={toggleFavorite} />
       )}
+      {view === 'pokedex' && <Pokedex />}
     </>
   );
 }

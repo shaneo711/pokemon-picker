@@ -16,6 +16,12 @@ export function Nav({ view, onViewChange, favoritesCount, score, onNewGame, kids
         >
           Favorites {favoritesCount > 0 && <span className="nav__badge">♥ {favoritesCount}</span>}
         </button>
+        <button
+          className={`nav__tab ${view === 'pokedex' ? 'nav__tab--active' : ''}`}
+          onClick={() => onViewChange('pokedex')}
+        >
+          Pokédex
+        </button>
       </div>
       {view === 'game' && (
         <div className="nav__score">

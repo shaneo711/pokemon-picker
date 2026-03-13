@@ -1,0 +1,60 @@
+.pdex {
+  padding: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pdex__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  gap: 10px;
+}
+
+.pdex-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: white;
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 6px 4px 6px;
+  cursor: pointer;
+  transition: transform 0.12s, border-color 0.12s, box-shadow 0.12s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.pdex-tile:hover {
+  transform: translateY(-3px);
+  border-color: #4a90d9;
+  box-shadow: 0 6px 16px rgba(74, 144, 217, 0.2);
+}
+
+.pdex-tile:active {
+  transform: translateY(0);
+}
+
+.pdex-tile__num {
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: #bbb;
+  letter-spacing: 0.05em;
+  align-self: flex-end;
+  padding-right: 2px;
+  line-height: 1;
+}
+
+.pdex-tile__img {
+  width: 60px;
+  height: 60px;
+  image-rendering: pixelated;
+}
+
+.pdex-tile__name {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+  word-break: break-word;
+}

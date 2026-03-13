@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { POKEMON, getCryUrl } from '../../data/pokemon';
+import { getPronunciation } from '../../data/pronunciations';
 import { useSound } from '../../hooks/useSound';
 import { usePokemonDetails } from '../../hooks/usePokemonDetails';
 import { shuffle } from '../../utils/shuffle';
@@ -52,7 +53,7 @@ export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, o
           submitAnswer(pokemon);
         } else {
           window.speechSynthesis?.cancel();
-          const utt = new SpeechSynthesisUtterance(pokemon.name);
+          const utt = new SpeechSynthesisUtterance(getPronunciation(pokemon.name));
           utt.lang = 'en-US';
           window.speechSynthesis?.speak(utt);
           setPendingId(pokemon.id);
