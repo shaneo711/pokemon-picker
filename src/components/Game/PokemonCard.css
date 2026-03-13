@@ -5,6 +5,7 @@
   align-items: center;
 }
 
+/* ── Heart button ─────────────────────────────────── */
 .pokemon-card__heart {
   position: absolute;
   top: -8px;
@@ -32,15 +33,76 @@
   border-color: #FF3B3B;
 }
 
-.pokemon-card__image-wrap {
-  position: relative;
-  width: 280px;
-  height: 280px;
+/* ── Flip button ──────────────────────────────────── */
+.pokemon-card__flip-btn {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  z-index: 10;
+  background: white;
+  border: 2px solid #6890F0;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.3rem;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.15s;
 }
 
+.pokemon-card__flip-btn:hover {
+  transform: scale(1.15);
+}
+
+/* ── 3D scene ─────────────────────────────────────── */
+.pokemon-card__scene {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  perspective: 800px;
+}
+
+/* ── Shared face styles ───────────────────────────── */
+.pokemon-card__face {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Front face ───────────────────────────────────── */
+.pokemon-card__face--front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #f0f8ff 0%, #ffffff 70%);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.08);
+  padding: 16px;
+  transform: rotateY(0deg);
+}
+
+/* ── Back face ────────────────────────────────────── */
+.pokemon-card__face--back {
+  background: #1a3a5c;
+  transform: rotateY(-180deg);
+  overflow: hidden;
+}
+
+/* ── Flipped state ────────────────────────────────── */
+.pokemon-card__scene--flipped .pokemon-card__face--front {
+  transform: rotateY(180deg);
+}
+
+.pokemon-card__scene--flipped .pokemon-card__face--back {
+  transform: rotateY(0deg);
+}
+
+/* ── Spinner (front loading) ──────────────────────── */
 .pokemon-card__spinner {
   position: absolute;
   inset: 0;
@@ -57,7 +119,7 @@
 }
 
 .pokemon-card__img {
-  max-width: 280px;
+  max-width: 248px;
   width: 100%;
   height: auto;
   opacity: 0;
@@ -66,6 +128,89 @@
 
 .pokemon-card__img--visible {
   opacity: 1;
+}
+
+/* ── Back loading state ───────────────────────────── */
+.pokemon-card__back-loading {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+}
+
+/* ── Back content ─────────────────────────────────── */
+.pokemon-card__back-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  color: white;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.pokemon-card__back-name {
+  margin: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #FFD700;
+  text-transform: capitalize;
+}
+
+.pokemon-card__back-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pokemon-card__back-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.6);
+  min-width: 48px;
+}
+
+.pokemon-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pokemon-card__type-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+
+.pokemon-card__flavor {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.85);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+.pokemon-card__stats {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.8);
 }
 
 @keyframes spin {

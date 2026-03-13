@@ -23,21 +23,24 @@
   cursor: default;
 }
 
-/* idle — cycle through colorful options via nth-child */
-.answer-btn--idle:nth-child(1) {
-  background: #4A90D9;
-  color: white;
-  border-color: #357abd;
-}
-.answer-btn--idle:nth-child(2) {
-  background: #FFD700;
+/* idle — uniform raised white */
+.answer-btn--idle {
+  background: white;
   color: #333;
-  border-color: #e6c200;
+  border-color: #ccc;
+  box-shadow: 0 4px 0 #aaa;
 }
-.answer-btn--idle:nth-child(3) {
-  background: #FF3B3B;
-  color: white;
-  border-color: #d42e2e;
+
+.answer-btn--idle:not(:disabled):hover {
+  background: #f0f8ff;
+  border-color: #4A90D9;
+  box-shadow: 0 4px 0 #357abd;
+  color: #1a4a80;
+}
+
+.answer-btn--idle:not(:disabled):active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #aaa;
 }
 
 /* correct */

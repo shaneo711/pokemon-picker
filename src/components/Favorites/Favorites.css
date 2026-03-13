@@ -16,6 +16,12 @@
   text-align: center;
 }
 
+.favorites--empty p:first-child {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #333;
+}
+
 .favorites__title {
   font-size: 1.6rem;
   font-weight: 800;
@@ -51,8 +57,8 @@
   background: white;
   border: 2px solid #FF3B3B;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   font-size: 1rem;
   cursor: pointer;
   display: flex;

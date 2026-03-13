@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import { POKEMON, getCryUrl } from '../../data/pokemon';
 import { useSound } from '../../hooks/useSound';
+import { usePokemonDetails } from '../../hooks/usePokemonDetails';
 import { shuffle } from '../../utils/shuffle';
 import { PokemonCard } from './PokemonCard';
 import { AnswerButton } from './AnswerButton';
-import { ScoreBar } from './ScoreBar';
 import './Game.css';
 
 function pickChoices(correct, allPokemon) {
@@ -12,7 +12,7 @@ function pickChoices(correct, allPokemon) {
   return shuffle([correct, ...wrong]);
 }
 
-export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, score, onScoreUpdate, onNewGame }) {
+export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, onScoreUpdate }) {
   const { play } = useSound();
 
   const [choices, setChoices] = useState(() => pickChoices(currentPokemon, POKEMON));
@@ -44,6 +44,8 @@ export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, s
 
   const answered = answerStatus !== 'unanswered';
 
+  const { details, loading: detailsLoading } = usePokemonDetails(currentPokemon.id, answered);
+
   function getButtonStatus(pokemon) {
     if (!answered) return 'idle';
     if (pokemon.id === currentPokemon.id) {
@@ -56,8 +58,6 @@ export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, s
 
   return (
     <div className="game">
-      <ScoreBar correct={score.correct} total={score.total} onNewGame={onNewGame} />
-
       <div className="game__content">
         <p className="game__prompt">Who's that Pokémon?</p>
 
@@ -65,7 +65,18 @@ export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, s
           pokemon={currentPokemon}
           isFavorite={favorites.has(currentPokemon.id)}
           onToggleFavorite={onToggleFavorite}
+          answered={answered}
+          details={details}
+          loading={detailsLoading}
         />
+
+        {answered && (
+          <p className={`game__feedback game__feedback--${answerStatus}`}>
+            {answerStatus === 'correct'
+              ? "🎉 Yes! That's right!"
+              : `😢 Nope! It was ${currentPokemon.name}!`}
+          </p>
+        )}
 
         <div className="game__buttons">
           {choices.map((pokemon) => (

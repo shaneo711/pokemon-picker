@@ -23,6 +23,8 @@ export default function App() {
         view={view}
         onViewChange={setView}
         favoritesCount={favorites.size}
+        score={score}
+        onNewGame={handleNewGame}
       />
       <div hidden={view !== 'game'}>
         <Game
@@ -30,9 +32,7 @@ export default function App() {
           onToggleFavorite={toggleFavorite}
           currentPokemon={currentPokemon}
           onAdvance={advance}
-          score={score}
           onScoreUpdate={setScore}
-          onNewGame={handleNewGame}
         />
       </div>
       {view === 'favorites' && (
