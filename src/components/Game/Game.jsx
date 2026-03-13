@@ -12,34 +12,57 @@ function pickChoices(correct, allPokemon) {
   return shuffle([correct, ...wrong]);
 }
 
-export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, onScoreUpdate }) {
+export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, onScoreUpdate, kidsMode }) {
   const { play } = useSound();
 
   const [choices, setChoices] = useState(() => pickChoices(currentPokemon, POKEMON));
   const [selectedId, setSelectedId] = useState(null);
   const [answerStatus, setAnswerStatus] = useState('unanswered');
+  const [pendingId, setPendingId] = useState(null);
 
   useEffect(() => {
     setChoices(pickChoices(currentPokemon, POKEMON));
     setSelectedId(null);
     setAnswerStatus('unanswered');
+    setPendingId(null);
+    window.speechSynthesis?.cancel();
   }, [currentPokemon]);
+
+  function submitAnswer(pokemon) {
+    const isCorrect = pokemon.id === currentPokemon.id;
+    setSelectedId(pokemon.id);
+    setAnswerStatus(isCorrect ? 'correct' : 'wrong');
+    onScoreUpdate((prev) => ({
+      correct: prev.correct + (isCorrect ? 1 : 0),
+      total: prev.total + 1,
+    }));
+    if (isCorrect) {
+      play(getCryUrl(currentPokemon.id));
+    }
+  }
 
   const handleAnswer = useCallback(
     (pokemon) => {
       if (answerStatus !== 'unanswered') return;
-      const isCorrect = pokemon.id === currentPokemon.id;
-      setSelectedId(pokemon.id);
-      setAnswerStatus(isCorrect ? 'correct' : 'wrong');
-      onScoreUpdate((prev) => ({
-        correct: prev.correct + (isCorrect ? 1 : 0),
-        total: prev.total + 1,
-      }));
-      if (isCorrect) {
-        play(getCryUrl(currentPokemon.id));
+
+      if (kidsMode) {
+        if (pendingId === pokemon.id) {
+          setPendingId(null);
+          window.speechSynthesis?.cancel();
+          submitAnswer(pokemon);
+        } else {
+          window.speechSynthesis?.cancel();
+          const utt = new SpeechSynthesisUtterance(pokemon.name);
+          utt.lang = 'en-US';
+          window.speechSynthesis?.speak(utt);
+          setPendingId(pokemon.id);
+        }
+        return;
       }
+
+      submitAnswer(pokemon);
     },
-    [answerStatus, currentPokemon, onScoreUpdate, play]
+    [answerStatus, currentPokemon, onScoreUpdate, play, kidsMode, pendingId]
   );
 
   const answered = answerStatus !== 'unanswered';
@@ -47,7 +70,10 @@ export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, o
   const { details, loading: detailsLoading } = usePokemonDetails(currentPokemon.id, answered);
 
   function getButtonStatus(pokemon) {
-    if (!answered) return 'idle';
+    if (!answered) {
+      if (kidsMode && pendingId === pokemon.id) return 'pending';
+      return 'idle';
+    }
     if (pokemon.id === currentPokemon.id) {
       return answerStatus === 'correct' ? 'correct' : 'reveal';
     }

@@ -7,7 +7,10 @@ export function AnswerButton({ pokemon, status, onClick, disabled }) {
       onClick={onClick}
       disabled={disabled}
     >
-      {pokemon.name}
+      <span className="answer-btn__name">{pokemon.name}</span>
+      {status === 'pending' && (
+        <span className="answer-btn__confirm">Tap again to choose!</span>
+      )}
     </button>
   );
 }

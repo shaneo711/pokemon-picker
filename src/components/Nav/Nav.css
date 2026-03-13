@@ -83,3 +83,25 @@
   transform: rotate(-30deg);
   border-color: #4A90D9;
 }
+
+.nav__kids-mode {
+  background: none;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, border-color 0.15s;
+  opacity: 0.5;
+}
+
+.nav__kids-mode:hover { transform: scale(1.1); opacity: 0.8; }
+
+.nav__kids-mode--active {
+  border-color: #4A90D9;
+  opacity: 1;
+}

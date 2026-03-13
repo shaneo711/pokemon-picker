@@ -11,10 +11,19 @@ export default function App() {
   const { favorites, toggleFavorite } = useFavorites();
   const { currentPokemon, advance, reset } = useGameQueue();
   const [score, setScore] = useState({ correct: 0, total: 0 });
+  const [kidsMode, setKidsMode] = useState(() => localStorage.getItem('kids-mode') === 'true');
 
   const handleNewGame = () => {
     reset();
     setScore({ correct: 0, total: 0 });
+  };
+
+  const toggleKidsMode = () => {
+    setKidsMode(prev => {
+      const next = !prev;
+      localStorage.setItem('kids-mode', String(next));
+      return next;
+    });
   };
 
   return (
@@ -25,6 +34,8 @@ export default function App() {
         favoritesCount={favorites.size}
         score={score}
         onNewGame={handleNewGame}
+        kidsMode={kidsMode}
+        onToggleKidsMode={toggleKidsMode}
       />
       <div hidden={view !== 'game'}>
         <Game
@@ -33,6 +44,7 @@ export default function App() {
           currentPokemon={currentPokemon}
           onAdvance={advance}
           onScoreUpdate={setScore}
+          kidsMode={kidsMode}
         />
       </div>
       {view === 'favorites' && (
