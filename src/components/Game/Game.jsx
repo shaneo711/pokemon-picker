@@ -38,7 +38,7 @@ export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, o
       total: prev.total + 1,
     }));
     if (isCorrect) {
-      play(getCryUrl(currentPokemon.id));
+      play(getCryUrl(currentPokemon.id), 0.5);
     }
   }
 
