@@ -28,6 +28,15 @@ const PRONUNCIATIONS = {
   Magikarp: "Maji carp",
   Rattata: "Rat uh tuh",
   Marowak: "Mar oh wak",
+  Scyther: "Sigh ther",
+  Gyrados: "Guy ra dose",
+  Arcanine: "Are ca nine",
+  Growlithe: "Graul ith",
+  Machop: "Mah chop",
+  Machoke: "Mah choke",
+  Machamp: "Mah champ",
+  Alakazam: "Al uh kaz am",
+  Psyduck: "Sigh-duck",
 };
 
 export function getPronunciation(name) {

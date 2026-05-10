@@ -119,6 +119,8 @@ export function PokedexDetail({ pokemon, onClose, pokemonList, onNavigate }) {
                   window.speechSynthesis?.cancel();
                   const utt = new SpeechSynthesisUtterance(getPronunciation(pokemon.name));
                   utt.lang = 'en-US';
+                  const voices = window.speechSynthesis.getVoices();
+                  utt.voice = voices.find(v => v.name === 'Samantha') || voices.find(v => v.lang === 'en-US') || null;
                   window.speechSynthesis?.speak(utt);
                 }}
               >

@@ -55,6 +55,8 @@ export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, o
           window.speechSynthesis?.cancel();
           const utt = new SpeechSynthesisUtterance(getPronunciation(pokemon.name));
           utt.lang = 'en-US';
+          const voices = window.speechSynthesis.getVoices();
+          utt.voice = voices.find(v => v.name === 'Samantha') || voices.find(v => v.lang === 'en-US') || null;
           window.speechSynthesis?.speak(utt);
           setPendingId(pokemon.id);
         }
