@@ -20,6 +20,7 @@ export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, o
   const [selectedId, setSelectedId] = useState(null);
   const [answerStatus, setAnswerStatus] = useState('unanswered');
   const [pendingId, setPendingId] = useState(null);
+  const [streak, setStreak] = useState(0);
 
   useEffect(() => {
     setChoices(pickChoices(currentPokemon, POKEMON));
@@ -33,6 +34,7 @@ export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, o
     const isCorrect = pokemon.id === currentPokemon.id;
     setSelectedId(pokemon.id);
     setAnswerStatus(isCorrect ? 'correct' : 'wrong');
+    setStreak((prev) => (isCorrect ? prev + 1 : 0));
     onScoreUpdate((prev) => ({
       correct: prev.correct + (isCorrect ? 1 : 0),
       total: prev.total + 1,
@@ -98,6 +100,12 @@ export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, o
           details={details}
           loading={detailsLoading}
         />
+
+        {streak >= 2 && (
+          <div key={streak} className="game__streak">
+            🔥 {streak} in a row!
+          </div>
+        )}
 
         {answered && (
           <p className={`game__feedback game__feedback--${answerStatus}`}>

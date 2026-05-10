@@ -86,3 +86,22 @@
   0%   { transform: scale(0.7); opacity: 0; }
   100% { transform: scale(1);   opacity: 1; }
 }
+
+.game__streak {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #c45000;
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  border: 2px solid #ffab40;
+  border-radius: 50px;
+  padding: 8px 20px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 3px 0 #e65100;
+  animation: streakBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+}
+
+@keyframes streakBounce {
+  0%   { transform: scale(0.5) translateY(-10px); opacity: 0; }
+  60%  { transform: scale(1.15) translateY(0);    opacity: 1; }
+  100% { transform: scale(1)   translateY(0);     opacity: 1; }
+}
