@@ -37,6 +37,13 @@ const PRONUNCIATIONS = {
   Machamp: "Mah champ",
   Alakazam: "Al uh kaz am",
   Psyduck: "Sigh-duck",
+  Gengar: "Gheng gar",
+  Horsea: "Horsey",
+  Ponyta: "Pony Ta",
+  Poliwrath: "Poly Rath",
+  Electabuzz: "Eelecktehbuzz",
+  Staryu: "Star you",
+  Muk: "Muck",
 };
 
 export function getPronunciation(name) {
