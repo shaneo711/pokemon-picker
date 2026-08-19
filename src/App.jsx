@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useFavorites } from './hooks/useFavorites';
 import { useGameQueue } from './hooks/useGameQueue';
+import { useHotkeys } from './hooks/useHotkeys';
 import { Game } from './components/Game/Game';
 import { Favorites } from './components/Favorites/Favorites';
 import { Pokedex } from './components/Pokedex/Pokedex';
 import { Nav } from './components/Nav/Nav';
+import { Shortcuts } from './components/Shortcuts/Shortcuts';
 import './App.css';
 
 export default function App() {
@@ -13,10 +15,13 @@ export default function App() {
   const { currentPokemon, advance, reset } = useGameQueue();
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [kidsMode, setKidsMode] = useState(() => localStorage.getItem('kids-mode') === 'true');
+  const [confirmReset, setConfirmReset] = useState(false);
+  const [showShortcuts, setShowShortcuts] = useState(false);
 
   const handleNewGame = () => {
     reset();
     setScore({ correct: 0, total: 0 });
+    setConfirmReset(false);
   };
 
   const toggleKidsMode = () => {
@@ -26,6 +31,31 @@ export default function App() {
       return next;
     });
   };
+
+  const overlayOpen = confirmReset || showShortcuts;
+
+  const handleKey = useCallback((e) => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+    if (e.key === 'Escape') {
+      setConfirmReset(false);
+      setShowShortcuts(false);
+      return;
+    }
+    // The reset modal is a decision — only Escape gets out of it.
+    if (confirmReset) return;
+
+    if (e.key === '?') {
+      e.preventDefault();
+      setShowShortcuts(prev => !prev);
+      return;
+    }
+    if (!showShortcuts && e.key.toLowerCase() === 'n') {
+      setConfirmReset(true);
+    }
+  }, [confirmReset, showShortcuts]);
+
+  useHotkeys(handleKey, view === 'game');
 
   return (
     <>
@@ -37,6 +67,10 @@ export default function App() {
         onNewGame={handleNewGame}
         kidsMode={kidsMode}
         onToggleKidsMode={toggleKidsMode}
+        confirmReset={confirmReset}
+        onRequestReset={() => setConfirmReset(true)}
+        onCancelReset={() => setConfirmReset(false)}
+        onShowShortcuts={() => setShowShortcuts(true)}
       />
       <div hidden={view !== 'game'}>
         <Game
@@ -46,12 +80,14 @@ export default function App() {
           onAdvance={advance}
           onScoreUpdate={setScore}
           kidsMode={kidsMode}
+          active={view === 'game' && !overlayOpen}
         />
       </div>
       {view === 'favorites' && (
         <Favorites favorites={favorites} onToggleFavorite={toggleFavorite} />
       )}
       {view === 'pokedex' && <Pokedex />}
+      {showShortcuts && <Shortcuts onClose={() => setShowShortcuts(false)} />}
     </>
   );
 }

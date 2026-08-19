@@ -1,8 +1,9 @@
 import './AnswerButton.css';
 
-export function AnswerButton({ pokemon, status, onClick, disabled }) {
+export function AnswerButton({ pokemon, status, onClick, disabled, ref }) {
   return (
     <button
+      ref={ref}
       className={`answer-btn answer-btn--${status}`}
       onClick={onClick}
       disabled={disabled}

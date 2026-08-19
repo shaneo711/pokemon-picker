@@ -82,7 +82,8 @@ src/
 │   ├── useFavorites.js         Set<id> backed by localStorage
 │   ├── useGameQueue.js         shuffled play order + advance/reset
 │   ├── usePokemonDetails.js    PokéAPI fetch + in-memory cache + weakness calc
-│   └── useSound.js             fire-and-forget audio playback
+│   ├── useSound.js             fire-and-forget audio playback
+│   └── useHotkeys.js           document-level keydown listener, gated by `enabled`
 │
 ├── utils/
 │   └── shuffle.js              Fisher–Yates, returns a new array
@@ -90,9 +91,10 @@ src/
 └── components/                 one folder per component, .jsx + .css together
     ├── Nav/Nav.jsx             tabs, score badge, Kids Mode toggle, reset modal
     ├── Game/
-    │   ├── Game.jsx            the round: choices, answer handling, streak
+    │   ├── Game.jsx            the round: choices, answer handling, streak, hotkeys
     │   ├── PokemonCard.jsx     flip card — artwork front, Pokédex data back
     │   └── AnswerButton.jsx    a single answer button, purely presentational
+    ├── Shortcuts/Shortcuts.jsx  the `?` keyboard-shortcuts modal
     ├── Favorites/Favorites.jsx grid of favourited Pokémon
     └── Pokedex/
         ├── Pokedex.jsx         grid of all 151, with a tile-size zoom control
@@ -113,18 +115,19 @@ is:
 
 ```mermaid
 graph TD
-    App["App.jsx<br/>view · score · kidsMode<br/>useFavorites · useGameQueue"]
+    App["App.jsx<br/>view · score · kidsMode<br/>confirmReset · showShortcuts<br/>useFavorites · useGameQueue · useHotkeys"]
 
-    App -->|view, score, favoritesCount,<br/>kidsMode + callbacks| Nav
-    App -->|currentPokemon, favorites,<br/>kidsMode, onAdvance, onScoreUpdate| Game
+    App -->|view, score, favoritesCount,<br/>kidsMode, confirmReset + callbacks| Nav
+    App -->|currentPokemon, favorites, kidsMode,<br/>active, onAdvance, onScoreUpdate| Game
+    App --> Shortcuts
     App -->|favorites, onToggleFavorite| Favorites
     App --> Pokedex
 
-    Game -->|owns: choices, selectedId,<br/>answerStatus, pendingId, streak| GameState[" "]
+    Game -->|owns: choices, selectedId, answerStatus,<br/>pendingId, streak, flipped| GameState[" "]
     Game --> PokemonCard
     Game --> AnswerButton
 
-    PokemonCard -->|owns: flipped,<br/>loaded, errored| CardState[" "]
+    PokemonCard -->|owns: loaded, errored| CardState[" "]
 
     Favorites -->|owns: selected| PokedexDetail
     Pokedex -->|owns: selected, tileSize| PokedexDetail
@@ -141,11 +144,17 @@ graph TD
 | `score` | `{ correct, total }` | no | session score, shown in Nav |
 | `kidsMode` | `boolean` | **yes** (`kids-mode`) | double-tap-to-confirm + speech |
 | `favorites` | `Set<number>` | **yes** (`pokemon-favorites`) | via `useFavorites` |
+| `confirmReset` | `boolean` | no | the reset-confirmation modal `Nav` renders |
+| `showShortcuts` | `boolean` | no | the `?` shortcuts overlay |
 | queue/index | internal | no | via `useGameQueue` |
 
 Score lives in `App` rather than `Game` for one reason: `Nav` needs to display
 it. That's the general rule this codebase follows — state gets lifted only as
 far as the nearest component that needs it, and no further.
+
+`confirmReset` lives in `App` rather than `Nav` for the same reason `score`
+does — something outside `Nav` needs it, namely the `N` hotkey. `Nav` still
+renders the modal; it just doesn't own whether it's open.
 
 ### A subtle but deliberate rendering choice
 
@@ -275,6 +284,17 @@ just stays empty rather than breaking the round.
 > same render pass, which is why it re-checks the cache instead of unconditionally
 > nulling. It works, but it's the most fragile code in the app.
 
+### `useHotkeys(handler, enabled)`
+
+Attaches one `keydown` listener to `document` while `enabled` is true, and drops
+events that originate from a text input or `contenteditable`. The handler gets
+the raw event and decides on `preventDefault()` itself — the hook has no key map
+of its own.
+
+Two consumers: `App` (the `N` / `?` / `Escape` keys) and `Game` (everything
+else). **`enabled` is load-bearing in `Game`**, because `Game` stays mounted
+behind `hidden` on the other tabs — see §5.
+
 ### `useSound()`
 
 Four lines. Creates a fresh `Audio` per call, sets volume, and swallows the
@@ -340,6 +360,41 @@ class:
 
 `AnswerButton` itself is entirely presentational — status in, class name out.
 
+### Keyboard controls
+
+A round is fully playable from the keyboard. The design principle is **real DOM
+focus is the highlight** — arrow keys just move focus between the three answer
+buttons via `answerRefs`, and Space/Enter then fires that button's existing
+`onClick` natively. `handleAnswer` therefore needs no keyboard branch at all, and
+the Kids Mode two-press flow works from the keyboard for free. `:focus-visible`
+draws the highlight ring, so mouse and touch players never see it.
+
+| Key | Action |
+|---|---|
+| `↑` `↓` `←` `→` | move between the answers, wrapping (all four axes, because the layout is a column on mobile and a 3-up grid at ≥768px) |
+| `Enter` / `Space` | lock in the focused answer; press again for Next → |
+| `F` | flip the card (once answered) |
+| `H` | toggle favourite |
+| `N` | open the reset-confirmation modal |
+| `?` | open/close the shortcuts overlay |
+| `Escape` | close whichever overlay is open |
+
+Three details that aren't obvious from the code:
+
+- **`Game` only listens while `active`.** `App` passes
+  `active={view === 'game' && !overlayOpen}`, so the keys go quiet on the other
+  tabs (where `Game` is merely `hidden`, not unmounted) and behind modals.
+- **`ADVANCE_LOCKOUT_MS`.** Because the same key both answers and advances, a
+  fast double-press would otherwise skip straight past the reveal and the cry.
+  `submitAnswer` stamps `answeredAt`, and the advance branch ignores presses
+  within 400ms of it.
+- **Focus resumes across rounds.** Submitting disables the answer buttons, which
+  drops focus to `<body>`. When the advance came from a keypress, `resumeFocus`
+  is set and an effect keyed on `choices` focuses the first answer of the next
+  round — so keyboard play doesn't need a fresh arrow press each time. It's
+  keyed on `choices` rather than `currentPokemon` because the buttons don't
+  exist yet when the reset effect runs.
+
 ### Kids Mode
 
 A two-tap confirm flow that also speaks the name. First tap on a button cancels
@@ -359,10 +414,13 @@ reason `pronunciations.js` exists.
 
 ### `Nav.jsx`
 
-Three tab buttons, and — only on the game view — a Kids Mode toggle, the score
-badge, and a reset button. The reset button doesn't reset anything directly; it
-opens a confirmation overlay (local `confirmReset` state) whose OK button calls
-`onNewGame` up in `App`, which reshuffles the queue and zeroes the score.
+Three tab buttons, and — only on the game view — a Kids Mode toggle, a `⌨`
+shortcuts button (hidden under `@media (hover: none)`, since a touch device has
+no use for it), the score badge, and a reset button. The reset button doesn't
+reset anything directly; it asks `App` to open a confirmation overlay, whose OK
+button calls `onNewGame`, which reshuffles the queue and zeroes the score.
+
+`Nav` is now fully controlled — it holds no state of its own.
 
 The overlay uses the standard click-outside-to-close pattern: `onClick` on the
 backdrop closes, `e.stopPropagation()` on the card prevents that from firing.
@@ -379,9 +437,10 @@ Front face: the artwork, with a holographic shimmer sweep (`::before` /
 `::after` pseudo-elements plus a `holoSweep` keyframe). Back face: the Pokédex
 data pulled from `usePokemonDetails`.
 
-Three pieces of local state, all reset by an effect keyed on `pokemon.id`:
+Which face is showing (`flipped`) is a **prop**, owned by `Game` so the `F`
+hotkey can reach it. Two pieces of local state remain, both reset by an effect
+keyed on `pokemon.id`:
 
-- `flipped` — which face is showing
 - `loaded` — drives the fade-in; a pokeball spinner shows until the image loads
 - `errored` — **image fallback chain**: try official artwork, and on error swap
   to the small sprite. The second error is absorbed by setting `loaded` so the

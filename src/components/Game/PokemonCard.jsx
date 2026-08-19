@@ -66,13 +66,11 @@ function BackContent({ pokemon, details }) {
   );
 }
 
-export function PokemonCard({ pokemon, isFavorite, onToggleFavorite, answered, details, loading }) {
+export function PokemonCard({ pokemon, isFavorite, onToggleFavorite, answered, details, loading, flipped, onToggleFlip }) {
   const [loaded, setLoaded] = useState(false);
   const [errored, setErrored] = useState(false);
-  const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
-    setFlipped(false);
     setLoaded(false);
     setErrored(false);
   }, [pokemon.id]);
@@ -92,7 +90,7 @@ export function PokemonCard({ pokemon, isFavorite, onToggleFavorite, answered, d
       {answered && (
         <button
           className="pokemon-card__flip-btn"
-          onClick={() => setFlipped((f) => !f)}
+          onClick={onToggleFlip}
           aria-label={flipped ? 'Show image' : 'Show Pokédex info'}
         >
           {flipped ? '🖼️' : '📖'}

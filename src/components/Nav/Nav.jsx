@@ -1,9 +1,18 @@
-import { useState } from 'react';
 import './Nav.css';
 
-export function Nav({ view, onViewChange, favoritesCount, score, onNewGame, kidsMode, onToggleKidsMode }) {
-  const [confirmReset, setConfirmReset] = useState(false);
-
+export function Nav({
+  view,
+  onViewChange,
+  favoritesCount,
+  score,
+  onNewGame,
+  kidsMode,
+  onToggleKidsMode,
+  confirmReset,
+  onRequestReset,
+  onCancelReset,
+  onShowShortcuts,
+}) {
   return (
     <>
       <nav className="nav">
@@ -36,6 +45,14 @@ export function Nav({ view, onViewChange, favoritesCount, score, onNewGame, kids
             >
               🔊 Kids Mode
             </button>
+            <button
+              className="nav__shortcuts"
+              onClick={onShowShortcuts}
+              aria-label="Keyboard shortcuts"
+              title="Keyboard shortcuts (?)"
+            >
+              ⌨
+            </button>
             <div className="nav__score-badge">
               <span className="nav__score-correct">{score.correct}</span>
               <span className="nav__score-sep">/</span>
@@ -43,7 +60,7 @@ export function Nav({ view, onViewChange, favoritesCount, score, onNewGame, kids
             </div>
             <button
               className="nav__new-game"
-              onClick={() => setConfirmReset(true)}
+              onClick={onRequestReset}
               aria-label="New game"
             >
               ↺
@@ -53,15 +70,15 @@ export function Nav({ view, onViewChange, favoritesCount, score, onNewGame, kids
       </nav>
 
       {confirmReset && (
-        <div className="nav__confirm-overlay" onClick={() => setConfirmReset(false)}>
+        <div className="nav__confirm-overlay" onClick={onCancelReset}>
           <div className="nav__confirm-card" onClick={(e) => e.stopPropagation()}>
             <p className="nav__confirm-title">Start new game?</p>
             <p className="nav__confirm-sub">Your current score will be reset.</p>
             <div className="nav__confirm-btns">
-              <button className="nav__confirm-cancel" onClick={() => setConfirmReset(false)}>
+              <button className="nav__confirm-cancel" onClick={onCancelReset}>
                 Cancel
               </button>
-              <button className="nav__confirm-ok" onClick={() => { onNewGame(); setConfirmReset(false); }}>
+              <button className="nav__confirm-ok" onClick={onNewGame}>
                 Reset
               </button>
             </div>

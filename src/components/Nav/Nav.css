@@ -111,6 +111,36 @@
   border-color: #4A90D9;
 }
 
+/* ── Keyboard shortcuts button ────────────────────── */
+.nav__shortcuts {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #666;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.nav__shortcuts:hover {
+  transform: translateY(-2px);
+  border-color: #4A90D9;
+}
+
+/* No keyboard, no point taking up nav space. */
+@media (hover: none) {
+  .nav__shortcuts {
+    display: none;
+  }
+}
+
 /* ── Kids mode ────────────────────────────────────── */
 .nav__kids-mode {
   background: none;

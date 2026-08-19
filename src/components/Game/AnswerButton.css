@@ -23,6 +23,18 @@
   cursor: default;
 }
 
+/* keyboard highlight — arrow keys move focus between the answers */
+.answer-btn:focus {
+  outline: none;
+}
+
+.answer-btn:focus-visible {
+  outline: none;
+  border-color: #4A90D9;
+  box-shadow: 0 0 0 4px rgba(74, 144, 217, 0.35), 0 4px 0 #357abd;
+  transform: scale(1.03);
+}
+
 /* idle — uniform raised white */
 .answer-btn--idle {
   background: white;
