@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { POKEMON, getCryUrl } from '../../data/pokemon';
+import { getCryUrl } from '../../data/pokemon';
 import { getPronunciation } from '../../data/pronunciations';
 import { useSound } from '../../hooks/useSound';
 import { usePokemonDetails } from '../../hooks/usePokemonDetails';
@@ -19,10 +19,10 @@ function pickChoices(correct, allPokemon) {
   return shuffle([correct, ...wrong]);
 }
 
-export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, onScoreUpdate, kidsMode, active }) {
+export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdvance, onScoreUpdate, kidsMode, active }) {
   const { play } = useSound();
 
-  const [choices, setChoices] = useState(() => pickChoices(currentPokemon, POKEMON));
+  const [choices, setChoices] = useState(() => pickChoices(currentPokemon, pool));
   const [selectedId, setSelectedId] = useState(null);
   const [answerStatus, setAnswerStatus] = useState('unanswered');
   const [pendingId, setPendingId] = useState(null);
@@ -34,13 +34,13 @@ export function Game({ favorites, onToggleFavorite, currentPokemon, onAdvance, o
   const resumeFocus = useRef(false);
 
   useEffect(() => {
-    setChoices(pickChoices(currentPokemon, POKEMON));
+    setChoices(pickChoices(currentPokemon, pool));
     setSelectedId(null);
     setAnswerStatus('unanswered');
     setPendingId(null);
     setFlipped(false);
     window.speechSynthesis?.cancel();
-  }, [currentPokemon]);
+  }, [currentPokemon, pool]);
 
   useEffect(() => {
     if (!resumeFocus.current) return;

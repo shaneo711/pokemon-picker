@@ -112,7 +112,8 @@
 }
 
 /* ── Keyboard shortcuts button ────────────────────── */
-.nav__shortcuts {
+.nav__shortcuts,
+.nav__settings {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -129,12 +130,14 @@
   transition: transform 0.2s, border-color 0.2s;
 }
 
-.nav__shortcuts:hover {
+.nav__shortcuts:hover,
+.nav__settings:hover {
   transform: translateY(-2px);
   border-color: #4A90D9;
 }
 
-/* No keyboard, no point taking up nav space. */
+/* No keyboard, no point taking up nav space. `.nav__settings` stays — it's the
+   only way to reach the generation picker on a touch device. */
 @media (hover: none) {
   .nav__shortcuts {
     display: none;

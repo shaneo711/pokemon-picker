@@ -12,6 +12,7 @@ export function Nav({
   onRequestReset,
   onCancelReset,
   onShowShortcuts,
+  onShowSettings,
 }) {
   return (
     <>
@@ -44,6 +45,14 @@ export function Nav({
               aria-label={kidsMode ? 'Disable kids mode' : 'Enable kids mode'}
             >
               🔊 Kids Mode
+            </button>
+            <button
+              className="nav__settings"
+              onClick={onShowSettings}
+              aria-label="Settings"
+              title="Settings"
+            >
+              ⚙
             </button>
             <button
               className="nav__shortcuts"

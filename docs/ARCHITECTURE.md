@@ -9,11 +9,12 @@ for whatever you're touching.
 ## 1. The one-paragraph summary
 
 This is a **client-only React SPA** built with Vite. There is no backend, no
-router, no state library, and no database. All 151 original Pokémon are
-hardcoded as `{ id, name }` pairs in a single data file; everything else about a
-Pokémon (types, stats, flavour text, artwork, cry audio) is fetched on demand
-from the public **PokéAPI** and **PokeAPI GitHub sprite/cry repos**. The only
-persisted state is favourites and the Kids Mode flag, both in `localStorage`.
+router, no state library, and no database. All 251 Pokémon of Gens I–II are
+hardcoded as `{ id, name, gen }` triples in a single data file; everything else
+about a Pokémon (types, stats, flavour text, artwork, cry audio) is fetched on
+demand from the public **PokéAPI** and **PokeAPI GitHub sprite/cry repos**. The
+only persisted state is favourites, the Kids Mode flag and the enabled
+generations, all in `localStorage`.
 The app has three "views" (Play / Favorites / Pokédex) switched by a single
 `useState` string in `App.jsx`.
 
@@ -74,13 +75,14 @@ src/
 ├── App.css                     intentionally empty (components own their styles)
 │
 ├── data/                       static, hand-maintained data
-│   ├── pokemon.js              POKEMON[151] + the three remote URL builders
+│   ├── pokemon.js              GENERATIONS + POKEMON[251] + the three URL builders
 │   ├── pronunciations.js       phonetic TTS overrides, keyed by name
 │   └── typeColors.js           TYPE_COLORS + TYPE_TEXT_COLORS lookup maps
 │
 ├── hooks/                      all shared logic lives here
 │   ├── useFavorites.js         Set<id> backed by localStorage
-│   ├── useGameQueue.js         shuffled play order + advance/reset
+│   ├── useGameQueue.js         shuffled play order over a pool + advance/reset
+│   ├── useGenerations.js       Set<genId> in localStorage + the derived pool
 │   ├── usePokemonDetails.js    PokéAPI fetch + in-memory cache + weakness calc
 │   ├── useSound.js             fire-and-forget audio playback
 │   └── useHotkeys.js           document-level keydown listener, gated by `enabled`
@@ -95,9 +97,10 @@ src/
     │   ├── PokemonCard.jsx     flip card — artwork front, Pokédex data back
     │   └── AnswerButton.jsx    a single answer button, purely presentational
     ├── Shortcuts/Shortcuts.jsx  the `?` keyboard-shortcuts modal
+    ├── Settings/Settings.jsx   the ⚙ modal — which generations are in the pool
     ├── Favorites/Favorites.jsx grid of favourited Pokémon
     └── Pokedex/
-        ├── Pokedex.jsx         grid of all 151, with a tile-size zoom control
+        ├── Pokedex.jsx         grid of all 251, with a tile-size zoom control
         └── PokedexDetail.jsx   the modal used by BOTH Pokedex and Favorites
 ```
 
@@ -115,11 +118,12 @@ is:
 
 ```mermaid
 graph TD
-    App["App.jsx<br/>view · score · kidsMode<br/>confirmReset · showShortcuts<br/>useFavorites · useGameQueue · useHotkeys"]
+    App["App.jsx<br/>view · score · kidsMode<br/>confirmReset · showShortcuts · showSettings<br/>useFavorites · useGenerations<br/>useGameQueue · useHotkeys"]
 
     App -->|view, score, favoritesCount,<br/>kidsMode, confirmReset + callbacks| Nav
-    App -->|currentPokemon, favorites, kidsMode,<br/>active, onAdvance, onScoreUpdate| Game
+    App -->|pool, currentPokemon, favorites, kidsMode,<br/>active, onAdvance, onScoreUpdate| Game
     App --> Shortcuts
+    App -->|enabledGens, pool, onToggleGen| Settings
     App -->|favorites, onToggleFavorite| Favorites
     App --> Pokedex
 
@@ -144,8 +148,10 @@ graph TD
 | `score` | `{ correct, total }` | no | session score, shown in Nav |
 | `kidsMode` | `boolean` | **yes** (`kids-mode`) | double-tap-to-confirm + speech |
 | `favorites` | `Set<number>` | **yes** (`pokemon-favorites`) | via `useFavorites` |
+| `enabledGens` | `Set<number>` | **yes** (`pokemon-generations`) | via `useGenerations`; also yields `pool` |
 | `confirmReset` | `boolean` | no | the reset-confirmation modal `Nav` renders |
 | `showShortcuts` | `boolean` | no | the `?` shortcuts overlay |
+| `showSettings` | `boolean` | no | the ⚙ settings overlay |
 | queue/index | internal | no | via `useGameQueue` |
 
 Score lives in `App` rather than `Game` for one reason: `Nav` needs to display
@@ -183,8 +189,16 @@ If you ever add a router, this behaviour is the thing most likely to break.
 The single source of truth for *which* Pokémon exist:
 
 ```js
-export const POKEMON = [{ id: 1, name: 'Bulbasaur' }, ... 151 entries];
+export const GENERATIONS = [
+  { id: 1, label: 'Gen I',  region: 'Kanto', range: [1, 151] },
+  { id: 2, label: 'Gen II', region: 'Johto', range: [152, 251] },
+];
+export const POKEMON = [{ id: 1, name: 'Bulbasaur', gen: 1 }, ... 251 entries];
 ```
+
+`gen` keys each Pokémon to a `GENERATIONS` row. `GENERATIONS` is what the
+settings modal renders from, so a new generation is one row there plus the
+`POKEMON` entries — no UI change.
 
 Plus three pure URL builders that point at PokeAPI's GitHub asset repos:
 
@@ -194,10 +208,11 @@ Plus three pure URL builders that point at PokeAPI's GitHub asset repos:
 | `getSpriteUrl(id)` | small game sprite PNG | grid tiles, and as the **artwork fallback** on load error |
 | `getCryUrl(id)` | legacy cry `.ogg` | played on a correct answer and from the Pokédex |
 
-Because IDs are just Pokédex numbers, **extending to Gen 2 is mostly a matter of
-appending rows to this array** — the URL builders and PokéAPI calls already work
-for any valid ID. The parts that would need manual work are
-`pronunciations.js` and nothing else.
+Because IDs are just Pokédex numbers, the URL builders and PokéAPI calls work
+for any valid ID — **extending to a further generation is appending rows here,
+one `GENERATIONS` entry, and the matching `pronunciations.js` names.** One
+caveat the builders hide: `getCryUrl` points at the `legacy` cry set, which only
+covers Gens I–V. Gen VI onward would need the `latest` path.
 
 ### `data/pronunciations.js`
 
@@ -205,7 +220,8 @@ A hand-maintained map from display name → a phonetic respelling the browser's
 TTS engine says correctly (`Ivysaur → "Ivy sore"`). `getPronunciation(name)`
 falls back to the name itself when there's no override, and names the voice
 already handles map to themselves so the file doubles as a coverage checklist
-for all 151.
+for all 251. A missing entry fails silently — you just get the raw name read
+aloud — so check coverage explicitly after adding Pokémon.
 
 ### `data/typeColors.js`
 
@@ -220,23 +236,45 @@ a glow shadow; consolidating them is an easy first refactor.
 
 ## 7. The hooks
 
-### `useGameQueue()` — the play order
+### `useGameQueue(pool)` — the play order
 
 ```js
-const [queue, setQueue] = useState(() => shuffle(POKEMON.map(p => p.id)));
+const [queue, setQueue] = useState(() => shuffle(pool.map(p => p.id)));
 const [index, setIndex] = useState(0);
 ```
 
-It holds a shuffled array of all 151 IDs and a cursor. `advance()` moves the
+It holds a shuffled array of the pool's IDs and a cursor. `advance()` moves the
 cursor forward; when it runs off the end it **reshuffles and wraps to 0**, so
 you get every Pokémon once per pass in a fresh random order each time. `reset()`
-reshuffles and jumps to 0 immediately.
+reshuffles and jumps to 0 immediately. The wrap check compares against
+`queue.length`, not `pool.length` — the queue is the authority on how many are
+left in the current pass.
+
+**Changing the pool starts a fresh pass**, handled by a render-phase adjustment
+(`if (pool !== poolRef) { ... }`) rather than an effect, so React re-renders with
+the corrected queue before committing and nothing observes the mismatched pair.
+That's also why `useGenerations` memoises `pool` — a fresh array each render
+would reshuffle forever. Note this resets the round but *not* the score, which
+lives in `App`.
 
 The lazy `useState(() => ...)` initialiser matters — it means the shuffle runs
 once on mount, not on every render.
 
 Returns `{ currentPokemon, advance, reset }`, where `currentPokemon` is resolved
 from the ID by a `.find()` on every render.
+
+### `useGenerations()` — which generations are in play
+
+The same shape as `useFavorites`: a `Set<number>` of generation IDs mirrored to
+`localStorage['pokemon-generations']`, defaulting to **all generations** on
+missing or corrupt data, and intersected with `GENERATIONS` on load so a stale
+key can't smuggle in an unknown ID. `toggleGen` **refuses to remove the last
+enabled generation** — the pool can never be empty. It also returns the derived
+`pool` (`POKEMON` filtered by the enabled gens), memoised on `enabledGens`.
+
+The filter is deliberately **game-only**. `Pokedex` and `Favorites` still import
+`POKEMON` directly, so browsing always covers all 251 and turning a generation
+off never makes a favourite disappear.
 
 ### `useFavorites()` — persisted favourites
 
@@ -313,7 +351,7 @@ sequenceDiagram
     participant A as App.jsx
     participant P as usePokemonDetails
 
-    Note over Q: mount → shuffle 151 ids, index 0
+    Note over Q: mount → shuffle the pool's ids, index 0
     Q->>G: currentPokemon (via App)
     Note over G: effect on [currentPokemon]<br/>pickChoices() → 1 correct + 2 random<br/>reset selection/status/pending<br/>cancel any speech
 
@@ -333,16 +371,17 @@ sequenceDiagram
     Note over G: flip button appears on card
     U->>G: taps "Next →"
     G->>Q: advance()
-    Note over Q: index+1, reshuffle+wrap at 151
+    Note over Q: index+1, reshuffle+wrap at queue end
 ```
 
 ### Answer choices
 
-`pickChoices(correct, allPokemon)` filters the correct answer out of the full
-list, shuffles, takes 2, then shuffles the correct answer in with them. So the
-distractors are drawn uniformly from all 150 others — there's no difficulty
-tuning (no "prefer same-type" or "prefer adjacent evolution" logic). That's a
-natural place to add depth.
+`pickChoices(correct, allPokemon)` filters the correct answer out of the list,
+shuffles, takes 2, then shuffles the correct answer in with them. `Game` passes
+the `pool` prop, so distractors only ever come from enabled generations. They're
+drawn uniformly from the rest of the pool — there's no difficulty tuning (no
+"prefer same-type" or "prefer adjacent evolution" logic). That's a natural place
+to add depth.
 
 ### Answer button states
 
@@ -414,9 +453,11 @@ reason `pronunciations.js` exists.
 
 ### `Nav.jsx`
 
-Three tab buttons, and — only on the game view — a Kids Mode toggle, a `⌨`
-shortcuts button (hidden under `@media (hover: none)`, since a touch device has
-no use for it), the score badge, and a reset button. The reset button doesn't
+Three tab buttons, and — only on the game view — a Kids Mode toggle, a `⚙`
+settings button, a `⌨` shortcuts button (hidden under `@media (hover: none)`,
+since a touch device has no use for it — `⚙` deliberately is *not*, being the
+only way to reach the generation picker on touch), the score badge, and a reset
+button. The reset button doesn't
 reset anything directly; it asks `App` to open a confirmation overlay, whose OK
 button calls `onNewGame`, which reshuffles the queue and zeroes the score.
 
@@ -449,11 +490,20 @@ keyed on `pokemon.id`:
 The flip button only renders once `answered` is true, so you can't peek at the
 answer.
 
+### `Settings.jsx`
+
+The `⚙` overlay, built on the same recipe as `Shortcuts` (fixed backdrop, click
+outside to close, `stopPropagation` on the card). Purely presentational — it
+renders one toggle row per `GENERATIONS` entry with a live count of the pool, and
+disables the checkbox of the last enabled generation so `toggleGen`'s guard is
+visible rather than a silent no-op. Add a generation to the data and this UI
+picks it up with no edit.
+
 ### `Pokedex.jsx` / `Favorites.jsx`
 
 Both are grids of tiles that open the **same** `PokedexDetail` modal, each
 passing its own list so the modal's prev/next arrows walk the right collection —
-all 151 in the Pokédex, only your favourites in Favorites. That shared-modal
+all 251 in the Pokédex, only your favourites in Favorites. That shared-modal
 design is the nicest structural decision in the app.
 
 `Pokedex` adds a zoom control: `tileSize` state is written into the grid as a
@@ -498,8 +548,8 @@ all are the kind of thing that bites later.
    pick the name," not a silhouette guess. Either restore the silhouette (a CSS
    `filter: brightness(0)` on the front image until `answered`) or fix the alt.
 5. **`TypeBadge` is duplicated** in `PokemonCard.jsx` and `PokedexDetail.jsx`.
-6. **The details cache never evicts and never persists.** Fine at 151 entries;
-   think about it if you add generations.
+6. **The details cache never evicts and never persists.** Fine at 251 entries;
+   think about it again if you add more generations.
 7. **No error surface for network failure.** PokéAPI errors are swallowed, so a
    flaky connection looks like a permanently-blank card back.
 8. **No tests and no types.** Given how much of the logic is pure —
@@ -513,11 +563,12 @@ all are the kind of thing that bites later.
 
 | I want to... | Go to |
 |---|---|
-| Add more Pokémon (Gen 2+) | `data/pokemon.js` — append rows; add `data/pronunciations.js` entries |
+| Add more Pokémon (Gen 3+) | `data/pokemon.js` — append rows + a `GENERATIONS` entry; add `data/pronunciations.js` entries. Past Gen V, also switch `getCryUrl` off the `legacy` path |
 | Change how distractors are chosen | `pickChoices()` at the top of `Game/Game.jsx` |
 | Change what shows on the card back | `BackContent` in `Game/PokemonCard.jsx` |
 | Add a field from PokéAPI | `hooks/usePokemonDetails.js` — extend the parse and the `result` object |
 | Change the play order / repetition | `hooks/useGameQueue.js` |
+| Change what's in the play pool | `hooks/useGenerations.js` (and `Settings.jsx` if it needs new controls) |
 | Add a fourth answer option | `pickChoices()` `.slice(0, 2)` → `.slice(0, 3)`; check the grid in `Game.css` |
 | Add a new view/tab | `App.jsx` (`view` state + render) and `Nav.jsx` (tab button) |
 | Change type colours | `data/typeColors.js` |

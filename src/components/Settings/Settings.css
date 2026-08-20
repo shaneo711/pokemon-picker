@@ -1,0 +1,141 @@
+.settings__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: settingsFadeIn 0.15s ease;
+}
+
+@keyframes settingsFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.settings__card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px 32px 24px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  animation: settingsIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes settingsIn {
+  from { opacity: 0; transform: scale(0.9) translateY(8px); }
+  to   { opacity: 1; transform: scale(1)   translateY(0);   }
+}
+
+.settings__title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+.settings__section {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 10px;
+}
+
+.settings__list {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.settings__gen {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 2px solid #eee;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.settings__gen:hover {
+  border-color: #ccc;
+}
+
+.settings__gen--on {
+  border-color: #4A90D9;
+  background: rgba(74, 144, 217, 0.06);
+}
+
+.settings__gen:has(.settings__checkbox:disabled) {
+  cursor: default;
+}
+
+.settings__checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #4A90D9;
+  cursor: inherit;
+  flex-shrink: 0;
+}
+
+.settings__gen-label {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #1a1a2e;
+}
+
+.settings__gen-region {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #888;
+}
+
+.settings__gen-count {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #666;
+  background: #f2f2f2;
+  border-radius: 50px;
+  padding: 2px 9px;
+}
+
+.settings__summary {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 18px;
+}
+
+.settings__summary strong {
+  color: #4A90D9;
+  font-weight: 800;
+}
+
+.settings__close {
+  width: 100%;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  background: #4A90D9;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.settings__close:hover {
+  background: #357abd;
+}
