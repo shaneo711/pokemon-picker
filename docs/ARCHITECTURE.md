@@ -92,6 +92,7 @@ src/
 │   └── useHotkeys.js           document-level keydown listener, gated by `enabled`
 │
 ├── utils/
+│   ├── filterPokemon.js        pure Pokédex search/filter predicates
 │   └── shuffle.js              Fisher–Yates, returns a new array
 │
 └── components/                 one folder per component, .jsx + .css together
@@ -104,7 +105,7 @@ src/
     ├── Settings/Settings.jsx   the ⚙ modal — which generations are in the pool
     ├── Favorites/Favorites.jsx grid of favourited Pokémon
     └── Pokedex/
-        ├── Pokedex.jsx         grid of all 251, with a tile-size zoom control
+        ├── Pokedex.jsx         searchable/filterable grid with tile-size controls
         └── PokedexDetail.jsx   the modal used by BOTH Pokedex and Favorites
 ```
 
@@ -129,7 +130,7 @@ graph TD
     App --> Shortcuts
     App -->|enabledGens, pool, onToggleGen| Settings
     App -->|favorites, onToggleFavorite| Favorites
-    App --> Pokedex
+    App -->|favorites| Pokedex
 
     Game -->|owns: choices, selectedId, answerStatus,<br/>pendingId, streak, flipped| GameState[" "]
     Game --> PokemonCard
@@ -138,7 +139,7 @@ graph TD
     PokemonCard -->|owns: loaded, errored| CardState[" "]
 
     Favorites -->|owns: selected| PokedexDetail
-    Pokedex -->|owns: selected, tileSize| PokedexDetail
+    Pokedex -->|owns: selected, tileSize,<br/>search + filters| PokedexDetail
 
     style GameState fill:none,stroke:none
     style CardState fill:none,stroke:none
@@ -173,7 +174,7 @@ renders the modal; it just doesn't own whether it's open.
   <Game ... />
 </div>
 {view === 'favorites' && <Favorites ... />}
-{view === 'pokedex' && <Pokedex />}
+{view === 'pokedex' && <Pokedex favorites={favorites} />}
 ```
 
 `Game` is **always mounted** and merely hidden with the `hidden` attribute,
@@ -500,15 +501,18 @@ passing its own list so the modal's prev/next arrows walk the right collection �
 all 251 in the Pokédex, only your favourites in Favorites. That shared-modal
 design is the nicest structural decision in the app.
 
-`Pokedex` adds a zoom control: `tileSize` state is written into the grid as a
-CSS custom property (`--tile-size`), and the CSS grid sizes its columns off that
-variable. React never touches layout directly.
+`Pokedex` combines name/number search with generation, type and favorites
+filters. `filterPokemon()` keeps that derivation separate from the component,
+and the result count plus empty state reflect the combined filter set. Detail
+modal navigation uses the filtered list, so previous/next stays within the
+visible result set.
 
-`Favorites` has an effect that closes the modal if the currently-open Pokémon
-gets un-favourited out from under it.
+Its zoom control writes `tileSize` state into the grid as a CSS custom property
+(`--tile-size`), and the CSS grid sizes its columns off that variable. React
+never touches layout directly.
 
-> Note: `Pokedex` initialises `tileSize` to `88` but `MIN_SIZE` is `100`, so the
-> first "−" click jumps *up* to 100. Minor, but that's a real off-by-default bug.
+`Favorites` closes the detail modal as part of its removal action if the
+currently-open Pokémon gets un-favourited.
 
 ### `PokedexDetail.jsx`
 
@@ -532,13 +536,12 @@ all are the kind of thing that bites later.
    score, but `streak` lives inside `Game` and its reset effect only clears
    choices/selection/status. Start a new game on a hot streak and the counter
    keeps climbing.
-2. **`Pokedex` initial `tileSize` (88) is below `MIN_SIZE` (100).** See above.
-3. **`TypeBadge` is duplicated** in `PokemonCard.jsx` and `PokedexDetail.jsx`.
-4. **The generated details snapshot can go stale.** Adding Pokémon or changing
+2. **`TypeBadge` is duplicated** in `PokemonCard.jsx` and `PokedexDetail.jsx`.
+3. **The generated details snapshot can go stale.** Adding Pokémon or changing
    its schema requires running `npm run generate:data` and committing the JSON.
-5. **No tests and no types.** Given how much of the logic is pure —
-   `shuffle`, `pickChoices`, `getDamageMultiplier`, `getButtonStatus`,
-   `getPronunciation` — a test runner would pay for itself quickly. Those five
+4. **No tests and no types.** Given how much of the logic is pure —
+   `shuffle`, `filterPokemon`, `pickChoices`, `getDamageMultiplier`, `getButtonStatus`,
+   `getPronunciation` — a test runner would pay for itself quickly. Those six
    functions are where the real behaviour lives.
 
 ---

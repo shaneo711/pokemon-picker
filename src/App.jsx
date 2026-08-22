@@ -103,7 +103,7 @@ export default function App() {
       {view === 'favorites' && (
         <Favorites favorites={favorites} onToggleFavorite={toggleFavorite} />
       )}
-      {view === 'pokedex' && <Pokedex />}
+      {view === 'pokedex' && <Pokedex favorites={favorites} />}
       {showShortcuts && <Shortcuts onClose={() => setShowShortcuts(false)} />}
       {showSettings && (
         <Settings
