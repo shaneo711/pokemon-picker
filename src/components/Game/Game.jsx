@@ -152,7 +152,7 @@ export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdva
   }
 
   return (
-    <div className="game">
+    <div className={`game ${answered ? 'game--answered' : ''}`}>
       <div className="game__content">
         <p className="game__prompt">Who's that Pokémon?</p>
 
@@ -197,7 +197,7 @@ export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdva
         </div>
 
         {answered && (
-          <button className="game__next-btn" onClick={onAdvance}>
+          <button type="button" className="game__next-btn" onClick={onAdvance}>
             Next →
           </button>
         )}
