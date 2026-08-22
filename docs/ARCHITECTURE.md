@@ -10,11 +10,11 @@ for whatever you're touching.
 
 This is a **client-only React SPA** built with Vite. There is no backend, no
 router, no state library, and no database. All 251 Pokémon of Gens I–II are
-hardcoded as `{ id, name, gen }` triples in a single data file; everything else
-about a Pokémon (types, stats, flavour text, artwork, cry audio) is fetched on
-demand from the public **PokéAPI** and **PokeAPI GitHub sprite/cry repos**. The
-only persisted state is favourites, the Kids Mode flag and the enabled
-generations, all in `localStorage`.
+hardcoded as `{ id, name, gen }` triples in a single data file. Types, stats,
+flavour text and weaknesses live in a generated PokéAPI snapshot committed to
+the app; only artwork and cry audio come from the PokeAPI GitHub asset repos at
+runtime. The only persisted state is favourites, the Kids Mode flag and the
+enabled generations, all in `localStorage`.
 The app has three "views" (Play / Favorites / Pokédex) switched by a single
 `useState` string in `App.jsx`.
 
@@ -32,10 +32,11 @@ The app has three "views" (Play / Favorites / Pokédex) switched by a single
 Scripts (`package.json`):
 
 ```
-npm run dev       # vite dev server with HMR
-npm run build     # production bundle into dist/
-npm run lint      # eslint over the repo
-npm run preview   # serve the built dist/ locally
+npm run dev           # vite dev server with HMR
+npm run build         # production bundle into dist/
+npm run generate:data # refresh the checked-in PokéAPI details snapshot
+npm run lint          # eslint over the repo
+npm run preview       # serve the built dist/ locally
 ```
 
 There is **no test setup** and **no TypeScript**. Those are the two most obvious
@@ -68,13 +69,16 @@ Two things worth knowing about this boot:
 ## 4. File map
 
 ```
+scripts/
+└── generate-pokemon-details.mjs  validated PokéAPI snapshot generator
 src/
 ├── main.jsx                    entry point
 ├── App.jsx                     root component — owns view + score + kidsMode
 ├── index.css                   global reset, page background, base typography
 ├── App.css                     intentionally empty (components own their styles)
 │
-├── data/                       static, hand-maintained data
+├── data/                       static app data
+│   ├── pokemonDetails.json     generated types/stats/text/weaknesses snapshot
 │   ├── pokemon.js              GENERATIONS + POKEMON[251] + the three URL builders
 │   ├── pronunciations.js       phonetic TTS overrides, keyed by name
 │   └── typeColors.js           TYPE_COLORS + TYPE_TEXT_COLORS lookup maps
@@ -83,7 +87,7 @@ src/
 │   ├── useFavorites.js         Set<id> backed by localStorage
 │   ├── useGameQueue.js         shuffled play order over a pool + advance/reset
 │   ├── useGenerations.js       Set<genId> in localStorage + the derived pool
-│   ├── usePokemonDetails.js    PokéAPI fetch + in-memory cache + weakness calc
+│   ├── usePokemonDetails.js    synchronous adapter over the generated snapshot
 │   ├── useSound.js             fire-and-forget audio playback
 │   └── useHotkeys.js           document-level keydown listener, gated by `enabled`
 │
@@ -198,7 +202,21 @@ export const POKEMON = [{ id: 1, name: 'Bulbasaur', gen: 1 }, ... 251 entries];
 
 `gen` keys each Pokémon to a `GENERATIONS` row. `GENERATIONS` is what the
 settings modal renders from, so a new generation is one row there plus the
-`POKEMON` entries — no UI change.
+`POKEMON` entries, followed by `npm run generate:data` — no UI change.
+
+### `data/pokemonDetails.json`
+
+A generated, checked-in snapshot containing the types, correctly combined
+weaknesses, English flavour text, dimensions and six base stats used by the UI.
+The browser imports this file with the application bundle, so displaying details
+does not make a PokéAPI REST request and cannot enter a loading/error state.
+
+`scripts/generate-pokemon-details.mjs` is the source of this file. It fetches
+the Pokémon and species records with limited concurrency, fetches each shared
+type record once, calculates dual-type damage multipliers, validates all 251
+records, then replaces the JSON atomically. The normal production build never
+runs the generator; refresh the snapshot deliberately with `npm run generate:data`
+and commit its output.
 
 Plus three pure URL builders that point at PokeAPI's GitHub asset repos:
 
@@ -208,9 +226,10 @@ Plus three pure URL builders that point at PokeAPI's GitHub asset repos:
 | `getSpriteUrl(id)` | small game sprite PNG | grid tiles, and as the **artwork fallback** on load error |
 | `getCryUrl(id)` | legacy cry `.ogg` | played on a correct answer and from the Pokédex |
 
-Because IDs are just Pokédex numbers, the URL builders and PokéAPI calls work
-for any valid ID — **extending to a further generation is appending rows here,
-one `GENERATIONS` entry, and the matching `pronunciations.js` names.** One
+Because IDs are just Pokédex numbers, the URL builders work for any valid ID —
+**extending to a further generation is appending rows here, adding one
+`GENERATIONS` entry and the matching `pronunciations.js` names, then regenerating
+`pokemonDetails.json`.** One
 caveat the builders hide: `getCryUrl` points at the `legacy` cry set, which only
 covers Gens I–V. Gen VI onward would need the `latest` path.
 
@@ -288,39 +307,14 @@ effect in a place React doesn't guarantee purity, and under StrictMode the
 updater can run twice — harmless here since the write is idempotent, but worth
 knowing if you extend it.
 
-### `usePokemonDetails(id, enabled)` — the PokéAPI layer
+### `usePokemonDetails(id, enabled)` — the snapshot adapter
 
-This is the only network code in the app. Called with `enabled` so it can be
-mounted eagerly but only fire when the data is actually needed:
-
-- `Game` passes `enabled = answered` — details load only *after* you've guessed
-- `PokedexDetail` passes `enabled = true` — always loads
-
-What it does, in order:
-
-1. Check the module-level `cache` object. If `cache[id]` has stats, return it
-   synchronously — no fetch, no loading state.
-2. Fetch `/pokemon/{id}` and `/pokemon-species/{id}` in parallel.
-3. Pull out types, height, weight and base stats; find the first English
-   flavour-text entry and strip its form-feed/newline characters.
-4. Fetch `/type/{name}` for each of the Pokémon's 1–2 types.
-5. Run `calcWeaknesses()` — union all `double_damage_from` types, union all
-   `no_damage_from` types, then subtract the immunities from the weaknesses.
-6. Store in `cache[id]` and set state.
-
-**The cache is a plain module-scope object**, so it survives view switches and
-component unmounts but not a page reload. It is shared by every consumer of the
-hook, which is why opening a Pokémon in the Pokédex makes that same Pokémon's
-card back instant later in the game.
-
-A `cancelled` flag in the effect cleanup prevents setting state after unmount or
-after a rapid ID change. Fetch errors are swallowed deliberately — the card back
-just stays empty rather than breaking the round.
-
-> ⚠️ The second effect (`if (!cache[id]?.stats) setDetails(null)`) exists to
-> clear stale data when the ID changes. It runs *after* the fetch effect on the
-> same render pass, which is why it re-checks the cache instead of unconditionally
-> nulling. It works, but it's the most fragile code in the app.
+This small compatibility hook reads `data/pokemonDetails.json` synchronously.
+`Game` still passes `enabled = answered` so details remain hidden until a guess,
+while `PokedexDetail` passes `enabled = true`. It returns the same
+`{ details, loading }` shape the components used before the snapshot migration,
+but `loading` is always false. Keeping the adapter avoids coupling the generated
+file directly to multiple components.
 
 ### `useHotkeys(handler, enabled)`
 
@@ -366,7 +360,7 @@ sequenceDiagram
     opt correct
         G->>G: play cry at 0.5 volume
     end
-    G->>P: enabled=true → fetch details
+    G->>P: enabled=true → read local snapshot
     P-->>G: { types, weaknesses, flavorText, height, weight, stats }
     Note over G: flip button appears on card
     U->>G: taps "Next →"
@@ -476,11 +470,11 @@ All of the flipping is CSS — React only toggles one class.
 
 Front face: the artwork, with a holographic shimmer sweep (`::before` /
 `::after` pseudo-elements plus a `holoSweep` keyframe). Back face: the Pokédex
-data pulled from `usePokemonDetails`.
+data read from the local snapshot through `usePokemonDetails`.
 
 Which face is showing (`flipped`) is a **prop**, owned by `Game` so the `F`
-hotkey can reach it. Two pieces of local state remain, both reset by an effect
-keyed on `pokemon.id`:
+hotkey can reach it. Two pieces of local state remain; `Game` keys the component
+by `pokemon.id`, so both naturally reset when the Pokémon changes:
 
 - `loaded` — drives the fade-in; a pokeball spinner shows until the image loads
 - `errored` — **image fallback chain**: try official artwork, and on error swap
@@ -539,21 +533,11 @@ all are the kind of thing that bites later.
    choices/selection/status. Start a new game on a hot streak and the counter
    keeps climbing.
 2. **`Pokedex` initial `tileSize` (88) is below `MIN_SIZE` (100).** See above.
-3. **`submitAnswer` isn't memoised** but is called from inside the memoised
-   `handleAnswer`, and isn't in its dependency array. It happens to be correct
-   today because every value `submitAnswer` closes over *is* in `handleAnswer`'s
-   deps — but that's a coincidence you'd have to re-verify on every edit.
-4. **The card image's alt text says "Pokemon silhouette"** — a leftover from an
-   earlier design. The artwork is shown in full; the game is "see the picture,
-   pick the name," not a silhouette guess. Either restore the silhouette (a CSS
-   `filter: brightness(0)` on the front image until `answered`) or fix the alt.
-5. **`TypeBadge` is duplicated** in `PokemonCard.jsx` and `PokedexDetail.jsx`.
-6. **The details cache never evicts and never persists.** Fine at 251 entries;
-   think about it again if you add more generations.
-7. **No error surface for network failure.** PokéAPI errors are swallowed, so a
-   flaky connection looks like a permanently-blank card back.
-8. **No tests and no types.** Given how much of the logic is pure —
-   `shuffle`, `pickChoices`, `calcWeaknesses`, `getButtonStatus`,
+3. **`TypeBadge` is duplicated** in `PokemonCard.jsx` and `PokedexDetail.jsx`.
+4. **The generated details snapshot can go stale.** Adding Pokémon or changing
+   its schema requires running `npm run generate:data` and committing the JSON.
+5. **No tests and no types.** Given how much of the logic is pure —
+   `shuffle`, `pickChoices`, `getDamageMultiplier`, `getButtonStatus`,
    `getPronunciation` — a test runner would pay for itself quickly. Those five
    functions are where the real behaviour lives.
 
@@ -563,10 +547,10 @@ all are the kind of thing that bites later.
 
 | I want to... | Go to |
 |---|---|
-| Add more Pokémon (Gen 3+) | `data/pokemon.js` — append rows + a `GENERATIONS` entry; add `data/pronunciations.js` entries. Past Gen V, also switch `getCryUrl` off the `legacy` path |
+| Add more Pokémon (Gen 3+) | Add `data/pokemon.js` and `data/pronunciations.js` entries, run `npm run generate:data`, and commit `data/pokemonDetails.json`. Past Gen V, also switch `getCryUrl` off the `legacy` path |
 | Change how distractors are chosen | `pickChoices()` at the top of `Game/Game.jsx` |
 | Change what shows on the card back | `BackContent` in `Game/PokemonCard.jsx` |
-| Add a field from PokéAPI | `hooks/usePokemonDetails.js` — extend the parse and the `result` object |
+| Add a field from PokéAPI | Extend `scripts/generate-pokemon-details.mjs`, regenerate the snapshot, then render the field where needed |
 | Change the play order / repetition | `hooks/useGameQueue.js` |
 | Change what's in the play pool | `hooks/useGenerations.js` (and `Settings.jsx` if it needs new controls) |
 | Add a fourth answer option | `pickChoices()` `.slice(0, 2)` → `.slice(0, 3)`; check the grid in `Game.css` |
