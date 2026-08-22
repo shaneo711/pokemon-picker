@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { useFavorites } from './hooks/useFavorites';
 import { useGameQueue } from './hooks/useGameQueue';
 import { useGenerations } from './hooks/useGenerations';
@@ -114,6 +115,7 @@ export default function App() {
           onClose={() => setShowSettings(false)}
         />
       )}
+      <Analytics />
     </>
   );
 }
