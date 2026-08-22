@@ -1,0 +1,9927 @@
+{
+  "1": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "flavorText": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.",
+    "height": 7,
+    "weight": 69,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 49
+      },
+      {
+        "name": "defense",
+        "value": 49
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "2": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "flavorText": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+    "height": 10,
+    "weight": 130,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 62
+      },
+      {
+        "name": "defense",
+        "value": 63
+      },
+      {
+        "name": "special-attack",
+        "value": 80
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 60
+      }
+    ]
+  },
+  "3": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "flavorText": "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+    "height": 20,
+    "weight": 1000,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 82
+      },
+      {
+        "name": "defense",
+        "value": 83
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 80
+      }
+    ]
+  },
+  "4": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.",
+    "height": 6,
+    "weight": 85,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 39
+      },
+      {
+        "name": "attack",
+        "value": 52
+      },
+      {
+        "name": "defense",
+        "value": 43
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "5": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "When it swings its burning tail, it elevates the temperature to unbearably high levels.",
+    "height": 11,
+    "weight": 190,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 58
+      },
+      {
+        "name": "attack",
+        "value": 64
+      },
+      {
+        "name": "defense",
+        "value": 58
+      },
+      {
+        "name": "special-attack",
+        "value": 80
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 80
+      }
+    ]
+  },
+  "6": {
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "weaknesses": [
+      "water",
+      "electric",
+      "rock"
+    ],
+    "flavorText": "It is said that Charizard’s fire burns hotter if it has experienced harsh battles.",
+    "height": 17,
+    "weight": 905,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 78
+      },
+      {
+        "name": "attack",
+        "value": 84
+      },
+      {
+        "name": "defense",
+        "value": 78
+      },
+      {
+        "name": "special-attack",
+        "value": 109
+      },
+      {
+        "name": "special-defense",
+        "value": 85
+      },
+      {
+        "name": "speed",
+        "value": 100
+      }
+    ]
+  },
+  "7": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.",
+    "height": 5,
+    "weight": 90,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 44
+      },
+      {
+        "name": "attack",
+        "value": 48
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 64
+      },
+      {
+        "name": "speed",
+        "value": 43
+      }
+    ]
+  },
+  "8": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance.",
+    "height": 10,
+    "weight": 225,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 59
+      },
+      {
+        "name": "attack",
+        "value": 63
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 58
+      }
+    ]
+  },
+  "9": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "A brutal POKéMON with pressurized water jets on its shell. They are used for high speed tackles.",
+    "height": 16,
+    "weight": 855,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 79
+      },
+      {
+        "name": "attack",
+        "value": 83
+      },
+      {
+        "name": "defense",
+        "value": 100
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 105
+      },
+      {
+        "name": "speed",
+        "value": 78
+      }
+    ]
+  },
+  "10": {
+    "types": [
+      "bug"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "Its short feet are tipped with suction pads that enable it to tirelessly climb slopes and walls.",
+    "height": 3,
+    "weight": 29,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 30
+      },
+      {
+        "name": "defense",
+        "value": 35
+      },
+      {
+        "name": "special-attack",
+        "value": 20
+      },
+      {
+        "name": "special-defense",
+        "value": 20
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "11": {
+    "types": [
+      "bug"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "This POKéMON is vulnerable to attack while its shell is soft, exposing its weak and tender body.",
+    "height": 7,
+    "weight": 99,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 20
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 25
+      },
+      {
+        "name": "special-defense",
+        "value": 25
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "12": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "weaknesses": [
+      "fire",
+      "electric",
+      "ice",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "In battle, it flaps its wings at high speed to release highly toxic dust into the air.",
+    "height": 11,
+    "weight": 320,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 90
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "13": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "psychic",
+      "rock"
+    ],
+    "flavorText": "Often found in forests, eating leaves. It has a sharp venomous stinger on its head.",
+    "height": 3,
+    "weight": 32,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 35
+      },
+      {
+        "name": "defense",
+        "value": 30
+      },
+      {
+        "name": "special-attack",
+        "value": 20
+      },
+      {
+        "name": "special-defense",
+        "value": 20
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "14": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "psychic",
+      "rock"
+    ],
+    "flavorText": "Almost incapable of moving, this POKéMON can only harden its shell to protect itself from predators.",
+    "height": 6,
+    "weight": 100,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 25
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 25
+      },
+      {
+        "name": "special-defense",
+        "value": 25
+      },
+      {
+        "name": "speed",
+        "value": 35
+      }
+    ]
+  },
+  "15": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "psychic",
+      "rock"
+    ],
+    "flavorText": "Flies at high speed and attacks using its large venomous stingers on its forelegs and tail.",
+    "height": 10,
+    "weight": 295,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 40
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 75
+      }
+    ]
+  },
+  "16": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock"
+    ],
+    "flavorText": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.",
+    "height": 3,
+    "weight": 18,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 40
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 35
+      },
+      {
+        "name": "speed",
+        "value": 56
+      }
+    ]
+  },
+  "17": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock"
+    ],
+    "flavorText": "Very protective of its sprawling territorial area, this POKéMON will fiercely peck at any intruder.",
+    "height": 11,
+    "weight": 300,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 63
+      },
+      {
+        "name": "attack",
+        "value": 60
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 71
+      }
+    ]
+  },
+  "18": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock"
+    ],
+    "flavorText": "When hunting, it skims the surface of water at high speed to pick off unwary prey such as MAGIKARP.",
+    "height": 15,
+    "weight": 395,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 83
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 75
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 101
+      }
+    ]
+  },
+  "19": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "Living wherever there is food available, it ceaselessly scav­ enges for edibles the entire day.",
+    "height": 3,
+    "weight": 35,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 30
+      },
+      {
+        "name": "attack",
+        "value": 56
+      },
+      {
+        "name": "defense",
+        "value": 35
+      },
+      {
+        "name": "special-attack",
+        "value": 25
+      },
+      {
+        "name": "special-defense",
+        "value": 35
+      },
+      {
+        "name": "speed",
+        "value": 72
+      }
+    ]
+  },
+  "20": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "It uses its whis­ kers to maintain its balance. It apparently slows down if they are cut off.",
+    "height": 7,
+    "weight": 185,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 81
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 97
+      }
+    ]
+  },
+  "21": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock"
+    ],
+    "flavorText": "Eats bugs in grassy areas. It has to flap its short wings at high speed to stay airborne.",
+    "height": 3,
+    "weight": 20,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 60
+      },
+      {
+        "name": "defense",
+        "value": 30
+      },
+      {
+        "name": "special-attack",
+        "value": 31
+      },
+      {
+        "name": "special-defense",
+        "value": 31
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "22": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock"
+    ],
+    "flavorText": "With its huge and magnificent wings, it can keep aloft without ever having to land for rest.",
+    "height": 12,
+    "weight": 380,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 61
+      },
+      {
+        "name": "special-defense",
+        "value": 61
+      },
+      {
+        "name": "speed",
+        "value": 100
+      }
+    ]
+  },
+  "23": {
+    "types": [
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "Moves silently and stealthily. Eats the eggs of birds, such as PIDGEY and SPEAROW, whole.",
+    "height": 20,
+    "weight": 69,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 60
+      },
+      {
+        "name": "defense",
+        "value": 44
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 54
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "24": {
+    "types": [
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "It is rumored that the ferocious warning markings on its belly differ from area to area.",
+    "height": 35,
+    "weight": 650,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 69
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 79
+      },
+      {
+        "name": "speed",
+        "value": 80
+      }
+    ]
+  },
+  "25": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "When several of these POKéMON gather, their electricity could build and cause lightning storms.",
+    "height": 4,
+    "weight": 60,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 55
+      },
+      {
+        "name": "defense",
+        "value": 40
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "26": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "Its long tail serves as a ground to protect itself from its own high voltage power.",
+    "height": 8,
+    "weight": 300,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 90
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 110
+      }
+    ]
+  },
+  "27": {
+    "types": [
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice"
+    ],
+    "flavorText": "Burrows deep underground in arid locations far from water. It only emerges to hunt for food.",
+    "height": 6,
+    "weight": 120,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 85
+      },
+      {
+        "name": "special-attack",
+        "value": 20
+      },
+      {
+        "name": "special-defense",
+        "value": 30
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "28": {
+    "types": [
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice"
+    ],
+    "flavorText": "Curls up into a spiny ball when threatened. It can roll while curled up to attack or escape.",
+    "height": 10,
+    "weight": 295,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 100
+      },
+      {
+        "name": "defense",
+        "value": 110
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "29": {
+    "types": [
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "Although small, its venomous barbs render this POKéMON dangerous. The female has smaller horns.",
+    "height": 4,
+    "weight": 70,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 47
+      },
+      {
+        "name": "defense",
+        "value": 52
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 40
+      },
+      {
+        "name": "speed",
+        "value": 41
+      }
+    ]
+  },
+  "30": {
+    "types": [
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "The female's horn develops slowly. Prefers physical attacks such as clawing and biting.",
+    "height": 8,
+    "weight": 200,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 62
+      },
+      {
+        "name": "defense",
+        "value": 67
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 56
+      }
+    ]
+  },
+  "31": {
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "ice",
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "Its hard scales provide strong protection. It uses its hefty bulk to execute powerful moves.",
+    "height": 13,
+    "weight": 600,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 92
+      },
+      {
+        "name": "defense",
+        "value": 87
+      },
+      {
+        "name": "special-attack",
+        "value": 75
+      },
+      {
+        "name": "special-defense",
+        "value": 85
+      },
+      {
+        "name": "speed",
+        "value": 76
+      }
+    ]
+  },
+  "32": {
+    "types": [
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "Stiffens its ears to sense danger. The larger its horns, the more powerful its secreted venom.",
+    "height": 5,
+    "weight": 90,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 46
+      },
+      {
+        "name": "attack",
+        "value": 57
+      },
+      {
+        "name": "defense",
+        "value": 40
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 40
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "33": {
+    "types": [
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "An aggressive POKéMON that is quick to attack. The horn on its head secretes a powerful venom.",
+    "height": 9,
+    "weight": 195,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 61
+      },
+      {
+        "name": "attack",
+        "value": 72
+      },
+      {
+        "name": "defense",
+        "value": 57
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "34": {
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "ice",
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "It uses its powerful tail in battle to smash, constrict, then break the prey's bones.",
+    "height": 14,
+    "weight": 620,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 81
+      },
+      {
+        "name": "attack",
+        "value": 102
+      },
+      {
+        "name": "defense",
+        "value": 77
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "35": {
+    "types": [
+      "fairy"
+    ],
+    "weaknesses": [
+      "poison",
+      "steel"
+    ],
+    "flavorText": "Its magical and cute appeal has many admirers. It is rare and found only in certain areas.",
+    "height": 6,
+    "weight": 75,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 48
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 35
+      }
+    ]
+  },
+  "36": {
+    "types": [
+      "fairy"
+    ],
+    "weaknesses": [
+      "poison",
+      "steel"
+    ],
+    "flavorText": "A timid fairy POKéMON that is rarely seen. It will run and hide the moment it senses people.",
+    "height": 13,
+    "weight": 400,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 95
+      },
+      {
+        "name": "attack",
+        "value": 70
+      },
+      {
+        "name": "defense",
+        "value": 73
+      },
+      {
+        "name": "special-attack",
+        "value": 95
+      },
+      {
+        "name": "special-defense",
+        "value": 90
+      },
+      {
+        "name": "speed",
+        "value": 60
+      }
+    ]
+  },
+  "37": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "At the time of birth, it has just one tail. The tail splits from its tip as it grows older.",
+    "height": 6,
+    "weight": 99,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 38
+      },
+      {
+        "name": "attack",
+        "value": 41
+      },
+      {
+        "name": "defense",
+        "value": 40
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "38": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "Very smart and very vengeful. Grabbing one of its many tails could result in a 1000-year curse.",
+    "height": 11,
+    "weight": 199,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 73
+      },
+      {
+        "name": "attack",
+        "value": 76
+      },
+      {
+        "name": "defense",
+        "value": 75
+      },
+      {
+        "name": "special-attack",
+        "value": 81
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 100
+      }
+    ]
+  },
+  "39": {
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "weaknesses": [
+      "poison",
+      "steel"
+    ],
+    "flavorText": "When its huge eyes light up, it sings a mysteriously soothing melody that lulls its enemies to sleep.",
+    "height": 5,
+    "weight": 55,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 115
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 20
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 25
+      },
+      {
+        "name": "speed",
+        "value": 20
+      }
+    ]
+  },
+  "40": {
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "weaknesses": [
+      "poison",
+      "steel"
+    ],
+    "flavorText": "The body is soft and rubbery. When angered, it will suck in air and inflate itself to an enormous size.",
+    "height": 10,
+    "weight": 120,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 140
+      },
+      {
+        "name": "attack",
+        "value": 70
+      },
+      {
+        "name": "defense",
+        "value": 45
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "41": {
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "psychic",
+      "rock"
+    ],
+    "flavorText": "It has no eyes. Instead, it relies on its ultrasonic cries for echolocation to flit about in darkness.",
+    "height": 8,
+    "weight": 75,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 35
+      },
+      {
+        "name": "special-attack",
+        "value": 30
+      },
+      {
+        "name": "special-defense",
+        "value": 40
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "42": {
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "psychic",
+      "rock"
+    ],
+    "flavorText": "Once it strikes, it will not stop draining energy from the victim even if it gets too heavy to fly.",
+    "height": 16,
+    "weight": 550,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "43": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "flavorText": "During the day, it keeps its face buried in the ground. At night, it wanders around sowing its seeds.",
+    "height": 5,
+    "weight": 54,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 75
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "44": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "flavorText": "The fluid that oozes from its mouth isn't drool. It is a nectar that is used to attract prey.",
+    "height": 8,
+    "weight": 86,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "45": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "flavorText": "The larger its petals, the more toxic pollen it contains. Its big head is heavy and hard to hold up.",
+    "height": 12,
+    "weight": 186,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 85
+      },
+      {
+        "name": "special-attack",
+        "value": 110
+      },
+      {
+        "name": "special-defense",
+        "value": 90
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "46": {
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug",
+      "rock"
+    ],
+    "flavorText": "Burrows to suck tree roots. The mushrooms on its back grow by draw­ ing nutrients from the bug host.",
+    "height": 3,
+    "weight": 54,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 70
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 25
+      }
+    ]
+  },
+  "47": {
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug",
+      "rock"
+    ],
+    "flavorText": "It stays mostly in dark, damp places, the preference not of the bug, but of the big mush­ rooms on its back.",
+    "height": 10,
+    "weight": 295,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "48": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "psychic",
+      "rock"
+    ],
+    "flavorText": "Its big eyes are actually clusters of tiny eyes. At night, its kind is drawn by light.",
+    "height": 10,
+    "weight": 300,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 55
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "49": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "psychic",
+      "rock"
+    ],
+    "flavorText": "The dust-like scales covering its wings are color coded to indicate the kinds of poison it has.",
+    "height": 15,
+    "weight": 125,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 90
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "50": {
+    "types": [
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice"
+    ],
+    "flavorText": "Lives about one yard underground where it feeds on plant roots. It sometimes appears above ground.",
+    "height": 2,
+    "weight": 8,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 10
+      },
+      {
+        "name": "attack",
+        "value": 55
+      },
+      {
+        "name": "defense",
+        "value": 25
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 95
+      }
+    ]
+  },
+  "51": {
+    "types": [
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice"
+    ],
+    "flavorText": "A team of DIGLETT triplets. It triggers huge earthquakes by burrowing 60 miles underground.",
+    "height": 7,
+    "weight": 333,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 100
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 120
+      }
+    ]
+  },
+  "52": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "Adores circular objects. Wanders the streets on a nightly basis to look for dropped loose change.",
+    "height": 4,
+    "weight": 42,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 35
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 40
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "53": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "Although its fur has many admirers, it is tough to raise as a pet because of its fickle meanness.",
+    "height": 10,
+    "weight": 320,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 70
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 115
+      }
+    ]
+  },
+  "54": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "While lulling its enemies with its vacant look, this wily POKéMON will use psychokinetic powers.",
+    "height": 8,
+    "weight": 196,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 52
+      },
+      {
+        "name": "defense",
+        "value": 48
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "55": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Often seen swim­ ming elegantly by lake shores. It is often mistaken for the Japanese monster, Kappa.",
+    "height": 17,
+    "weight": 766,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 82
+      },
+      {
+        "name": "defense",
+        "value": 78
+      },
+      {
+        "name": "special-attack",
+        "value": 95
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "56": {
+    "types": [
+      "fighting"
+    ],
+    "weaknesses": [
+      "flying",
+      "psychic",
+      "fairy"
+    ],
+    "flavorText": "Extremely quick to anger. It could be docile one moment then thrashing away the next instant.",
+    "height": 5,
+    "weight": 280,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 35
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "57": {
+    "types": [
+      "fighting"
+    ],
+    "weaknesses": [
+      "flying",
+      "psychic",
+      "fairy"
+    ],
+    "flavorText": "Always furious and tenacious to boot. It will not abandon chasing its quarry until it is caught.",
+    "height": 10,
+    "weight": 320,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 105
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 95
+      }
+    ]
+  },
+  "58": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "Very protective of its territory. It will bark and bite to repel intruders from its space.",
+    "height": 7,
+    "weight": 190,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 70
+      },
+      {
+        "name": "defense",
+        "value": 45
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 60
+      }
+    ]
+  },
+  "59": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "A POKéMON that has been admired since the past for its beauty. It runs agilely as if on wings.",
+    "height": 19,
+    "weight": 1550,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 110
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 95
+      }
+    ]
+  },
+  "60": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Its newly grown legs prevent it from running. It appears to prefer swimming than trying to stand.",
+    "height": 6,
+    "weight": 124,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 40
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 40
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "61": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Capable of living in or out of water. When out of water, it sweats to keep its body slimy.",
+    "height": 10,
+    "weight": 200,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "62": {
+    "types": [
+      "water",
+      "fighting"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "flying",
+      "psychic",
+      "fairy"
+    ],
+    "flavorText": "An adept swimmer at both the front crawl and breast stroke. Easily overtakes the best human swimmers.",
+    "height": 13,
+    "weight": 540,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 90
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "63": {
+    "types": [
+      "psychic"
+    ],
+    "weaknesses": [
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Using its ability to read minds, it will identify impending danger and TELEPORT to safety.",
+    "height": 9,
+    "weight": 195,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 25
+      },
+      {
+        "name": "attack",
+        "value": 20
+      },
+      {
+        "name": "defense",
+        "value": 15
+      },
+      {
+        "name": "special-attack",
+        "value": 105
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "64": {
+    "types": [
+      "psychic"
+    ],
+    "weaknesses": [
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "It emits special alpha waves from its body that induce headaches just by being close by.",
+    "height": 13,
+    "weight": 565,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 35
+      },
+      {
+        "name": "defense",
+        "value": 30
+      },
+      {
+        "name": "special-attack",
+        "value": 120
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 105
+      }
+    ]
+  },
+  "65": {
+    "types": [
+      "psychic"
+    ],
+    "weaknesses": [
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Its brain can out­ perform a super­ computer. Its intelligence quotient is said to be 5,000.",
+    "height": 15,
+    "weight": 480,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 45
+      },
+      {
+        "name": "special-attack",
+        "value": 135
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 120
+      }
+    ]
+  },
+  "66": {
+    "types": [
+      "fighting"
+    ],
+    "weaknesses": [
+      "flying",
+      "psychic",
+      "fairy"
+    ],
+    "flavorText": "Loves to build its muscles. It trains in all styles of martial arts to become even stronger.",
+    "height": 8,
+    "weight": 195,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 35
+      },
+      {
+        "name": "speed",
+        "value": 35
+      }
+    ]
+  },
+  "67": {
+    "types": [
+      "fighting"
+    ],
+    "weaknesses": [
+      "flying",
+      "psychic",
+      "fairy"
+    ],
+    "flavorText": "It happily carries heavy cargo to toughen up. It willingly does hard work for people.",
+    "height": 15,
+    "weight": 705,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 100
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 60
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "68": {
+    "types": [
+      "fighting"
+    ],
+    "weaknesses": [
+      "flying",
+      "psychic",
+      "fairy"
+    ],
+    "flavorText": "Using its heavy muscles, it throws powerful punches that can send the victim clear over the horizon.",
+    "height": 16,
+    "weight": 1300,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 130
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 85
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "69": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "flavorText": "A carnivorous POKéMON that traps and eats bugs. It uses its root feet to soak up needed moisture.",
+    "height": 7,
+    "weight": 40,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 35
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 30
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "70": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "flavorText": "A Pokémon that appears to be a plant. It captures unwary prey by dousing them with a toxic powder.",
+    "height": 10,
+    "weight": 64,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "71": {
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "flavorText": "Said to live in huge colonies deep in jungles, although no one has ever returned from there.",
+    "height": 17,
+    "weight": 155,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 105
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "72": {
+    "types": [
+      "water",
+      "poison"
+    ],
+    "weaknesses": [
+      "electric",
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "Drifts in shallow seas. Anglers who hook them by accident are often punished by its stinging acid.",
+    "height": 9,
+    "weight": 455,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 40
+      },
+      {
+        "name": "defense",
+        "value": 35
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "73": {
+    "types": [
+      "water",
+      "poison"
+    ],
+    "weaknesses": [
+      "electric",
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "The tentacles are normally kept short. On hunts, they are extended to ensnare and immobilize prey.",
+    "height": 16,
+    "weight": 550,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 70
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 80
+      },
+      {
+        "name": "special-defense",
+        "value": 120
+      },
+      {
+        "name": "speed",
+        "value": 100
+      }
+    ]
+  },
+  "74": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice",
+      "fighting",
+      "ground",
+      "steel"
+    ],
+    "flavorText": "Found in fields and mountains. Mistaking them for boulders, people often step or trip on them.",
+    "height": 4,
+    "weight": 200,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 100
+      },
+      {
+        "name": "special-attack",
+        "value": 30
+      },
+      {
+        "name": "special-defense",
+        "value": 30
+      },
+      {
+        "name": "speed",
+        "value": 20
+      }
+    ]
+  },
+  "75": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice",
+      "fighting",
+      "ground",
+      "steel"
+    ],
+    "flavorText": "Rolls down slopes to move. It rolls over any obstacle without slowing or changing its direction.",
+    "height": 10,
+    "weight": 1050,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 115
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 35
+      }
+    ]
+  },
+  "76": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice",
+      "fighting",
+      "ground",
+      "steel"
+    ],
+    "flavorText": "Its boulder-like body is extremely hard. It can easily withstand dynamite blasts without damage.",
+    "height": 14,
+    "weight": 3000,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 120
+      },
+      {
+        "name": "defense",
+        "value": 130
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "77": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "Its hooves are 10 times harder than diamonds. It can trample anything completely flat in little time.",
+    "height": 10,
+    "weight": 300,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 85
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "78": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "Very competitive, this POKéMON will chase anything that moves fast in the hopes of racing it.",
+    "height": 17,
+    "weight": 950,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 100
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 80
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 105
+      }
+    ]
+  },
+  "79": {
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "It is always so absent-minded that it won't react, even if its flavorful tail is bitten.",
+    "height": 12,
+    "weight": 360,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 40
+      },
+      {
+        "name": "speed",
+        "value": 15
+      }
+    ]
+  },
+  "80": {
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "The SHELLDER that is latched onto SLOWPOKE's tail is said to feed on the host's left over scraps.",
+    "height": 16,
+    "weight": 785,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 95
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 110
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "81": {
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "weaknesses": [
+      "fire",
+      "fighting",
+      "ground"
+    ],
+    "flavorText": "Uses anti-gravity to stay suspended. Appears without warning and uses THUNDER WAVE and similar moves.",
+    "height": 3,
+    "weight": 60,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 25
+      },
+      {
+        "name": "attack",
+        "value": 35
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 95
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "82": {
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "weaknesses": [
+      "fire",
+      "fighting",
+      "ground"
+    ],
+    "flavorText": "Formed by several MAGNEMITEs linked together. They frequently appear when sunspots flare up.",
+    "height": 10,
+    "weight": 600,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 60
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 120
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "83": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock"
+    ],
+    "flavorText": "The sprig of green onions it holds is its weapon. It is used much like a metal sword.",
+    "height": 8,
+    "weight": 150,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 52
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 58
+      },
+      {
+        "name": "special-defense",
+        "value": 62
+      },
+      {
+        "name": "speed",
+        "value": 60
+      }
+    ]
+  },
+  "84": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock"
+    ],
+    "flavorText": "A bird that makes up for its poor flying with its fast foot speed. Leaves giant footprints.",
+    "height": 14,
+    "weight": 392,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 85
+      },
+      {
+        "name": "defense",
+        "value": 45
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 35
+      },
+      {
+        "name": "speed",
+        "value": 75
+      }
+    ]
+  },
+  "85": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock"
+    ],
+    "flavorText": "Uses its three brains to execute complex plans. While two heads sleep, one head stays awake.",
+    "height": 18,
+    "weight": 852,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 110
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 60
+      },
+      {
+        "name": "speed",
+        "value": 110
+      }
+    ]
+  },
+  "86": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "The protruding horn on its head is very hard. It is used for bashing through thick ice.",
+    "height": 11,
+    "weight": 900,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "87": {
+    "types": [
+      "water",
+      "ice"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "fighting",
+      "rock"
+    ],
+    "flavorText": "Stores thermal energy in its body. Swims at a steady 8 knots even in intensely cold waters.",
+    "height": 17,
+    "weight": 1200,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 70
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "88": {
+    "types": [
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "Appears in filthy areas. Thrives by sucking up polluted sludge that is pumped out of factories.",
+    "height": 9,
+    "weight": 300,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 25
+      }
+    ]
+  },
+  "89": {
+    "types": [
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "Thickly covered with a filthy, vile sludge. It is so toxic, even its footprints contain poison.",
+    "height": 12,
+    "weight": 300,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 105
+      },
+      {
+        "name": "attack",
+        "value": 105
+      },
+      {
+        "name": "defense",
+        "value": 75
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "90": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Its hard shell repels any kind of attack. It is vulnerable only when its shell is open.",
+    "height": 3,
+    "weight": 40,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 30
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 100
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 25
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "91": {
+    "types": [
+      "water",
+      "ice"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "fighting",
+      "rock"
+    ],
+    "flavorText": "When attacked, it launches its horns in quick volleys. Its innards have never been seen.",
+    "height": 15,
+    "weight": 1325,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 180
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "92": {
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Almost invisible, this gaseous POKéMON cloaks the target and puts it to sleep without notice.",
+    "height": 13,
+    "weight": 1,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 30
+      },
+      {
+        "name": "attack",
+        "value": 35
+      },
+      {
+        "name": "defense",
+        "value": 30
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 35
+      },
+      {
+        "name": "speed",
+        "value": 80
+      }
+    ]
+  },
+  "93": {
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Because of its ability to slip through block walls, it is said to be from an­ other dimension.",
+    "height": 16,
+    "weight": 1,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 45
+      },
+      {
+        "name": "special-attack",
+        "value": 115
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 95
+      }
+    ]
+  },
+  "94": {
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Under a full moon, this POKéMON likes to mimic the shadows of people and laugh at their fright.",
+    "height": 15,
+    "weight": 405,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 130
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 110
+      }
+    ]
+  },
+  "95": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice",
+      "fighting",
+      "ground",
+      "steel"
+    ],
+    "flavorText": "It burrows through the ground at a speed of 50 mph while feeding on large boulders.",
+    "height": 88,
+    "weight": 2100,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 160
+      },
+      {
+        "name": "special-attack",
+        "value": 30
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "96": {
+    "types": [
+      "psychic"
+    ],
+    "weaknesses": [
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Puts enemies to sleep then eats their dreams. Occasionally gets sick from eating bad dreams.",
+    "height": 10,
+    "weight": 324,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 48
+      },
+      {
+        "name": "defense",
+        "value": 45
+      },
+      {
+        "name": "special-attack",
+        "value": 43
+      },
+      {
+        "name": "special-defense",
+        "value": 90
+      },
+      {
+        "name": "speed",
+        "value": 42
+      }
+    ]
+  },
+  "97": {
+    "types": [
+      "psychic"
+    ],
+    "weaknesses": [
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "When it locks eyes with an enemy, it will use a mix of PSI moves such as HYPNOSIS and CONFUSION.",
+    "height": 16,
+    "weight": 756,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 85
+      },
+      {
+        "name": "attack",
+        "value": 73
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 73
+      },
+      {
+        "name": "special-defense",
+        "value": 115
+      },
+      {
+        "name": "speed",
+        "value": 67
+      }
+    ]
+  },
+  "98": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Its pincers are not only powerful weapons, they are used for balance when walking sideways.",
+    "height": 4,
+    "weight": 65,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 30
+      },
+      {
+        "name": "attack",
+        "value": 105
+      },
+      {
+        "name": "defense",
+        "value": 90
+      },
+      {
+        "name": "special-attack",
+        "value": 25
+      },
+      {
+        "name": "special-defense",
+        "value": 25
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "99": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "The large pincer has 10000 hp of crushing power. However, its huge size makes it unwieldy to use.",
+    "height": 13,
+    "weight": 600,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 130
+      },
+      {
+        "name": "defense",
+        "value": 115
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 75
+      }
+    ]
+  },
+  "100": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "Usually found in power plants. Easily mistaken for a POKé BALL, they have zapped many people.",
+    "height": 5,
+    "weight": 104,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 30
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 100
+      }
+    ]
+  },
+  "101": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "It stores electric energy under very high pressure. It often explodes with little or no provocation.",
+    "height": 12,
+    "weight": 666,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 80
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 150
+      }
+    ]
+  },
+  "102": {
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Using telepathy only they can receive, they always form a cluster of six EXEGGCUTE.",
+    "height": 4,
+    "weight": 25,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 40
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "103": {
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Legend has it that on rare occasions, one of its heads will drop off and continue on as an EXEGGCUTE.",
+    "height": 20,
+    "weight": 1200,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 95
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 85
+      },
+      {
+        "name": "special-attack",
+        "value": 125
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "104": {
+    "types": [
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice"
+    ],
+    "flavorText": "Because it never removes its skull helmet, no one has ever seen this POKéMON's real face.",
+    "height": 4,
+    "weight": 65,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 35
+      }
+    ]
+  },
+  "105": {
+    "types": [
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice"
+    ],
+    "flavorText": "The bone it holds is its key weapon. It throws the bone skillfully like a boomerang to KO targets.",
+    "height": 10,
+    "weight": 450,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 110
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "106": {
+    "types": [
+      "fighting"
+    ],
+    "weaknesses": [
+      "flying",
+      "psychic",
+      "fairy"
+    ],
+    "flavorText": "When in a hurry, its legs lengthen progressively. It runs smoothly with extra long, loping strides.",
+    "height": 15,
+    "weight": 498,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 120
+      },
+      {
+        "name": "defense",
+        "value": 53
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 110
+      },
+      {
+        "name": "speed",
+        "value": 87
+      }
+    ]
+  },
+  "107": {
+    "types": [
+      "fighting"
+    ],
+    "weaknesses": [
+      "flying",
+      "psychic",
+      "fairy"
+    ],
+    "flavorText": "The arm-twisting punches it throws pulverize even concrete. It rests after three minutes of fighting.",
+    "height": 14,
+    "weight": 502,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 105
+      },
+      {
+        "name": "defense",
+        "value": 79
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 110
+      },
+      {
+        "name": "speed",
+        "value": 76
+      }
+    ]
+  },
+  "108": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "Its tongue can be extended like a chameleon's. It leaves a tingling sensation when it licks enemies.",
+    "height": 12,
+    "weight": 655,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 55
+      },
+      {
+        "name": "defense",
+        "value": 75
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "109": {
+    "types": [
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "Because it stores several kinds of toxic gases in its body, it is prone to exploding without warning.",
+    "height": 6,
+    "weight": 10,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 35
+      }
+    ]
+  },
+  "110": {
+    "types": [
+      "poison"
+    ],
+    "weaknesses": [
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "Where two kinds of poison gases meet, 2 KOFFINGs can fuse into a WEEZING over many years.",
+    "height": 12,
+    "weight": 95,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 120
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 60
+      }
+    ]
+  },
+  "111": {
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice",
+      "fighting",
+      "ground",
+      "steel"
+    ],
+    "flavorText": "Its massive bones are 1000 times harder than human bones. It can easily knock a trailer flying.",
+    "height": 10,
+    "weight": 1150,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 85
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 30
+      },
+      {
+        "name": "special-defense",
+        "value": 30
+      },
+      {
+        "name": "speed",
+        "value": 25
+      }
+    ]
+  },
+  "112": {
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice",
+      "fighting",
+      "ground",
+      "steel"
+    ],
+    "flavorText": "Protected by an armor-like hide, it is capable of living in molten lava of 3,600 degrees.",
+    "height": 19,
+    "weight": 1200,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 105
+      },
+      {
+        "name": "attack",
+        "value": 130
+      },
+      {
+        "name": "defense",
+        "value": 120
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "113": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "A rare and elusive POKéMON that is said to bring happiness to those who manage to get it.",
+    "height": 11,
+    "weight": 346,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 250
+      },
+      {
+        "name": "attack",
+        "value": 5
+      },
+      {
+        "name": "defense",
+        "value": 5
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 105
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "114": {
+    "types": [
+      "grass"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug"
+    ],
+    "flavorText": "The whole body is swathed with wide vines that are similar to sea­ weed. Its vines shake as it walks.",
+    "height": 10,
+    "weight": 350,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 55
+      },
+      {
+        "name": "defense",
+        "value": 115
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 40
+      },
+      {
+        "name": "speed",
+        "value": 60
+      }
+    ]
+  },
+  "115": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "The infant rarely ventures out of its mother's protective pouch until it is 3 years old.",
+    "height": 22,
+    "weight": 800,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 105
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "116": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Known to shoot down flying bugs with precision blasts of ink from the surface of the water.",
+    "height": 4,
+    "weight": 80,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 30
+      },
+      {
+        "name": "attack",
+        "value": 40
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 25
+      },
+      {
+        "name": "speed",
+        "value": 60
+      }
+    ]
+  },
+  "117": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Capable of swim­ ming backwards by rapidly flapping its wing-like pectoral fins and stout tail.",
+    "height": 12,
+    "weight": 250,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 95
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "118": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Its tail fin billows like an elegant ballroom dress, giving it the nickname of the Water Queen.",
+    "height": 6,
+    "weight": 150,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 67
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 63
+      }
+    ]
+  },
+  "119": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "In autumn, its body becomes more fatty in preparing to propose to a mate. It takes on beautiful colors.",
+    "height": 13,
+    "weight": 390,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 92
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 68
+      }
+    ]
+  },
+  "120": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "An enigmatic POKéMON that can effortlessly regenerate any appendage it loses in battle.",
+    "height": 8,
+    "weight": 345,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 30
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "121": {
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Its central core glows with the seven colors of the rainbow. Some people value the core as a gem.",
+    "height": 11,
+    "weight": 800,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 85
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 85
+      },
+      {
+        "name": "speed",
+        "value": 115
+      }
+    ]
+  },
+  "122": {
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "weaknesses": [
+      "poison",
+      "ghost",
+      "steel"
+    ],
+    "flavorText": "If interrupted while it is miming, it will slap around the offender with its broad hands.",
+    "height": 13,
+    "weight": 545,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 120
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "123": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "weaknesses": [
+      "fire",
+      "electric",
+      "ice",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "With ninja-like agility and speed, it can create the illusion that there is more than one.",
+    "height": 15,
+    "weight": 560,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 110
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 105
+      }
+    ]
+  },
+  "124": {
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "weaknesses": [
+      "fire",
+      "bug",
+      "rock",
+      "ghost",
+      "dark",
+      "steel"
+    ],
+    "flavorText": "It seductively wiggles its hips as it walks. It can cause people to dance in unison with it.",
+    "height": 14,
+    "weight": 406,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 35
+      },
+      {
+        "name": "special-attack",
+        "value": 115
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 95
+      }
+    ]
+  },
+  "125": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "Normally found near power plants, they can wander away and cause major blackouts in cities.",
+    "height": 11,
+    "weight": 300,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 83
+      },
+      {
+        "name": "defense",
+        "value": 57
+      },
+      {
+        "name": "special-attack",
+        "value": 95
+      },
+      {
+        "name": "special-defense",
+        "value": 85
+      },
+      {
+        "name": "speed",
+        "value": 105
+      }
+    ]
+  },
+  "126": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "Its body always burns with an orange glow that enables it to hide perfectly among flames.",
+    "height": 13,
+    "weight": 445,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 57
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 85
+      },
+      {
+        "name": "speed",
+        "value": 93
+      }
+    ]
+  },
+  "127": {
+    "types": [
+      "bug"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "If it fails to crush the victim in its pincers, it will swing it around and toss it hard.",
+    "height": 15,
+    "weight": 550,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 125
+      },
+      {
+        "name": "defense",
+        "value": 100
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "128": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "When it targets an enemy, it charges furiously while whipping its body with its long tails.",
+    "height": 14,
+    "weight": 884,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 100
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 110
+      }
+    ]
+  },
+  "129": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "In the distant past, it was somewhat stronger than the horribly weak descendants that exist today.",
+    "height": 9,
+    "weight": 100,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 20
+      },
+      {
+        "name": "attack",
+        "value": 10
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 15
+      },
+      {
+        "name": "special-defense",
+        "value": 20
+      },
+      {
+        "name": "speed",
+        "value": 80
+      }
+    ]
+  },
+  "130": {
+    "types": [
+      "water",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "rock"
+    ],
+    "flavorText": "Rarely seen in the wild. Huge and vicious, it is capable of destroying entire cities in a rage.",
+    "height": 65,
+    "weight": 2350,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 95
+      },
+      {
+        "name": "attack",
+        "value": 125
+      },
+      {
+        "name": "defense",
+        "value": 79
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 81
+      }
+    ]
+  },
+  "131": {
+    "types": [
+      "water",
+      "ice"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "fighting",
+      "rock"
+    ],
+    "flavorText": "A POKéMON that has been over­ hunted almost to extinction. It can ferry people across the water.",
+    "height": 25,
+    "weight": 2200,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 130
+      },
+      {
+        "name": "attack",
+        "value": 85
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 60
+      }
+    ]
+  },
+  "132": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "When it spots an enemy, its body transfigures into an almost-perfect copy of its opponent.",
+    "height": 3,
+    "weight": 40,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 48
+      },
+      {
+        "name": "attack",
+        "value": 48
+      },
+      {
+        "name": "defense",
+        "value": 48
+      },
+      {
+        "name": "special-attack",
+        "value": 48
+      },
+      {
+        "name": "special-defense",
+        "value": 48
+      },
+      {
+        "name": "speed",
+        "value": 48
+      }
+    ]
+  },
+  "133": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "Its genetic code is irregular. It may mutate if it is exposed to radiation from element STONEs.",
+    "height": 3,
+    "weight": 65,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 55
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "134": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Lives close to water. Its long tail is ridged with a fin which is often mistaken for a mermaid's.",
+    "height": 10,
+    "weight": 290,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 130
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 110
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "135": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "It accumulates negative ions in the atmosphere to blast out 10000- volt lightning bolts.",
+    "height": 8,
+    "weight": 245,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 110
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 130
+      }
+    ]
+  },
+  "136": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "When storing thermal energy in its body, its temperature could soar to over 1600 degrees.",
+    "height": 9,
+    "weight": 250,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 130
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 95
+      },
+      {
+        "name": "special-defense",
+        "value": 110
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "137": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "A POKéMON that consists entirely of programming code. Capable of moving freely in cyberspace.",
+    "height": 8,
+    "weight": 365,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 60
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "138": {
+    "types": [
+      "rock",
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "fighting",
+      "ground"
+    ],
+    "flavorText": "Although long extinct, in rare cases, it can be genetically resurrected from fossils.",
+    "height": 4,
+    "weight": 75,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 40
+      },
+      {
+        "name": "defense",
+        "value": 100
+      },
+      {
+        "name": "special-attack",
+        "value": 90
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 35
+      }
+    ]
+  },
+  "139": {
+    "types": [
+      "rock",
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "fighting",
+      "ground"
+    ],
+    "flavorText": "A prehistoric POKéMON that died out when its heavy shell made it impossible to catch prey.",
+    "height": 10,
+    "weight": 350,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 60
+      },
+      {
+        "name": "defense",
+        "value": 125
+      },
+      {
+        "name": "special-attack",
+        "value": 115
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "140": {
+    "types": [
+      "rock",
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "fighting",
+      "ground"
+    ],
+    "flavorText": "A POKéMON that was resurrected from a fossil found in what was once the ocean floor eons ago.",
+    "height": 5,
+    "weight": 115,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 30
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 90
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "141": {
+    "types": [
+      "rock",
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "fighting",
+      "ground"
+    ],
+    "flavorText": "Kabutops slices its prey apart and sucks out the fluids. The discarded body parts become food for other Pokémon.",
+    "height": 13,
+    "weight": 405,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 115
+      },
+      {
+        "name": "defense",
+        "value": 105
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 80
+      }
+    ]
+  },
+  "142": {
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "weaknesses": [
+      "water",
+      "electric",
+      "ice",
+      "rock",
+      "steel"
+    ],
+    "flavorText": "A ferocious, pre­ historic POKéMON that goes for the enemy's throat with its serrated saw-like fangs.",
+    "height": 18,
+    "weight": 590,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 105
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 130
+      }
+    ]
+  },
+  "143": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "Very lazy. Just eats and sleeps. As its rotund bulk builds, it becomes steadily more slothful.",
+    "height": 21,
+    "weight": 4600,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 160
+      },
+      {
+        "name": "attack",
+        "value": 110
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 110
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "144": {
+    "types": [
+      "ice",
+      "flying"
+    ],
+    "weaknesses": [
+      "fire",
+      "electric",
+      "rock",
+      "steel"
+    ],
+    "flavorText": "A legendary bird POKéMON that is said to appear to doomed people who are lost in icy mountains.",
+    "height": 17,
+    "weight": 554,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 85
+      },
+      {
+        "name": "defense",
+        "value": 100
+      },
+      {
+        "name": "special-attack",
+        "value": 95
+      },
+      {
+        "name": "special-defense",
+        "value": 125
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "145": {
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "weaknesses": [
+      "ice",
+      "rock"
+    ],
+    "flavorText": "A legendary bird POKéMON that is said to appear from clouds while dropping enormous lightning bolts.",
+    "height": 16,
+    "weight": 526,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 85
+      },
+      {
+        "name": "special-attack",
+        "value": 125
+      },
+      {
+        "name": "special-defense",
+        "value": 90
+      },
+      {
+        "name": "speed",
+        "value": 100
+      }
+    ]
+  },
+  "146": {
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "weaknesses": [
+      "water",
+      "electric",
+      "rock"
+    ],
+    "flavorText": "Known as the legendary bird of fire. Every flap of its wings creates a dazzling flash of flames.",
+    "height": 20,
+    "weight": 600,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 100
+      },
+      {
+        "name": "defense",
+        "value": 90
+      },
+      {
+        "name": "special-attack",
+        "value": 125
+      },
+      {
+        "name": "special-defense",
+        "value": 85
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "147": {
+    "types": [
+      "dragon"
+    ],
+    "weaknesses": [
+      "ice",
+      "dragon",
+      "fairy"
+    ],
+    "flavorText": "Long considered a mythical POKéMON until recently when a small colony was found living underwater.",
+    "height": 18,
+    "weight": 33,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 41
+      },
+      {
+        "name": "attack",
+        "value": 64
+      },
+      {
+        "name": "defense",
+        "value": 45
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "148": {
+    "types": [
+      "dragon"
+    ],
+    "weaknesses": [
+      "ice",
+      "dragon",
+      "fairy"
+    ],
+    "flavorText": "A mystical POKéMON that exudes a gentle aura. Has the ability to change climate conditions.",
+    "height": 40,
+    "weight": 165,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 61
+      },
+      {
+        "name": "attack",
+        "value": 84
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "149": {
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "weaknesses": [
+      "ice",
+      "rock",
+      "dragon",
+      "fairy"
+    ],
+    "flavorText": "An extremely rarely seen marine POKéMON. Its intelligence is said to match that of humans.",
+    "height": 22,
+    "weight": 2100,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 91
+      },
+      {
+        "name": "attack",
+        "value": 134
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 80
+      }
+    ]
+  },
+  "150": {
+    "types": [
+      "psychic"
+    ],
+    "weaknesses": [
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "It was created by a scientist after years of horrific gene splicing and DNA engineering experiments.",
+    "height": 20,
+    "weight": 1220,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 106
+      },
+      {
+        "name": "attack",
+        "value": 110
+      },
+      {
+        "name": "defense",
+        "value": 90
+      },
+      {
+        "name": "special-attack",
+        "value": 154
+      },
+      {
+        "name": "special-defense",
+        "value": 90
+      },
+      {
+        "name": "speed",
+        "value": 130
+      }
+    ]
+  },
+  "151": {
+    "types": [
+      "psychic"
+    ],
+    "weaknesses": [
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "So rare that it is still said to be a mirage by many experts. Only a few people have seen it worldwide.",
+    "height": 4,
+    "weight": 40,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 100
+      },
+      {
+        "name": "attack",
+        "value": 100
+      },
+      {
+        "name": "defense",
+        "value": 100
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 100
+      }
+    ]
+  },
+  "152": {
+    "types": [
+      "grass"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug"
+    ],
+    "flavorText": "It uses the leaf on its head to determine the temperature and humidity. It loves to sunbathe.",
+    "height": 9,
+    "weight": 64,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 49
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 49
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "153": {
+    "types": [
+      "grass"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug"
+    ],
+    "flavorText": "The scent of spices comes from around its neck. Somehow, sniffing it makes you want to fight.",
+    "height": 12,
+    "weight": 158,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 62
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 63
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 60
+      }
+    ]
+  },
+  "154": {
+    "types": [
+      "grass"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug"
+    ],
+    "flavorText": "The aroma that rises from its petals contains a substance that calms aggressive feelings.",
+    "height": 18,
+    "weight": 1005,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 82
+      },
+      {
+        "name": "defense",
+        "value": 100
+      },
+      {
+        "name": "special-attack",
+        "value": 83
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 80
+      }
+    ]
+  },
+  "155": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "It is timid, and always curls it­ self up in a ball. If attacked, it flares up its back for protection.",
+    "height": 5,
+    "weight": 79,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 39
+      },
+      {
+        "name": "attack",
+        "value": 52
+      },
+      {
+        "name": "defense",
+        "value": 43
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "156": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "Be careful if it turns its back during battle. It means that it will attack with the fire on its back.",
+    "height": 9,
+    "weight": 190,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 58
+      },
+      {
+        "name": "attack",
+        "value": 64
+      },
+      {
+        "name": "defense",
+        "value": 58
+      },
+      {
+        "name": "special-attack",
+        "value": 80
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 80
+      }
+    ]
+  },
+  "157": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "If its rage peaks, it becomes so hot that anything that touches it will instantly go up in flames.",
+    "height": 17,
+    "weight": 795,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 78
+      },
+      {
+        "name": "attack",
+        "value": 84
+      },
+      {
+        "name": "defense",
+        "value": 78
+      },
+      {
+        "name": "special-attack",
+        "value": 109
+      },
+      {
+        "name": "special-defense",
+        "value": 85
+      },
+      {
+        "name": "speed",
+        "value": 100
+      }
+    ]
+  },
+  "158": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Its well-developed jaws are powerful and capable of crushing anything. Even its trainer must be careful.",
+    "height": 6,
+    "weight": 95,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 64
+      },
+      {
+        "name": "special-attack",
+        "value": 44
+      },
+      {
+        "name": "special-defense",
+        "value": 48
+      },
+      {
+        "name": "speed",
+        "value": 43
+      }
+    ]
+  },
+  "159": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "If it loses a fang, a new one grows back in its place. There are always 48 fangs lining its mouth.",
+    "height": 11,
+    "weight": 250,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 59
+      },
+      {
+        "name": "special-defense",
+        "value": 63
+      },
+      {
+        "name": "speed",
+        "value": 58
+      }
+    ]
+  },
+  "160": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "When it bites with its massive and powerful jaws, it shakes its head and savagely tears its victim up.",
+    "height": 23,
+    "weight": 888,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 85
+      },
+      {
+        "name": "attack",
+        "value": 105
+      },
+      {
+        "name": "defense",
+        "value": 100
+      },
+      {
+        "name": "special-attack",
+        "value": 79
+      },
+      {
+        "name": "special-defense",
+        "value": 83
+      },
+      {
+        "name": "speed",
+        "value": 78
+      }
+    ]
+  },
+  "161": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "It has a very nervous nature. It stands up high on its tail so it can scan wide areas.",
+    "height": 8,
+    "weight": 60,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 46
+      },
+      {
+        "name": "defense",
+        "value": 34
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 20
+      }
+    ]
+  },
+  "162": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "It makes a nest to suit its long and skinny body. The nest is impossible for other POKéMON to enter.",
+    "height": 18,
+    "weight": 325,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 85
+      },
+      {
+        "name": "attack",
+        "value": 76
+      },
+      {
+        "name": "defense",
+        "value": 64
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "163": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock"
+    ],
+    "flavorText": "It always stands on one foot. It changes feet so fast, the movement can rarely be seen.",
+    "height": 7,
+    "weight": 212,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 30
+      },
+      {
+        "name": "defense",
+        "value": 30
+      },
+      {
+        "name": "special-attack",
+        "value": 36
+      },
+      {
+        "name": "special-defense",
+        "value": 56
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "164": {
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock"
+    ],
+    "flavorText": "Its eyes are specially adapted. They concentrate even faint light and enable it to see in the dark.",
+    "height": 16,
+    "weight": 408,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 100
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 86
+      },
+      {
+        "name": "special-defense",
+        "value": 96
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "165": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "weaknesses": [
+      "fire",
+      "electric",
+      "ice",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "It is very timid. It will be afraid to move if it is alone. But it will be active if it is in a group.",
+    "height": 10,
+    "weight": 108,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 20
+      },
+      {
+        "name": "defense",
+        "value": 30
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "166": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "weaknesses": [
+      "fire",
+      "electric",
+      "ice",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "When the stars flicker in the night sky, it flutters about, scattering a glowing powder.",
+    "height": 14,
+    "weight": 356,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 35
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 110
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "167": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "psychic",
+      "rock"
+    ],
+    "flavorText": "It lies still in the same pose for days in its web, waiting for its unsuspecting prey to wander close.",
+    "height": 5,
+    "weight": 85,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 60
+      },
+      {
+        "name": "defense",
+        "value": 40
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 40
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "168": {
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "psychic",
+      "rock"
+    ],
+    "flavorText": "It spins string not only from its rear but also from its mouth. It is hard to tell which end is which.",
+    "height": 11,
+    "weight": 335,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "169": {
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "psychic",
+      "rock"
+    ],
+    "flavorText": "Having four wings allows it to fly more quickly and quietly so it can sneak up on prey without its noticing.",
+    "height": 18,
+    "weight": 750,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 85
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 130
+      }
+    ]
+  },
+  "170": {
+    "types": [
+      "water",
+      "electric"
+    ],
+    "weaknesses": [
+      "grass",
+      "ground"
+    ],
+    "flavorText": "It shoots positive and negative elec­ tricity between the tips of its two antennae and zaps its enemies.",
+    "height": 5,
+    "weight": 120,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 38
+      },
+      {
+        "name": "defense",
+        "value": 38
+      },
+      {
+        "name": "special-attack",
+        "value": 56
+      },
+      {
+        "name": "special-defense",
+        "value": 56
+      },
+      {
+        "name": "speed",
+        "value": 67
+      }
+    ]
+  },
+  "171": {
+    "types": [
+      "water",
+      "electric"
+    ],
+    "weaknesses": [
+      "grass",
+      "ground"
+    ],
+    "flavorText": "The light it emits is so bright that it can illuminate the sea's surface from a depth of over three miles.",
+    "height": 12,
+    "weight": 225,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 125
+      },
+      {
+        "name": "attack",
+        "value": 58
+      },
+      {
+        "name": "defense",
+        "value": 58
+      },
+      {
+        "name": "special-attack",
+        "value": 76
+      },
+      {
+        "name": "special-defense",
+        "value": 76
+      },
+      {
+        "name": "speed",
+        "value": 67
+      }
+    ]
+  },
+  "172": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "It is not yet skilled at storing electricity. It may send out a jolt if amused or startled.",
+    "height": 3,
+    "weight": 20,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 20
+      },
+      {
+        "name": "attack",
+        "value": 40
+      },
+      {
+        "name": "defense",
+        "value": 15
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 35
+      },
+      {
+        "name": "speed",
+        "value": 60
+      }
+    ]
+  },
+  "173": {
+    "types": [
+      "fairy"
+    ],
+    "weaknesses": [
+      "poison",
+      "steel"
+    ],
+    "flavorText": "Because of its unusual, star-like silhouette, people believe that it came here on a meteor.",
+    "height": 3,
+    "weight": 30,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 25
+      },
+      {
+        "name": "defense",
+        "value": 28
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 15
+      }
+    ]
+  },
+  "174": {
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "weaknesses": [
+      "poison",
+      "steel"
+    ],
+    "flavorText": "It has a very soft body. If it starts to roll, it will bounce all over and be impossible to stop.",
+    "height": 3,
+    "weight": 10,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 30
+      },
+      {
+        "name": "defense",
+        "value": 15
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 20
+      },
+      {
+        "name": "speed",
+        "value": 15
+      }
+    ]
+  },
+  "175": {
+    "types": [
+      "fairy"
+    ],
+    "weaknesses": [
+      "poison",
+      "steel"
+    ],
+    "flavorText": "The shell seems to be filled with joy. It is said that it will share good luck when treated kindly.",
+    "height": 3,
+    "weight": 15,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 20
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 20
+      }
+    ]
+  },
+  "176": {
+    "types": [
+      "fairy",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "poison",
+      "rock",
+      "steel"
+    ],
+    "flavorText": "To share its happiness, it flies around the world seeking kind- hearted people.",
+    "height": 6,
+    "weight": 32,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 40
+      },
+      {
+        "name": "defense",
+        "value": 85
+      },
+      {
+        "name": "special-attack",
+        "value": 80
+      },
+      {
+        "name": "special-defense",
+        "value": 105
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "177": {
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Because its wings aren't yet fully grown, it has to hop to get around. It is always star­ ing at something.",
+    "height": 2,
+    "weight": 20,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 45
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "178": {
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "They say that it stays still and quiet because it is seeing both the past and future at the same time.",
+    "height": 15,
+    "weight": 150,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 95
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 95
+      }
+    ]
+  },
+  "179": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "If static elec­ tricity builds in its body, its fleece doubles in volume. Touching it will shock you.",
+    "height": 6,
+    "weight": 78,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 40
+      },
+      {
+        "name": "defense",
+        "value": 40
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 35
+      }
+    ]
+  },
+  "180": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "As a result of storing too much electricity, it developed patches where even downy wool won't grow.",
+    "height": 8,
+    "weight": 133,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 55
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 80
+      },
+      {
+        "name": "special-defense",
+        "value": 60
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "181": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "The tail's tip shines brightly and can be seen from far away. It acts as a beacon for lost people.",
+    "height": 14,
+    "weight": 615,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 85
+      },
+      {
+        "name": "special-attack",
+        "value": 115
+      },
+      {
+        "name": "special-defense",
+        "value": 90
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "182": {
+    "types": [
+      "grass"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug"
+    ],
+    "flavorText": "BELLOSSOM gather at times and appear to dance. They say that the dance is a ritual to summon the sun.",
+    "height": 4,
+    "weight": 58,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 90
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "183": {
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "poison"
+    ],
+    "flavorText": "The tip of its tail, which con­ tains oil that is lighter than wa­ ter, lets it swim without drowning.",
+    "height": 4,
+    "weight": 85,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 20
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 20
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "184": {
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "poison"
+    ],
+    "flavorText": "By keeping still and listening in­ tently, it can tell what is in even wild, fast- moving rivers.",
+    "height": 8,
+    "weight": 285,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 100
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "185": {
+    "types": [
+      "rock"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "fighting",
+      "ground",
+      "steel"
+    ],
+    "flavorText": "Despite appearing to be a tree, its body is closer to rocks and stones. It is very weak to water.",
+    "height": 12,
+    "weight": 380,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 100
+      },
+      {
+        "name": "defense",
+        "value": 115
+      },
+      {
+        "name": "special-attack",
+        "value": 30
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "186": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "If POLIWAG and POLIWHIRL hear its echoing cry, they respond by gather­ ing from far and wide.",
+    "height": 11,
+    "weight": 339,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 75
+      },
+      {
+        "name": "special-attack",
+        "value": 90
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "187": {
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "To keep from being blown away by the wind, they gather in clusters. They do enjoy gentle breezes, though.",
+    "height": 4,
+    "weight": 5,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 35
+      },
+      {
+        "name": "defense",
+        "value": 40
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "188": {
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "The bloom on top of its head opens and closes as the temperature fluc­ tuates up and down.",
+    "height": 6,
+    "weight": 10,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 80
+      }
+    ]
+  },
+  "189": {
+    "types": [
+      "grass",
+      "flying"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "Blown by seasonal winds, it circles the globe, scattering cotton spores as it goes.",
+    "height": 8,
+    "weight": 30,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 55
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 110
+      }
+    ]
+  },
+  "190": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "Its tail is so powerful that it can use it to grab a tree branch and hold itself up in the air.",
+    "height": 8,
+    "weight": 115,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 70
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "191": {
+    "types": [
+      "grass"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug"
+    ],
+    "flavorText": "It may drop out of the sky suddenly. If attacked by a SPEAROW, it will violently shake its leaves.",
+    "height": 3,
+    "weight": 18,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 30
+      },
+      {
+        "name": "attack",
+        "value": 30
+      },
+      {
+        "name": "defense",
+        "value": 30
+      },
+      {
+        "name": "special-attack",
+        "value": 30
+      },
+      {
+        "name": "special-defense",
+        "value": 30
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "192": {
+    "types": [
+      "grass"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug"
+    ],
+    "flavorText": "It converts sun­ light into energy. In the darkness after sunset, it closes its petals and becomes still.",
+    "height": 8,
+    "weight": 85,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 105
+      },
+      {
+        "name": "special-defense",
+        "value": 85
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "193": {
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "weaknesses": [
+      "fire",
+      "electric",
+      "ice",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "If it flaps its wings really fast, it can generate shock waves that will shatter win­ dows in the area.",
+    "height": 12,
+    "weight": 380,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 45
+      },
+      {
+        "name": "special-attack",
+        "value": 75
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 95
+      }
+    ]
+  },
+  "194": {
+    "types": [
+      "water",
+      "ground"
+    ],
+    "weaknesses": [
+      "grass"
+    ],
+    "flavorText": "This POKéMON lives in cold water. It will leave the water to search for food when it gets cold outside.",
+    "height": 4,
+    "weight": 85,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 45
+      },
+      {
+        "name": "defense",
+        "value": 45
+      },
+      {
+        "name": "special-attack",
+        "value": 25
+      },
+      {
+        "name": "special-defense",
+        "value": 25
+      },
+      {
+        "name": "speed",
+        "value": 15
+      }
+    ]
+  },
+  "195": {
+    "types": [
+      "water",
+      "ground"
+    ],
+    "weaknesses": [
+      "grass"
+    ],
+    "flavorText": "This carefree POKéMON has an easy-going nature. While swimming, it always bumps into boat hulls.",
+    "height": 14,
+    "weight": 750,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 95
+      },
+      {
+        "name": "attack",
+        "value": 85
+      },
+      {
+        "name": "defense",
+        "value": 85
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 35
+      }
+    ]
+  },
+  "196": {
+    "types": [
+      "psychic"
+    ],
+    "weaknesses": [
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Its fur is so sensitive, it can sense minute shifts in the air and predict the weather.",
+    "height": 9,
+    "weight": 265,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 130
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 110
+      }
+    ]
+  },
+  "197": {
+    "types": [
+      "dark"
+    ],
+    "weaknesses": [
+      "fighting",
+      "bug",
+      "fairy"
+    ],
+    "flavorText": "When agitated, this POKéMON pro­ tects itself by spraying poisonous sweat from its pores.",
+    "height": 10,
+    "weight": 270,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 95
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 110
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 130
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "198": {
+    "types": [
+      "dark",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock",
+      "fairy"
+    ],
+    "flavorText": "Feared and loathed by many, it is believed to bring misfortune to all those who see it at night.",
+    "height": 5,
+    "weight": 21,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 85
+      },
+      {
+        "name": "defense",
+        "value": 42
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 42
+      },
+      {
+        "name": "speed",
+        "value": 91
+      }
+    ]
+  },
+  "199": {
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "It has incredible intellect and in­ tuition. Whatever the situation, it remains calm and collected.",
+    "height": 20,
+    "weight": 795,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 95
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 110
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "200": {
+    "types": [
+      "ghost"
+    ],
+    "weaknesses": [
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "It likes playing mischievous tricks such as screaming and wailing to startle people at night.",
+    "height": 7,
+    "weight": 10,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 60
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 85
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "201": {
+    "types": [
+      "psychic"
+    ],
+    "weaknesses": [
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "Their shapes look like hieroglyphs on ancient tab­ lets. It is said that the two are somehow related.",
+    "height": 5,
+    "weight": 50,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 48
+      },
+      {
+        "name": "attack",
+        "value": 72
+      },
+      {
+        "name": "defense",
+        "value": 48
+      },
+      {
+        "name": "special-attack",
+        "value": 72
+      },
+      {
+        "name": "special-defense",
+        "value": 48
+      },
+      {
+        "name": "speed",
+        "value": 48
+      }
+    ]
+  },
+  "202": {
+    "types": [
+      "psychic"
+    ],
+    "weaknesses": [
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "It hates light and shock. If attack­ ed, it inflates its body to pump up its counter­ strike.",
+    "height": 13,
+    "weight": 285,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 190
+      },
+      {
+        "name": "attack",
+        "value": 33
+      },
+      {
+        "name": "defense",
+        "value": 58
+      },
+      {
+        "name": "special-attack",
+        "value": 33
+      },
+      {
+        "name": "special-defense",
+        "value": 58
+      },
+      {
+        "name": "speed",
+        "value": 33
+      }
+    ]
+  },
+  "203": {
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "weaknesses": [
+      "bug",
+      "dark"
+    ],
+    "flavorText": "Its tail has a small brain of its own. Beware! If you get close, it may react to your scent and bite.",
+    "height": 15,
+    "weight": 415,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 65
+      },
+      {
+        "name": "special-attack",
+        "value": 90
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "204": {
+    "types": [
+      "bug"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "rock"
+    ],
+    "flavorText": "It likes to make its shell thicker by adding layers of tree bark. The additional weight doesn't bother it.",
+    "height": 6,
+    "weight": 72,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 90
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 35
+      },
+      {
+        "name": "speed",
+        "value": 15
+      }
+    ]
+  },
+  "205": {
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "weaknesses": [
+      "fire"
+    ],
+    "flavorText": "Its entire body is shielded by a steel-hard shell. What lurks inside the armor is a total mystery.",
+    "height": 12,
+    "weight": 1258,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 140
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 60
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "206": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "When spotted, this POKéMON escapes backward by furi­ ously boring into the ground with its tail.",
+    "height": 15,
+    "weight": 140,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 100
+      },
+      {
+        "name": "attack",
+        "value": 70
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "207": {
+    "types": [
+      "ground",
+      "flying"
+    ],
+    "weaknesses": [
+      "water",
+      "ice"
+    ],
+    "flavorText": "It flies straight at its target's face then clamps down on the star­ tled victim to inject poison.",
+    "height": 11,
+    "weight": 648,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 105
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "208": {
+    "types": [
+      "steel",
+      "ground"
+    ],
+    "weaknesses": [
+      "fire",
+      "water",
+      "fighting",
+      "ground"
+    ],
+    "flavorText": "Its body has been compressed deep under the ground. As a result, it is even harder than a diamond.",
+    "height": 92,
+    "weight": 4000,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 85
+      },
+      {
+        "name": "defense",
+        "value": 200
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "209": {
+    "types": [
+      "fairy"
+    ],
+    "weaknesses": [
+      "poison",
+      "steel"
+    ],
+    "flavorText": "Although it looks frightening, it is actually kind and affectionate. It is very popular among women.",
+    "height": 6,
+    "weight": 78,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 40
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "210": {
+    "types": [
+      "fairy"
+    ],
+    "weaknesses": [
+      "poison",
+      "steel"
+    ],
+    "flavorText": "It is actually timid and easily spooked. If at­ tacked, it flails about to fend off its attacker.",
+    "height": 14,
+    "weight": 487,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 120
+      },
+      {
+        "name": "defense",
+        "value": 75
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 60
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "211": {
+    "types": [
+      "water",
+      "poison"
+    ],
+    "weaknesses": [
+      "electric",
+      "ground",
+      "psychic"
+    ],
+    "flavorText": "To fire its poison spikes, it must inflate its body by drinking over 2.6 gallons of water all at once.",
+    "height": 5,
+    "weight": 39,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 85
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "212": {
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "weaknesses": [
+      "fire"
+    ],
+    "flavorText": "It swings its eye- patterned pincers up to scare its foes. This makes it look like it has three heads.",
+    "height": 18,
+    "weight": 1180,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 130
+      },
+      {
+        "name": "defense",
+        "value": 100
+      },
+      {
+        "name": "special-attack",
+        "value": 55
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "213": {
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "weaknesses": [
+      "water",
+      "rock",
+      "steel"
+    ],
+    "flavorText": "The BERRIES it stores in its vase-like shell decompose and become a gooey liquid.",
+    "height": 6,
+    "weight": 205,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 20
+      },
+      {
+        "name": "attack",
+        "value": 10
+      },
+      {
+        "name": "defense",
+        "value": 230
+      },
+      {
+        "name": "special-attack",
+        "value": 10
+      },
+      {
+        "name": "special-defense",
+        "value": 230
+      },
+      {
+        "name": "speed",
+        "value": 5
+      }
+    ]
+  },
+  "214": {
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "weaknesses": [
+      "fire",
+      "flying",
+      "psychic",
+      "fairy"
+    ],
+    "flavorText": "This powerful POKéMON thrusts its prized horn under its enemies’ bellies then lifts and throws them.",
+    "height": 15,
+    "weight": 540,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 80
+      },
+      {
+        "name": "attack",
+        "value": 125
+      },
+      {
+        "name": "defense",
+        "value": 75
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "215": {
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "weaknesses": [
+      "fire",
+      "fighting",
+      "bug",
+      "rock",
+      "steel",
+      "fairy"
+    ],
+    "flavorText": "Its paws conceal sharp claws. If attacked, it sud­ denly extends the claws and startles its enemy.",
+    "height": 9,
+    "weight": 280,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 55
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 115
+      }
+    ]
+  },
+  "216": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "If it finds honey, its crescent mark glows. It always licks its paws because they are soaked with honey.",
+    "height": 6,
+    "weight": 88,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 50
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "217": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "Although it is a good climber, it prefers to snap trees with its forelegs and eat fallen BERRIES.",
+    "height": 18,
+    "weight": 1258,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 130
+      },
+      {
+        "name": "defense",
+        "value": 75
+      },
+      {
+        "name": "special-attack",
+        "value": 75
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "218": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "Its body is made of magma. If it doesn’t keep moving, its body will cool and harden.",
+    "height": 7,
+    "weight": 350,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 40
+      },
+      {
+        "name": "attack",
+        "value": 40
+      },
+      {
+        "name": "defense",
+        "value": 40
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 40
+      },
+      {
+        "name": "speed",
+        "value": 20
+      }
+    ]
+  },
+  "219": {
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "weaknesses": [
+      "water",
+      "fighting",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "The shell on its back is just skin that has cooled and hardened. It breaks easily with a slight touch.",
+    "height": 8,
+    "weight": 550,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 60
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 120
+      },
+      {
+        "name": "special-attack",
+        "value": 90
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 30
+      }
+    ]
+  },
+  "220": {
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "weaknesses": [
+      "fire",
+      "water",
+      "grass",
+      "fighting",
+      "steel"
+    ],
+    "flavorText": "It rubs its snout on the ground to find and dig up food. It sometimes discovers hot springs.",
+    "height": 4,
+    "weight": 65,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 50
+      },
+      {
+        "name": "defense",
+        "value": 40
+      },
+      {
+        "name": "special-attack",
+        "value": 30
+      },
+      {
+        "name": "special-defense",
+        "value": 30
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "221": {
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "weaknesses": [
+      "fire",
+      "water",
+      "grass",
+      "fighting",
+      "steel"
+    ],
+    "flavorText": "Although its legs are short, its rugged hooves prevent it from slipping, even on icy ground.",
+    "height": 11,
+    "weight": 558,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 100
+      },
+      {
+        "name": "attack",
+        "value": 100
+      },
+      {
+        "name": "defense",
+        "value": 80
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 60
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "222": {
+    "types": [
+      "water",
+      "rock"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass",
+      "fighting",
+      "ground"
+    ],
+    "flavorText": "It continuously sheds and grows. The tip of its head is prized as a treasure for its beauty.",
+    "height": 6,
+    "weight": 50,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 55
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 35
+      }
+    ]
+  },
+  "223": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "It has superb ac­ curacy. The water it shoots out can strike even moving prey from more than 300 feet.",
+    "height": 6,
+    "weight": 120,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 65
+      },
+      {
+        "name": "defense",
+        "value": 35
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 35
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "224": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "It traps enemies with its suction- cupped tentacles then smashes them with its rock-hard head.",
+    "height": 9,
+    "weight": 285,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 105
+      },
+      {
+        "name": "defense",
+        "value": 75
+      },
+      {
+        "name": "special-attack",
+        "value": 105
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 45
+      }
+    ]
+  },
+  "225": {
+    "types": [
+      "ice",
+      "flying"
+    ],
+    "weaknesses": [
+      "fire",
+      "electric",
+      "rock",
+      "steel"
+    ],
+    "flavorText": "It carries food all day long. There are tales about lost people who were saved by the food it had.",
+    "height": 9,
+    "weight": 160,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 55
+      },
+      {
+        "name": "defense",
+        "value": 45
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 75
+      }
+    ]
+  },
+  "226": {
+    "types": [
+      "water",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "rock"
+    ],
+    "flavorText": "As it majestically swims, it doesn't care if REMORAID attach to it for scavenging its leftovers.",
+    "height": 21,
+    "weight": 2200,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 85
+      },
+      {
+        "name": "attack",
+        "value": 40
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 80
+      },
+      {
+        "name": "special-defense",
+        "value": 140
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "227": {
+    "types": [
+      "steel",
+      "flying"
+    ],
+    "weaknesses": [
+      "fire",
+      "electric"
+    ],
+    "flavorText": "Its sturdy wings look heavy, but they are actually hollow and light, allowing it to fly freely in the sky.",
+    "height": 17,
+    "weight": 505,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 65
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 140
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "228": {
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "fighting",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "It uses different kinds of cries for communicating with others of its kind and for pursuing its prey.",
+    "height": 6,
+    "weight": 108,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 60
+      },
+      {
+        "name": "defense",
+        "value": 30
+      },
+      {
+        "name": "special-attack",
+        "value": 80
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "229": {
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "fighting",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "If you are burned by the flames it shoots from its mouth, the pain will never go away.",
+    "height": 14,
+    "weight": 350,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 110
+      },
+      {
+        "name": "special-defense",
+        "value": 80
+      },
+      {
+        "name": "speed",
+        "value": 95
+      }
+    ]
+  },
+  "230": {
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "weaknesses": [
+      "dragon",
+      "fairy"
+    ],
+    "flavorText": "It is said that it usually hides in underwater caves. It can create whirlpools by yawning.",
+    "height": 18,
+    "weight": 1520,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 75
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 95
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "231": {
+    "types": [
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice"
+    ],
+    "flavorText": "It swings its long snout around play­ fully, but because it is so strong, that can be dan­ gerous.",
+    "height": 5,
+    "weight": 335,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 60
+      },
+      {
+        "name": "defense",
+        "value": 60
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 40
+      },
+      {
+        "name": "speed",
+        "value": 40
+      }
+    ]
+  },
+  "232": {
+    "types": [
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice"
+    ],
+    "flavorText": "It has sharp, hard tusks and a rugged hide. Its TACKLE is strong enough to knock down a house.",
+    "height": 11,
+    "weight": 1200,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 120
+      },
+      {
+        "name": "defense",
+        "value": 120
+      },
+      {
+        "name": "special-attack",
+        "value": 60
+      },
+      {
+        "name": "special-defense",
+        "value": 60
+      },
+      {
+        "name": "speed",
+        "value": 50
+      }
+    ]
+  },
+  "233": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "This upgraded version of PORYGON is designed for space exploration. It can't fly, though.",
+    "height": 6,
+    "weight": 325,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 85
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 90
+      },
+      {
+        "name": "special-attack",
+        "value": 105
+      },
+      {
+        "name": "special-defense",
+        "value": 95
+      },
+      {
+        "name": "speed",
+        "value": 60
+      }
+    ]
+  },
+  "234": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "The curved antlers subtly change the flow of air to create a strange space where real­ ity is distorted.",
+    "height": 14,
+    "weight": 712,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 73
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 62
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "235": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "A special fluid oozes from the tip of its tail. It paints the fluid everywhere to mark its territory.",
+    "height": 12,
+    "weight": 580,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 55
+      },
+      {
+        "name": "attack",
+        "value": 20
+      },
+      {
+        "name": "defense",
+        "value": 35
+      },
+      {
+        "name": "special-attack",
+        "value": 20
+      },
+      {
+        "name": "special-defense",
+        "value": 45
+      },
+      {
+        "name": "speed",
+        "value": 75
+      }
+    ]
+  },
+  "236": {
+    "types": [
+      "fighting"
+    ],
+    "weaknesses": [
+      "flying",
+      "psychic",
+      "fairy"
+    ],
+    "flavorText": "It is always bursting with en­ ergy. To make it­ self stronger, it keeps on fighting even if it loses.",
+    "height": 7,
+    "weight": 210,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 35
+      },
+      {
+        "name": "attack",
+        "value": 35
+      },
+      {
+        "name": "defense",
+        "value": 35
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 35
+      },
+      {
+        "name": "speed",
+        "value": 35
+      }
+    ]
+  },
+  "237": {
+    "types": [
+      "fighting"
+    ],
+    "weaknesses": [
+      "flying",
+      "psychic",
+      "fairy"
+    ],
+    "flavorText": "If you become enchanted by its smooth, elegant, dance-like kicks, you may get drilled hard.",
+    "height": 14,
+    "weight": 480,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 95
+      },
+      {
+        "name": "defense",
+        "value": 95
+      },
+      {
+        "name": "special-attack",
+        "value": 35
+      },
+      {
+        "name": "special-defense",
+        "value": 110
+      },
+      {
+        "name": "speed",
+        "value": 70
+      }
+    ]
+  },
+  "238": {
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "weaknesses": [
+      "fire",
+      "bug",
+      "rock",
+      "ghost",
+      "dark",
+      "steel"
+    ],
+    "flavorText": "Its lips are the most sensitive parts on its body. It always uses its lips first to examine things.",
+    "height": 4,
+    "weight": 60,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 30
+      },
+      {
+        "name": "defense",
+        "value": 15
+      },
+      {
+        "name": "special-attack",
+        "value": 85
+      },
+      {
+        "name": "special-defense",
+        "value": 65
+      },
+      {
+        "name": "speed",
+        "value": 65
+      }
+    ]
+  },
+  "239": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "It rotates its arms to generate electricity, but it tires easily, so it charges up only a little bit.",
+    "height": 6,
+    "weight": 235,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 63
+      },
+      {
+        "name": "defense",
+        "value": 37
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 95
+      }
+    ]
+  },
+  "240": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "Each and every time it inhales and exhales, hot embers dribble out of its mouth and nostrils.",
+    "height": 7,
+    "weight": 214,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 45
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 37
+      },
+      {
+        "name": "special-attack",
+        "value": 70
+      },
+      {
+        "name": "special-defense",
+        "value": 55
+      },
+      {
+        "name": "speed",
+        "value": 83
+      }
+    ]
+  },
+  "241": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "Its milk is packed with nutrition, making it the ultimate beverage for the sick or weary.",
+    "height": 12,
+    "weight": 755,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 95
+      },
+      {
+        "name": "attack",
+        "value": 80
+      },
+      {
+        "name": "defense",
+        "value": 105
+      },
+      {
+        "name": "special-attack",
+        "value": 40
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 100
+      }
+    ]
+  },
+  "242": {
+    "types": [
+      "normal"
+    ],
+    "weaknesses": [
+      "fighting"
+    ],
+    "flavorText": "Anyone who takes even one bite of BLISSEY's egg be­ comes unfailingly caring and pleas­ ant to everyone.",
+    "height": 15,
+    "weight": 468,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 255
+      },
+      {
+        "name": "attack",
+        "value": 10
+      },
+      {
+        "name": "defense",
+        "value": 10
+      },
+      {
+        "name": "special-attack",
+        "value": 75
+      },
+      {
+        "name": "special-defense",
+        "value": 135
+      },
+      {
+        "name": "speed",
+        "value": 55
+      }
+    ]
+  },
+  "243": {
+    "types": [
+      "electric"
+    ],
+    "weaknesses": [
+      "ground"
+    ],
+    "flavorText": "The rain clouds it carries let it fire thunderbolts at will. They say that it descended with lightning.",
+    "height": 19,
+    "weight": 1780,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 90
+      },
+      {
+        "name": "attack",
+        "value": 85
+      },
+      {
+        "name": "defense",
+        "value": 75
+      },
+      {
+        "name": "special-attack",
+        "value": 115
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 115
+      }
+    ]
+  },
+  "244": {
+    "types": [
+      "fire"
+    ],
+    "weaknesses": [
+      "water",
+      "ground",
+      "rock"
+    ],
+    "flavorText": "Volcanoes erupt when it barks. Un­ able to restrain its extreme power, it races headlong around the land.",
+    "height": 21,
+    "weight": 1980,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 115
+      },
+      {
+        "name": "attack",
+        "value": 115
+      },
+      {
+        "name": "defense",
+        "value": 85
+      },
+      {
+        "name": "special-attack",
+        "value": 90
+      },
+      {
+        "name": "special-defense",
+        "value": 75
+      },
+      {
+        "name": "speed",
+        "value": 100
+      }
+    ]
+  },
+  "245": {
+    "types": [
+      "water"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
+    ],
+    "flavorText": "Said to be the reincarnation of north winds, it can instantly purify filthy, murky water.",
+    "height": 20,
+    "weight": 1870,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 100
+      },
+      {
+        "name": "attack",
+        "value": 75
+      },
+      {
+        "name": "defense",
+        "value": 115
+      },
+      {
+        "name": "special-attack",
+        "value": 90
+      },
+      {
+        "name": "special-defense",
+        "value": 115
+      },
+      {
+        "name": "speed",
+        "value": 85
+      }
+    ]
+  },
+  "246": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice",
+      "fighting",
+      "ground",
+      "steel"
+    ],
+    "flavorText": "It feeds on soil. After it has eaten a large mountain, it will fall asleep so it can grow.",
+    "height": 6,
+    "weight": 720,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 50
+      },
+      {
+        "name": "attack",
+        "value": 64
+      },
+      {
+        "name": "defense",
+        "value": 50
+      },
+      {
+        "name": "special-attack",
+        "value": 45
+      },
+      {
+        "name": "special-defense",
+        "value": 50
+      },
+      {
+        "name": "speed",
+        "value": 41
+      }
+    ]
+  },
+  "247": {
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "ice",
+      "fighting",
+      "ground",
+      "steel"
+    ],
+    "flavorText": "Its shell is as hard as sheet rock, and it is also very strong. Its THRASHING can topple a mountain.",
+    "height": 12,
+    "weight": 1520,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 70
+      },
+      {
+        "name": "attack",
+        "value": 84
+      },
+      {
+        "name": "defense",
+        "value": 70
+      },
+      {
+        "name": "special-attack",
+        "value": 65
+      },
+      {
+        "name": "special-defense",
+        "value": 70
+      },
+      {
+        "name": "speed",
+        "value": 51
+      }
+    ]
+  },
+  "248": {
+    "types": [
+      "rock",
+      "dark"
+    ],
+    "weaknesses": [
+      "water",
+      "grass",
+      "fighting",
+      "ground",
+      "bug",
+      "steel",
+      "fairy"
+    ],
+    "flavorText": "Its body can't be harmed by any sort of attack, so it is very eager to make challenges against enemies.",
+    "height": 20,
+    "weight": 2020,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 100
+      },
+      {
+        "name": "attack",
+        "value": 134
+      },
+      {
+        "name": "defense",
+        "value": 110
+      },
+      {
+        "name": "special-attack",
+        "value": 95
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 61
+      }
+    ]
+  },
+  "249": {
+    "types": [
+      "psychic",
+      "flying"
+    ],
+    "weaknesses": [
+      "electric",
+      "ice",
+      "rock",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "It is said that it quietly spends its time deep at the bottom of the sea because its powers are too strong.",
+    "height": 52,
+    "weight": 2160,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 106
+      },
+      {
+        "name": "attack",
+        "value": 90
+      },
+      {
+        "name": "defense",
+        "value": 130
+      },
+      {
+        "name": "special-attack",
+        "value": 90
+      },
+      {
+        "name": "special-defense",
+        "value": 154
+      },
+      {
+        "name": "speed",
+        "value": 110
+      }
+    ]
+  },
+  "250": {
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "weaknesses": [
+      "water",
+      "electric",
+      "rock"
+    ],
+    "flavorText": "Legends claim this POKéMON flies the world's skies con­ tinuously on its magnificent seven- colored wings.",
+    "height": 38,
+    "weight": 1990,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 106
+      },
+      {
+        "name": "attack",
+        "value": 130
+      },
+      {
+        "name": "defense",
+        "value": 90
+      },
+      {
+        "name": "special-attack",
+        "value": 110
+      },
+      {
+        "name": "special-defense",
+        "value": 154
+      },
+      {
+        "name": "speed",
+        "value": 90
+      }
+    ]
+  },
+  "251": {
+    "types": [
+      "psychic",
+      "grass"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "poison",
+      "flying",
+      "bug",
+      "ghost",
+      "dark"
+    ],
+    "flavorText": "This POKéMON wan­ ders across time. Grass and trees flourish in the forests in which it has appeared.",
+    "height": 6,
+    "weight": 50,
+    "stats": [
+      {
+        "name": "hp",
+        "value": 100
+      },
+      {
+        "name": "attack",
+        "value": 100
+      },
+      {
+        "name": "defense",
+        "value": 100
+      },
+      {
+        "name": "special-attack",
+        "value": 100
+      },
+      {
+        "name": "special-defense",
+        "value": 100
+      },
+      {
+        "name": "speed",
+        "value": 100
+      }
+    ]
+  }
+}
