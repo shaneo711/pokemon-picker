@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { POKEMON, getSpriteUrl } from '../../data/pokemon';
 import { PokedexDetail } from '../Pokedex/PokedexDetail';
 import './Favorites.css';
@@ -29,11 +29,12 @@ export function Favorites({ favorites, onToggleFavorite }) {
   const [selected, setSelected] = useState(null);
   const favPokemon = POKEMON.filter((p) => favorites.has(p.id));
 
-  useEffect(() => {
-    if (selected && !favorites.has(selected.id)) {
+  function removeFavorite(id) {
+    onToggleFavorite(id);
+    if (selected?.id === id) {
       setSelected(null);
     }
-  }, [favorites, selected]);
+  }
 
   if (favPokemon.length === 0) {
     return (
@@ -52,7 +53,7 @@ export function Favorites({ favorites, onToggleFavorite }) {
           <FavTile
             key={pokemon.id}
             pokemon={pokemon}
-            onRemove={onToggleFavorite}
+            onRemove={removeFavorite}
             onClick={setSelected}
           />
         ))}

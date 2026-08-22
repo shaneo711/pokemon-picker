@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { getArtworkUrl, getSpriteUrl } from '../../data/pokemon';
 import { TYPE_COLORS, TYPE_TEXT_COLORS } from '../../data/typeColors';
 import './PokemonCard.css';
@@ -69,11 +69,6 @@ function BackContent({ pokemon, details }) {
 export function PokemonCard({ pokemon, isFavorite, onToggleFavorite, answered, details, loading, flipped, silhouette, onToggleFlip }) {
   const [loaded, setLoaded] = useState(false);
   const [errored, setErrored] = useState(false);
-
-  useEffect(() => {
-    setLoaded(false);
-    setErrored(false);
-  }, [pokemon.id]);
 
   const src = errored ? getSpriteUrl(pokemon.id) : getArtworkUrl(pokemon.id);
 

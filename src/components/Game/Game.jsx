@@ -28,17 +28,23 @@ export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdva
   const [pendingId, setPendingId] = useState(null);
   const [streak, setStreak] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [roundSource, setRoundSource] = useState(() => ({ currentPokemon, pool }));
 
   const answerRefs = useRef([]);
   const answeredAt = useRef(0);
   const resumeFocus = useRef(false);
 
-  useEffect(() => {
+  // Reset round-local state before React commits a render for a new queue item.
+  if (roundSource.currentPokemon !== currentPokemon || roundSource.pool !== pool) {
+    setRoundSource({ currentPokemon, pool });
     setChoices(pickChoices(currentPokemon, pool));
     setSelectedId(null);
     setAnswerStatus('unanswered');
     setPendingId(null);
     setFlipped(false);
+  }
+
+  useEffect(() => {
     window.speechSynthesis?.cancel();
   }, [currentPokemon, pool]);
 
@@ -48,7 +54,7 @@ export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdva
     answerRefs.current[0]?.focus();
   }, [choices]);
 
-  function submitAnswer(pokemon) {
+  const submitAnswer = useCallback((pokemon) => {
     const isCorrect = pokemon.id === currentPokemon.id;
     answeredAt.current = Date.now();
     setSelectedId(pokemon.id);
@@ -61,33 +67,30 @@ export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdva
     if (isCorrect) {
       play(getCryUrl(currentPokemon.id), 0.5);
     }
-  }
+  }, [currentPokemon, onScoreUpdate, play]);
 
-  const handleAnswer = useCallback(
-    (pokemon) => {
-      if (answerStatus !== 'unanswered') return;
+  const handleAnswer = useCallback((pokemon) => {
+    if (answerStatus !== 'unanswered') return;
 
-      if (kidsMode) {
-        if (pendingId === pokemon.id) {
-          setPendingId(null);
-          window.speechSynthesis?.cancel();
-          submitAnswer(pokemon);
-        } else {
-          window.speechSynthesis?.cancel();
-          const utt = new SpeechSynthesisUtterance(getPronunciation(pokemon.name));
-          utt.lang = 'en-US';
-          const voices = window.speechSynthesis.getVoices();
-          utt.voice = voices.find(v => v.name === 'Samantha') || voices.find(v => v.lang === 'en-US') || null;
-          window.speechSynthesis?.speak(utt);
-          setPendingId(pokemon.id);
-        }
-        return;
+    if (kidsMode) {
+      if (pendingId === pokemon.id) {
+        setPendingId(null);
+        window.speechSynthesis?.cancel();
+        submitAnswer(pokemon);
+      } else {
+        window.speechSynthesis?.cancel();
+        const utt = new SpeechSynthesisUtterance(getPronunciation(pokemon.name));
+        utt.lang = 'en-US';
+        const voices = window.speechSynthesis.getVoices();
+        utt.voice = voices.find(v => v.name === 'Samantha') || voices.find(v => v.lang === 'en-US') || null;
+        window.speechSynthesis?.speak(utt);
+        setPendingId(pokemon.id);
       }
+      return;
+    }
 
-      submitAnswer(pokemon);
-    },
-    [answerStatus, currentPokemon, onScoreUpdate, play, kidsMode, pendingId]
-  );
+    submitAnswer(pokemon);
+  }, [answerStatus, kidsMode, pendingId, submitAnswer]);
 
   const answered = answerStatus !== 'unanswered';
 
@@ -154,6 +157,7 @@ export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdva
         <p className="game__prompt">Who's that Pokémon?</p>
 
         <PokemonCard
+          key={currentPokemon.id}
           pokemon={currentPokemon}
           isFavorite={favorites.has(currentPokemon.id)}
           onToggleFavorite={onToggleFavorite}
