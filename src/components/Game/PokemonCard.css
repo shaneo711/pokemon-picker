@@ -230,13 +230,25 @@
   width: 100%;
   height: auto;
   opacity: 0;
-  transition: opacity 0.35s;
+  transition: opacity 0.35s, filter 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
   z-index: 2;
 }
 
 .pokemon-card__img--visible {
   opacity: 1;
+}
+
+.pokemon-card__img--silhouette {
+  filter: brightness(0) saturate(0) drop-shadow(0 8px 6px rgba(26, 58, 92, 0.2));
+  transform: scale(0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pokemon-card__img {
+    transition: opacity 0.35s;
+  }
 }
 
 /* ── Back loading ─────────────────────────────────── */

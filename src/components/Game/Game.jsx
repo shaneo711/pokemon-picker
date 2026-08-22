@@ -19,7 +19,7 @@ function pickChoices(correct, allPokemon) {
   return shuffle([correct, ...wrong]);
 }
 
-export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdvance, onScoreUpdate, kidsMode, active }) {
+export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdvance, onScoreUpdate, kidsMode, difficulty, active }) {
   const { play } = useSound();
 
   const [choices, setChoices] = useState(() => pickChoices(currentPokemon, pool));
@@ -161,6 +161,7 @@ export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdva
           details={details}
           loading={detailsLoading}
           flipped={flipped}
+          silhouette={difficulty === 'silhouette'}
           onToggleFlip={() => setFlipped((f) => !f)}
         />
 

@@ -18,6 +18,9 @@ export default function App() {
   const { currentPokemon, advance, reset } = useGameQueue(pool);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [kidsMode, setKidsMode] = useState(() => localStorage.getItem('kids-mode') === 'true');
+  const [difficulty, setDifficulty] = useState(
+    () => localStorage.getItem('difficulty') || 'classic'
+  );
   const [confirmReset, setConfirmReset] = useState(false);
   const [showShortcuts, setShowShortcuts] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -34,6 +37,11 @@ export default function App() {
       localStorage.setItem('kids-mode', String(next));
       return next;
     });
+  };
+
+  const changeDifficulty = (nextDifficulty) => {
+    setDifficulty(nextDifficulty);
+    localStorage.setItem('difficulty', nextDifficulty);
   };
 
   const overlayOpen = confirmReset || showShortcuts || showSettings;
@@ -87,6 +95,7 @@ export default function App() {
           onAdvance={advance}
           onScoreUpdate={setScore}
           kidsMode={kidsMode}
+          difficulty={difficulty}
           active={view === 'game' && !overlayOpen}
         />
       </div>
@@ -100,6 +109,8 @@ export default function App() {
           enabledGens={enabledGens}
           onToggleGen={toggleGen}
           pool={pool}
+          difficulty={difficulty}
+          onDifficultyChange={changeDifficulty}
           onClose={() => setShowSettings(false)}
         />
       )}

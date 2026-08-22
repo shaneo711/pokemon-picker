@@ -5,11 +5,46 @@ const COUNTS = Object.fromEntries(
   GENERATIONS.map((g) => [g.id, POKEMON.filter((p) => p.gen === g.id).length])
 );
 
-export function Settings({ enabledGens, onToggleGen, pool, onClose }) {
+const DIFFICULTIES = [
+  {
+    id: 'classic',
+    label: 'Classic',
+    description: 'See the full Pokémon artwork',
+  },
+  {
+    id: 'silhouette',
+    label: 'Silhouette',
+    description: 'Guess from the outline alone',
+  },
+];
+
+export function Settings({ enabledGens, onToggleGen, pool, difficulty, onDifficultyChange, onClose }) {
   return (
     <div className="settings__overlay" onClick={onClose}>
       <div className="settings__card" onClick={(e) => e.stopPropagation()}>
         <p className="settings__title">⚙ Settings</p>
+
+        <p className="settings__section">Difficulty</p>
+        <div className="settings__difficulty" role="radiogroup" aria-label="Difficulty">
+          {DIFFICULTIES.map((option) => (
+            <label
+              key={option.id}
+              className={`settings__difficulty-option ${difficulty === option.id ? 'settings__difficulty-option--selected' : ''}`}
+            >
+              <input
+                type="radio"
+                name="difficulty"
+                value={option.id}
+                checked={difficulty === option.id}
+                onChange={() => onDifficultyChange(option.id)}
+              />
+              <span>
+                <strong>{option.id === 'silhouette' ? '◐ ' : '✦ '}{option.label}</strong>
+                <small>{option.description}</small>
+              </span>
+            </label>
+          ))}
+        </div>
 
         <p className="settings__section">Generations in the pool</p>
         <ul className="settings__list">

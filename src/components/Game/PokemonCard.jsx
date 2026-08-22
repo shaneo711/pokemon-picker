@@ -66,7 +66,7 @@ function BackContent({ pokemon, details }) {
   );
 }
 
-export function PokemonCard({ pokemon, isFavorite, onToggleFavorite, answered, details, loading, flipped, onToggleFlip }) {
+export function PokemonCard({ pokemon, isFavorite, onToggleFavorite, answered, details, loading, flipped, silhouette, onToggleFlip }) {
   const [loaded, setLoaded] = useState(false);
   const [errored, setErrored] = useState(false);
 
@@ -107,8 +107,8 @@ export function PokemonCard({ pokemon, isFavorite, onToggleFavorite, answered, d
           <img
             key={pokemon.id}
             src={src}
-            alt="Pokemon silhouette"
-            className={`pokemon-card__img ${loaded ? 'pokemon-card__img--visible' : ''}`}
+            alt={answered ? pokemon.name : 'Mystery Pokémon'}
+            className={`pokemon-card__img ${loaded ? 'pokemon-card__img--visible' : ''} ${silhouette && !answered ? 'pokemon-card__img--silhouette' : ''}`}
             onLoad={() => setLoaded(true)}
             onError={() => {
               if (!errored) {
