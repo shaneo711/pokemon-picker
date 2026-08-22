@@ -1,11 +1,16 @@
 .nav {
+  --nav-blue: #2f70b5;
+  --nav-blue-dark: #245f9f;
+  --nav-blue-soft: #eaf4ff;
+  --nav-ink: #34425a;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
-  padding: 12px 16px;
-  background: white;
-  border-bottom: 2px solid #eee;
+  gap: 12px;
+  padding: 10px clamp(12px, 3vw, 24px);
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #dce8f3;
+  box-shadow: 0 4px 16px rgba(41, 79, 117, 0.08);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -14,66 +19,109 @@
 
 .nav__tabs {
   display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #dce6ef;
+  border-radius: 16px;
+  background: #f2f7fb;
 }
 
 .nav__tab {
-  padding: 8px 20px;
-  font-size: 1rem;
-  font-weight: 700;
-  border: 2px solid #ddd;
-  border-radius: 50px;
-  background: white;
-  color: #555;
+  min-height: 38px;
+  padding: 7px clamp(12px, 2vw, 19px);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--nav-ink);
   cursor: pointer;
   font-family: inherit;
-  transition: all 0.15s;
+  transition: color 0.16s ease, background-color 0.16s ease,
+    border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+  white-space: nowrap;
 }
 
-.nav__tab:hover {
-  border-color: #4A90D9;
-  color: #4A90D9;
+.nav__tab:not(.nav__tab--active):hover {
+  background: #fff;
+  border-color: #c7d9e8;
+  color: var(--nav-blue-dark);
+  box-shadow: 0 2px 7px rgba(49, 94, 137, 0.1);
+  transform: translateY(-1px);
 }
 
 .nav__tab--active {
-  background: #4A90D9;
-  border-color: #4A90D9;
-  color: white;
+  background: var(--nav-blue);
+  border-color: var(--nav-blue);
+  color: #f8fbff;
+  box-shadow: 0 3px 8px rgba(39, 102, 166, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.nav__tab--active:hover {
+  background: var(--nav-blue-dark);
+  border-color: var(--nav-blue-dark);
+  color: #fff;
+}
+
+.nav__tab:active,
+.nav__kids-mode:active,
+.nav__settings:active,
+.nav__shortcuts:active,
+.nav__new-game:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.nav__tab:focus-visible,
+.nav__kids-mode:focus-visible,
+.nav__settings:focus-visible,
+.nav__shortcuts:focus-visible,
+.nav__new-game:focus-visible {
+  outline: 3px solid rgba(255, 190, 55, 0.72);
+  outline-offset: 2px;
 }
 
 .nav__badge {
-  background: #FF3B3B;
-  color: white;
+  min-width: 24px;
+  background: #c92f42;
+  color: #fff9fa;
   border-radius: 50px;
-  padding: 2px 8px;
-  font-size: 0.8rem;
+  padding: 3px 7px;
+  font-size: 0.75rem;
+  line-height: 1;
+  box-shadow: inset 0 -1px 0 rgba(104, 8, 21, 0.2);
 }
 
 /* ── Score area ───────────────────────────────────── */
 .nav__score {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
 }
 
 .nav__score-badge {
   display: flex;
   align-items: baseline;
   gap: 3px;
-  background: #f0f7ff;
-  border: 2px solid #4A90D9;
-  border-radius: 10px;
-  padding: 4px 12px;
+  min-height: 38px;
+  background: var(--nav-blue-soft);
+  border: 1px solid #b9d7f3;
+  border-radius: 12px;
+  padding: 5px 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
 .nav__score-correct {
   font-size: 1.5rem;
   font-weight: 900;
-  color: #4A90D9;
+  color: var(--nav-blue-dark);
   line-height: 1;
 }
 
@@ -91,11 +139,12 @@
 
 /* ── Reset button ─────────────────────────────────── */
 .nav__new-game {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  background: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid #cbd9e5;
+  background: #f8fbfd;
+  color: var(--nav-ink);
   font-size: 1.2rem;
   cursor: pointer;
   font-family: inherit;
@@ -103,22 +152,26 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  transition: transform 0.2s, border-color 0.2s;
+  transition: transform 0.18s ease, border-color 0.18s ease,
+    background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
 }
 
 .nav__new-game:hover {
-  transform: rotate(-30deg);
-  border-color: #4A90D9;
+  transform: rotate(-24deg) translateY(-1px);
+  border-color: #e3a7ad;
+  background: #fff1f2;
+  color: #b92f3c;
+  box-shadow: 0 3px 8px rgba(143, 42, 52, 0.12);
 }
 
 /* ── Keyboard shortcuts button ────────────────────── */
 .nav__shortcuts,
 .nav__settings {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  background: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid #cbd9e5;
+  background: #f8fbfd;
   font-size: 1.1rem;
   cursor: pointer;
   font-family: inherit;
@@ -126,14 +179,18 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  color: #666;
-  transition: transform 0.2s, border-color 0.2s;
+  color: var(--nav-ink);
+  transition: transform 0.18s ease, border-color 0.18s ease,
+    background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
 }
 
 .nav__shortcuts:hover,
 .nav__settings:hover {
   transform: translateY(-2px);
-  border-color: #4A90D9;
+  border-color: #9bc2e6;
+  background: var(--nav-blue-soft);
+  color: var(--nav-blue-dark);
+  box-shadow: 0 3px 8px rgba(49, 94, 137, 0.12);
 }
 
 /* No keyboard, no point taking up nav space. `.nav__settings` stays — it's the
@@ -146,10 +203,10 @@
 
 /* ── Kids mode ────────────────────────────────────── */
 .nav__kids-mode {
-  background: none;
-  border: 2px solid #ddd;
-  border-radius: 50px;
-  height: 36px;
+  background: #f8fbfd;
+  border: 1px solid #cbd9e5;
+  border-radius: 12px;
+  height: 38px;
   padding: 0 12px;
   font-size: 0.85rem;
   font-weight: 700;
@@ -158,19 +215,74 @@
   align-items: center;
   gap: 5px;
   white-space: nowrap;
-  transition: border-color 0.15s, color 0.15s, opacity 0.15s;
-  opacity: 0.55;
-  color: #555;
+  transition: transform 0.16s ease, border-color 0.16s ease,
+    color 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
+  color: #5c6878;
 }
 
 .nav__kids-mode:hover {
-  opacity: 0.85;
+  border-color: #9bc2e6;
+  background: var(--nav-blue-soft);
+  color: var(--nav-blue-dark);
+  transform: translateY(-1px);
 }
 
 .nav__kids-mode--active {
-  border-color: #4A90D9;
-  color: #4A90D9;
-  opacity: 1;
+  border-color: #c48a13;
+  background: #f5c84b;
+  color: #513a08;
+  box-shadow: inset 0 -2px 0 rgba(111, 70, 0, 0.2),
+    0 2px 7px rgba(159, 111, 13, 0.2);
+}
+
+.nav__kids-mode--active:hover {
+  border-color: #ad7608;
+  background: #eeb82e;
+  color: #402d05;
+}
+
+.nav__kids-mode--active:active {
+  box-shadow: inset 0 2px 3px rgba(92, 57, 0, 0.3);
+}
+
+@media (max-width: 680px) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav__tabs {
+    width: 100%;
+  }
+
+  .nav__tab {
+    flex: 1;
+    padding-inline: 8px;
+  }
+
+  .nav__score {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav__tab {
+    font-size: 0.85rem;
+  }
+
+  .nav__kids-mode {
+    padding-inline: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav__tab,
+  .nav__kids-mode,
+  .nav__settings,
+  .nav__shortcuts,
+  .nav__new-game {
+    transition: none;
+  }
 }
 
 /* ── Reset confirmation modal ─────────────────────── */

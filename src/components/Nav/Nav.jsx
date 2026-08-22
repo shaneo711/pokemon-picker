@@ -19,20 +19,26 @@ export function Nav({
       <nav className="nav">
         <div className="nav__tabs">
           <button
+            type="button"
             className={`nav__tab ${view === 'game' ? 'nav__tab--active' : ''}`}
             onClick={() => onViewChange('game')}
+            aria-current={view === 'game' ? 'page' : undefined}
           >
             Play
           </button>
           <button
+            type="button"
             className={`nav__tab ${view === 'favorites' ? 'nav__tab--active' : ''}`}
             onClick={() => onViewChange('favorites')}
+            aria-current={view === 'favorites' ? 'page' : undefined}
           >
             Favorites {favoritesCount > 0 && <span className="nav__badge">♥ {favoritesCount}</span>}
           </button>
           <button
+            type="button"
             className={`nav__tab ${view === 'pokedex' ? 'nav__tab--active' : ''}`}
             onClick={() => onViewChange('pokedex')}
+            aria-current={view === 'pokedex' ? 'page' : undefined}
           >
             Pokédex
           </button>
@@ -40,13 +46,16 @@ export function Nav({
         {view === 'game' && (
           <div className="nav__score">
             <button
+              type="button"
               className={`nav__kids-mode ${kidsMode ? 'nav__kids-mode--active' : ''}`}
               onClick={onToggleKidsMode}
               aria-label={kidsMode ? 'Disable kids mode' : 'Enable kids mode'}
+              aria-pressed={kidsMode}
             >
               🔊 Kids Mode
             </button>
             <button
+              type="button"
               className="nav__settings"
               onClick={onShowSettings}
               aria-label="Settings"
@@ -55,6 +64,7 @@ export function Nav({
               ⚙
             </button>
             <button
+              type="button"
               className="nav__shortcuts"
               onClick={onShowShortcuts}
               aria-label="Keyboard shortcuts"
@@ -68,6 +78,7 @@ export function Nav({
               <span className="nav__score-total">{score.total}</span>
             </div>
             <button
+              type="button"
               className="nav__new-game"
               onClick={onRequestReset}
               aria-label="New game"
