@@ -76,30 +76,32 @@ export function PokedexDetail({ pokemon, onClose, pokemonList, onNavigate }) {
           ×
         </button>
 
-        {prevPokemon && onNavigate && (
-          <button
-            className="pdex-detail__nav pdex-detail__nav--prev"
-            onClick={() => onNavigate(prevPokemon)}
-            aria-label={`Previous: ${prevPokemon.name}`}
-          >
-            ‹
-          </button>
-        )}
-        {nextPokemon && onNavigate && (
-          <button
-            className="pdex-detail__nav pdex-detail__nav--next"
-            onClick={() => onNavigate(nextPokemon)}
-            aria-label={`Next: ${nextPokemon.name}`}
-          >
-            ›
-          </button>
-        )}
-
         <div className="pdex-detail__scroll">
           <div
             className="pdex-detail__header"
             style={{ background: `linear-gradient(160deg, ${headerBg}30 0%, ${headerBg}08 100%)` }}
           >
+            {prevPokemon && onNavigate && (
+              <button
+                type="button"
+                className="pdex-detail__nav pdex-detail__nav--prev"
+                onClick={() => onNavigate(prevPokemon)}
+                aria-label={`Previous: ${prevPokemon.name}`}
+              >
+                ‹
+              </button>
+            )}
+            {nextPokemon && onNavigate && (
+              <button
+                type="button"
+                className="pdex-detail__nav pdex-detail__nav--next"
+                onClick={() => onNavigate(nextPokemon)}
+                aria-label={`Next: ${nextPokemon.name}`}
+              >
+                ›
+              </button>
+            )}
+
             <span className="pdex-detail__id">#{String(pokemon.id).padStart(3, '0')}</span>
             <img
               src={getArtworkUrl(pokemon.id)}
