@@ -4,7 +4,7 @@ const SHORTCUTS = [
   { keys: ['↑', '↓', '←', '→'], label: 'Move between the answers' },
   { keys: ['Enter', 'Space'], label: 'Lock in your answer, then go to the next one' },
   { keys: ['F'], label: 'Flip the card (after answering)' },
-  { keys: ['H'], label: 'Add or remove from favorites' },
+  { keys: ['H'], label: 'Add or remove from favourites' },
   { keys: ['N'], label: 'Start a new game' },
   { keys: ['?'], label: 'Show these shortcuts' },
   { keys: ['Esc'], label: 'Close this' },

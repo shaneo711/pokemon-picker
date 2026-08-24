@@ -19,7 +19,7 @@ function pickChoices(correct, allPokemon) {
   return shuffle([correct, ...wrong]);
 }
 
-export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdvance, onScoreUpdate, kidsMode, difficulty, active }) {
+export function Game({ favourites, onToggleFavourite, pool, currentPokemon, onAdvance, onScoreUpdate, kidsMode, difficulty, active }) {
   const { play } = useSound();
 
   const [choices, setChoices] = useState(() => pickChoices(currentPokemon, pool));
@@ -128,10 +128,10 @@ export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdva
       if (key === 'f' && answered) {
         setFlipped((f) => !f);
       } else if (key === 'h') {
-        onToggleFavorite(currentPokemon.id);
+        onToggleFavourite(currentPokemon.id);
       }
     },
-    [answered, onAdvance, onToggleFavorite, currentPokemon]
+    [answered, onAdvance, onToggleFavourite, currentPokemon]
   );
 
   useHotkeys(handleKey, active);
@@ -159,8 +159,8 @@ export function Game({ favorites, onToggleFavorite, pool, currentPokemon, onAdva
         <PokemonCard
           key={currentPokemon.id}
           pokemon={currentPokemon}
-          isFavorite={favorites.has(currentPokemon.id)}
-          onToggleFavorite={onToggleFavorite}
+          isFavourite={favourites.has(currentPokemon.id)}
+          onToggleFavourite={onToggleFavourite}
           answered={answered}
           details={details}
           loading={detailsLoading}

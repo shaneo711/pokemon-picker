@@ -66,7 +66,7 @@ function BackContent({ pokemon, details }) {
   );
 }
 
-export function PokemonCard({ pokemon, isFavorite, onToggleFavorite, answered, details, loading, flipped, silhouette, onToggleFlip }) {
+export function PokemonCard({ pokemon, isFavourite, onToggleFavourite, answered, details, loading, flipped, silhouette, onToggleFlip }) {
   const [loaded, setLoaded] = useState(false);
   const [errored, setErrored] = useState(false);
 
@@ -75,11 +75,11 @@ export function PokemonCard({ pokemon, isFavorite, onToggleFavorite, answered, d
   return (
     <div className="pokemon-card">
       <button
-        className={`pokemon-card__heart ${isFavorite ? 'pokemon-card__heart--active' : ''}`}
-        onClick={() => onToggleFavorite(pokemon.id)}
-        aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+        className={`pokemon-card__heart ${isFavourite ? 'pokemon-card__heart--active' : ''}`}
+        onClick={() => onToggleFavourite(pokemon.id)}
+        aria-label={isFavourite ? 'Remove from favourites' : 'Add to favourites'}
       >
-        {isFavorite ? '❤️' : '🤍'}
+        {isFavourite ? '❤️' : '🤍'}
       </button>
 
       {answered && (

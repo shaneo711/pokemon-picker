@@ -3,7 +3,7 @@ import './Nav.css';
 export function Nav({
   view,
   onViewChange,
-  favoritesCount,
+  favouritesCount,
   score,
   onNewGame,
   kidsMode,
@@ -28,11 +28,11 @@ export function Nav({
           </button>
           <button
             type="button"
-            className={`nav__tab ${view === 'favorites' ? 'nav__tab--active' : ''}`}
-            onClick={() => onViewChange('favorites')}
-            aria-current={view === 'favorites' ? 'page' : undefined}
+            className={`nav__tab ${view === 'favourites' ? 'nav__tab--active' : ''}`}
+            onClick={() => onViewChange('favourites')}
+            aria-current={view === 'favourites' ? 'page' : undefined}
           >
-            Favorites {favoritesCount > 0 && <span className="nav__badge">♥ {favoritesCount}</span>}
+            Favourites {favouritesCount > 0 && <span className="nav__badge">♥ {favouritesCount}</span>}
           </button>
           <button
             type="button"

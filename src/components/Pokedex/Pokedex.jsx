@@ -21,7 +21,7 @@ function SearchIcon() {
   );
 }
 
-function PokedexTile({ pokemon, isFavorite, onClick }) {
+function PokedexTile({ pokemon, isFavourite, onClick }) {
   const details = pokemonDetails[pokemon.id];
   const typeLabel = details.types.map(formatType).join(' / ');
 
@@ -33,7 +33,7 @@ function PokedexTile({ pokemon, isFavorite, onClick }) {
     >
       <span className="pdex-tile__meta">
         <span className="pdex-tile__num">#{String(pokemon.id).padStart(3, '0')}</span>
-        {isFavorite && <span className="pdex-tile__favorite" aria-label="Favorite">♥</span>}
+        {isFavourite && <span className="pdex-tile__favourite" aria-label="Favourite">♥</span>}
       </span>
       <img
         src={getSpriteUrl(pokemon.id)}
@@ -61,31 +61,31 @@ const MIN_SIZE = 100;
 const MAX_SIZE = 260;
 const STEP = 40;
 
-export function Pokedex({ favorites }) {
+export function Pokedex({ favourites }) {
   const [selected, setSelected] = useState(null);
   const [tileSize, setTileSize] = useState(MIN_SIZE);
   const [search, setSearch] = useState('');
   const [generation, setGeneration] = useState('all');
   const [type, setType] = useState('all');
-  const [favoritesOnly, setFavoritesOnly] = useState(false);
+  const [favouritesOnly, setFavouritesOnly] = useState(false);
 
-  const filteredPokemon = filterPokemon(POKEMON, pokemonDetails, favorites, {
+  const filteredPokemon = filterPokemon(POKEMON, pokemonDetails, favourites, {
     search,
     generation,
     type,
-    favoritesOnly,
+    favouritesOnly,
   });
 
   const filtersActive = search.trim()
     || generation !== 'all'
     || type !== 'all'
-    || favoritesOnly;
+    || favouritesOnly;
 
   function clearFilters() {
     setSearch('');
     setGeneration('all');
     setType('all');
-    setFavoritesOnly(false);
+    setFavouritesOnly(false);
   }
 
   return (
@@ -148,13 +148,13 @@ export function Pokedex({ favorites }) {
 
           <button
             type="button"
-            className={`pdex__favorites-filter ${favoritesOnly ? 'pdex__favorites-filter--active' : ''}`}
-            onClick={() => setFavoritesOnly((active) => !active)}
-            aria-pressed={favoritesOnly}
+            className={`pdex__favourites-filter ${favouritesOnly ? 'pdex__favourites-filter--active' : ''}`}
+            onClick={() => setFavouritesOnly((active) => !active)}
+            aria-pressed={favouritesOnly}
           >
             <span aria-hidden="true">♥</span>
-            Favorites
-            <span className="pdex__favorites-count">{favorites.size}</span>
+            Favourites
+            <span className="pdex__favourites-count">{favourites.size}</span>
           </button>
         </div>
 
@@ -198,7 +198,7 @@ export function Pokedex({ favorites }) {
             <PokedexTile
               key={pokemon.id}
               pokemon={pokemon}
-              isFavorite={favorites.has(pokemon.id)}
+              isFavourite={favourites.has(pokemon.id)}
               onClick={setSelected}
             />
           ))}

@@ -8,14 +8,14 @@ export function matchesPokemonSearch(pokemon, search) {
     || (/^\d+$/.test(numberQuery) && paddedId.includes(numberQuery));
 }
 
-export function filterPokemon(pokemonList, detailsById, favorites, filters) {
-  const { search, generation, type, favoritesOnly } = filters;
+export function filterPokemon(pokemonList, detailsById, favourites, filters) {
+  const { search, generation, type, favouritesOnly } = filters;
 
   return pokemonList.filter((pokemon) => {
     const details = detailsById[pokemon.id];
     return matchesPokemonSearch(pokemon, search)
       && (generation === 'all' || pokemon.gen === Number(generation))
       && (type === 'all' || details.types.includes(type))
-      && (!favoritesOnly || favorites.has(pokemon.id));
+      && (!favouritesOnly || favourites.has(pokemon.id));
   });
 }

@@ -1,11 +1,11 @@
 import { useState, useCallback } from 'react';
 import { Analytics } from '@vercel/analytics/react';
-import { useFavorites } from './hooks/useFavorites';
+import { useFavourites } from './hooks/useFavourites';
 import { useGameQueue } from './hooks/useGameQueue';
 import { useGenerations } from './hooks/useGenerations';
 import { useHotkeys } from './hooks/useHotkeys';
 import { Game } from './components/Game/Game';
-import { Favorites } from './components/Favorites/Favorites';
+import { Favourites } from './components/Favourites/Favourites';
 import { Pokedex } from './components/Pokedex/Pokedex';
 import { Nav } from './components/Nav/Nav';
 import { Shortcuts } from './components/Shortcuts/Shortcuts';
@@ -14,7 +14,7 @@ import './App.css';
 
 export default function App() {
   const [view, setView] = useState('game');
-  const { favorites, toggleFavorite } = useFavorites();
+  const { favourites, toggleFavourite } = useFavourites();
   const { enabledGens, toggleGen, pool } = useGenerations();
   const { currentPokemon, advance, reset } = useGameQueue(pool);
   const [score, setScore] = useState({ correct: 0, total: 0 });
@@ -76,7 +76,7 @@ export default function App() {
       <Nav
         view={view}
         onViewChange={setView}
-        favoritesCount={favorites.size}
+        favouritesCount={favourites.size}
         score={score}
         onNewGame={handleNewGame}
         kidsMode={kidsMode}
@@ -89,8 +89,8 @@ export default function App() {
       />
       <div hidden={view !== 'game'}>
         <Game
-          favorites={favorites}
-          onToggleFavorite={toggleFavorite}
+          favourites={favourites}
+          onToggleFavourite={toggleFavourite}
           pool={pool}
           currentPokemon={currentPokemon}
           onAdvance={advance}
@@ -100,10 +100,10 @@ export default function App() {
           active={view === 'game' && !overlayOpen}
         />
       </div>
-      {view === 'favorites' && (
-        <Favorites favorites={favorites} onToggleFavorite={toggleFavorite} />
+      {view === 'favourites' && (
+        <Favourites favourites={favourites} onToggleFavourite={toggleFavourite} />
       )}
-      {view === 'pokedex' && <Pokedex favorites={favorites} />}
+      {view === 'pokedex' && <Pokedex favourites={favourites} />}
       {showShortcuts && <Shortcuts onClose={() => setShowShortcuts(false)} />}
       {showSettings && (
         <Settings

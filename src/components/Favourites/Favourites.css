@@ -1,10 +1,10 @@
-.favorites {
+.favourites {
   padding: 16px;
   max-width: 900px;
   margin: 0 auto;
 }
 
-.favorites--empty {
+.favourites--empty {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,13 +16,13 @@
   text-align: center;
 }
 
-.favorites--empty p:first-child {
+.favourites--empty p:first-child {
   font-size: 1.8rem;
   font-weight: 900;
   color: #333;
 }
 
-.favorites__title {
+.favourites__title {
   font-size: 1.6rem;
   font-weight: 800;
   color: #222;
@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-.favorites__grid {
+.favourites__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 10px;

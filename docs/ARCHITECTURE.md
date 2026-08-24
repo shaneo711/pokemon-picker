@@ -15,7 +15,7 @@ flavour text and weaknesses live in a generated PokéAPI snapshot committed to
 the app; only artwork and cry audio come from the PokeAPI GitHub asset repos at
 runtime. The only persisted state is favourites, the Kids Mode flag and the
 enabled generations, all in `localStorage`.
-The app has three "views" (Play / Favorites / Pokédex) switched by a single
+The app has three "views" (Play / Favourites / Pokédex) switched by a single
 `useState` string in `App.jsx`.
 
 ---
@@ -84,7 +84,7 @@ src/
 │   └── typeColors.js           TYPE_COLORS + TYPE_TEXT_COLORS lookup maps
 │
 ├── hooks/                      all shared logic lives here
-│   ├── useFavorites.js         Set<id> backed by localStorage
+│   ├── useFavourites.js         Set<id> backed by localStorage
 │   ├── useGameQueue.js         shuffled play order over a pool + advance/reset
 │   ├── useGenerations.js       Set<genId> in localStorage + the derived pool
 │   ├── usePokemonDetails.js    synchronous adapter over the generated snapshot
@@ -103,10 +103,10 @@ src/
     │   └── AnswerButton.jsx    a single answer button, purely presentational
     ├── Shortcuts/Shortcuts.jsx  the `?` keyboard-shortcuts modal
     ├── Settings/Settings.jsx   the ⚙ modal — which generations are in the pool
-    ├── Favorites/Favorites.jsx grid of favourited Pokémon
+    ├── Favourites/Favourites.jsx grid of favourited Pokémon
     └── Pokedex/
         ├── Pokedex.jsx         searchable/filterable grid with tile-size controls
-        └── PokedexDetail.jsx   the modal used by BOTH Pokedex and Favorites
+        └── PokedexDetail.jsx   the modal used by BOTH Pokedex and Favourites
 ```
 
 The convention throughout: **components are folders**, each holding a `.jsx`
@@ -123,14 +123,14 @@ is:
 
 ```mermaid
 graph TD
-    App["App.jsx<br/>view · score · kidsMode<br/>confirmReset · showShortcuts · showSettings<br/>useFavorites · useGenerations<br/>useGameQueue · useHotkeys"]
+    App["App.jsx<br/>view · score · kidsMode<br/>confirmReset · showShortcuts · showSettings<br/>useFavourites · useGenerations<br/>useGameQueue · useHotkeys"]
 
-    App -->|view, score, favoritesCount,<br/>kidsMode, confirmReset + callbacks| Nav
-    App -->|pool, currentPokemon, favorites, kidsMode,<br/>active, onAdvance, onScoreUpdate| Game
+    App -->|view, score, favouritesCount,<br/>kidsMode, confirmReset + callbacks| Nav
+    App -->|pool, currentPokemon, favourites, kidsMode,<br/>active, onAdvance, onScoreUpdate| Game
     App --> Shortcuts
     App -->|enabledGens, pool, onToggleGen| Settings
-    App -->|favorites, onToggleFavorite| Favorites
-    App -->|favorites| Pokedex
+    App -->|favourites, onToggleFavourite| Favourites
+    App -->|favourites| Pokedex
 
     Game -->|owns: choices, selectedId, answerStatus,<br/>pendingId, streak, flipped| GameState[" "]
     Game --> PokemonCard
@@ -138,7 +138,7 @@ graph TD
 
     PokemonCard -->|owns: loaded, errored| CardState[" "]
 
-    Favorites -->|owns: selected| PokedexDetail
+    Favourites -->|owns: selected| PokedexDetail
     Pokedex -->|owns: selected, tileSize,<br/>search + filters| PokedexDetail
 
     style GameState fill:none,stroke:none
@@ -149,10 +149,10 @@ graph TD
 
 | State | Type | Persisted? | Purpose |
 |---|---|---|---|
-| `view` | `'game' \| 'favorites' \| 'pokedex'` | no | which screen is showing |
+| `view` | `'game' \| 'favourites' \| 'pokedex'` | no | which screen is showing |
 | `score` | `{ correct, total }` | no | session score, shown in Nav |
 | `kidsMode` | `boolean` | **yes** (`kids-mode`) | double-tap-to-confirm + speech |
-| `favorites` | `Set<number>` | **yes** (`pokemon-favorites`) | via `useFavorites` |
+| `favourites` | `Set<number>` | **yes** (`pokemon-favourites`) | via `useFavourites` |
 | `enabledGens` | `Set<number>` | **yes** (`pokemon-generations`) | via `useGenerations`; also yields `pool` |
 | `confirmReset` | `boolean` | no | the reset-confirmation modal `Nav` renders |
 | `showShortcuts` | `boolean` | no | the `?` shortcuts overlay |
@@ -173,15 +173,15 @@ renders the modal; it just doesn't own whether it's open.
 <div hidden={view !== 'game'}>
   <Game ... />
 </div>
-{view === 'favorites' && <Favorites ... />}
-{view === 'pokedex' && <Pokedex favorites={favorites} />}
+{view === 'favourites' && <Favourites ... />}
+{view === 'pokedex' && <Pokedex favourites={favourites} />}
 ```
 
 `Game` is **always mounted** and merely hidden with the `hidden` attribute,
 while the other two views are conditionally rendered. That's why you can tab
 away to the Pokédex mid-round and come back to the same question with your
 choices, selection and streak intact — unmounting `Game` would throw all of that
-away. `Favorites` and `Pokedex` are cheap to rebuild, so they unmount freely.
+away. `Favourites` and `Pokedex` are cheap to rebuild, so they unmount freely.
 
 If you ever add a router, this behaviour is the thing most likely to break.
 
@@ -285,22 +285,22 @@ from the ID by a `.find()` on every render.
 
 ### `useGenerations()` — which generations are in play
 
-The same shape as `useFavorites`: a `Set<number>` of generation IDs mirrored to
+The same shape as `useFavourites`: a `Set<number>` of generation IDs mirrored to
 `localStorage['pokemon-generations']`, defaulting to **all generations** on
 missing or corrupt data, and intersected with `GENERATIONS` on load so a stale
 key can't smuggle in an unknown ID. `toggleGen` **refuses to remove the last
 enabled generation** — the pool can never be empty. It also returns the derived
 `pool` (`POKEMON` filtered by the enabled gens), memoised on `enabledGens`.
 
-The filter is deliberately **game-only**. `Pokedex` and `Favorites` still import
+The filter is deliberately **game-only**. `Pokedex` and `Favourites` still import
 `POKEMON` directly, so browsing always covers all 251 and turning a generation
 off never makes a favourite disappear.
 
-### `useFavorites()` — persisted favourites
+### `useFavourites()` — persisted favourites
 
-A `Set<number>` mirrored to `localStorage['pokemon-favorites']` as a JSON array.
+A `Set<number>` mirrored to `localStorage['pokemon-favourites']` as a JSON array.
 Load is wrapped in try/catch and degrades to an empty set on corrupt data.
-`toggleFavorite(id)` **copies the Set** before mutating — required, because
+`toggleFavourite(id)` **copies the Set** before mutating — required, because
 React compares by reference and mutating in place wouldn't re-render.
 
 The write to `localStorage` happens *inside* the state updater. That's a side
@@ -494,14 +494,14 @@ disables the checkbox of the last enabled generation so `toggleGen`'s guard is
 visible rather than a silent no-op. Add a generation to the data and this UI
 picks it up with no edit.
 
-### `Pokedex.jsx` / `Favorites.jsx`
+### `Pokedex.jsx` / `Favourites.jsx`
 
 Both are grids of tiles that open the **same** `PokedexDetail` modal, each
 passing its own list so the modal's prev/next arrows walk the right collection —
-all 251 in the Pokédex, only your favourites in Favorites. That shared-modal
+all 251 in the Pokédex, only your favourites in Favourites. That shared-modal
 design is the nicest structural decision in the app.
 
-`Pokedex` combines name/number search with generation, type and favorites
+`Pokedex` combines name/number search with generation, type and favourites
 filters. `filterPokemon()` keeps that derivation separate from the component,
 and the result count plus empty state reflect the combined filter set. Detail
 modal navigation uses the filtered list, so previous/next stays within the
@@ -511,7 +511,7 @@ Its zoom control writes `tileSize` state into the grid as a CSS custom property
 (`--tile-size`), and the CSS grid sizes its columns off that variable. React
 never touches layout directly.
 
-`Favorites` closes the detail modal as part of its removal action if the
+`Favourites` closes the detail modal as part of its removal action if the
 currently-open Pokémon gets un-favourited.
 
 ### `PokedexDetail.jsx`
@@ -559,5 +559,5 @@ all are the kind of thing that bites later.
 | Add a fourth answer option | `pickChoices()` `.slice(0, 2)` → `.slice(0, 3)`; check the grid in `Game.css` |
 | Add a new view/tab | `App.jsx` (`view` state + render) and `Nav.jsx` (tab button) |
 | Change type colours | `data/typeColors.js` |
-| Persist something new | Follow the `useFavorites` pattern — a hook that owns state and mirrors it |
+| Persist something new | Follow the `useFavourites` pattern — a hook that owns state and mirrors it |
 | Fix a mispronounced name | `data/pronunciations.js` |

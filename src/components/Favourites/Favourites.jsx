@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { POKEMON, getSpriteUrl } from '../../data/pokemon';
 import { PokedexDetail } from '../Pokedex/PokedexDetail';
-import './Favorites.css';
+import './Favourites.css';
 
 function FavTile({ pokemon, onRemove, onClick }) {
   return (
@@ -9,7 +9,7 @@ function FavTile({ pokemon, onRemove, onClick }) {
       <button
         className="fav-tile__remove"
         onClick={(e) => { e.stopPropagation(); onRemove(pokemon.id); }}
-        aria-label={`Remove ${pokemon.name} from favorites`}
+        aria-label={`Remove ${pokemon.name} from favourites`}
       >
         ❤️
       </button>
@@ -25,12 +25,12 @@ function FavTile({ pokemon, onRemove, onClick }) {
   );
 }
 
-export function Favorites({ favorites, onToggleFavorite }) {
+export function Favourites({ favourites, onToggleFavourite }) {
   const [selected, setSelected] = useState(null);
-  const favPokemon = POKEMON.filter((p) => favorites.has(p.id));
+  const favPokemon = POKEMON.filter((p) => favourites.has(p.id));
 
-  function removeFavorite(id) {
-    onToggleFavorite(id);
+  function removeFavourite(id) {
+    onToggleFavourite(id);
     if (selected?.id === id) {
       setSelected(null);
     }
@@ -38,22 +38,22 @@ export function Favorites({ favorites, onToggleFavorite }) {
 
   if (favPokemon.length === 0) {
     return (
-      <div className="favorites favorites--empty">
-        <p>No favorites yet!</p>
-        <p>Tap ❤️ during the game to save your favorites.</p>
+      <div className="favourites favourites--empty">
+        <p>No favourites yet!</p>
+        <p>Tap ❤️ during the game to save your favourites.</p>
       </div>
     );
   }
 
   return (
-    <div className="favorites">
-      <h2 className="favorites__title">My Favorites</h2>
-      <div className="favorites__grid">
+    <div className="favourites">
+      <h2 className="favourites__title">My Favourites</h2>
+      <div className="favourites__grid">
         {favPokemon.map((pokemon) => (
           <FavTile
             key={pokemon.id}
             pokemon={pokemon}
-            onRemove={removeFavorite}
+            onRemove={removeFavourite}
             onClick={setSelected}
           />
         ))}
