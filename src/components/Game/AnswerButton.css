@@ -111,6 +111,14 @@
   margin-top: 2px;
 }
 
+@media (max-width: 767px) {
+  .answer-btn {
+    min-height: 64px;
+    min-height: clamp(64px, calc(33.333dvh - 186px), 80px);
+    font-size: clamp(1.15rem, 2.8dvh, 1.4rem);
+  }
+}
+
 @keyframes pendingPulse {
   0%, 100% { box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.2); }
   50%       { box-shadow: 0 0 0 6px rgba(74, 144, 217, 0.08); }

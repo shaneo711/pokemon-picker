@@ -154,7 +154,28 @@ export function Game({ favourites, onToggleFavourite, pool, currentPokemon, onAd
   return (
     <div className={`game ${answered ? 'game--answered' : ''}`}>
       <div className="game__content">
-        <p className="game__prompt">Who's that Pokémon?</p>
+        <div className="game__status">
+          <p
+            className={`game__status-message ${answered ? `game__feedback game__feedback--${answerStatus}` : 'game__prompt'}`}
+            aria-live="polite"
+          >
+            {answered
+              ? answerStatus === 'correct'
+                ? "🎉 Yes! That's right!"
+                : `😢 Nope! It was ${currentPokemon.name}!`
+              : "Who's that Pokémon?"}
+          </p>
+
+          <div
+            key={streak}
+            className={`game__streak ${streak < 2 ? 'game__streak--hidden' : ''}`}
+            aria-hidden={streak < 2 ? true : undefined}
+            aria-label={streak >= 2 ? `${streak} in a row` : undefined}
+          >
+            <span aria-hidden="true">🔥 {Math.max(streak, 2)}</span>
+            <span className="game__streak-label" aria-hidden="true"> in a row!</span>
+          </div>
+        </div>
 
         <PokemonCard
           key={currentPokemon.id}
@@ -168,20 +189,6 @@ export function Game({ favourites, onToggleFavourite, pool, currentPokemon, onAd
           silhouette={difficulty === 'silhouette'}
           onToggleFlip={() => setFlipped((f) => !f)}
         />
-
-        {streak >= 2 && (
-          <div key={streak} className="game__streak">
-            🔥 {streak} in a row!
-          </div>
-        )}
-
-        {answered && (
-          <p className={`game__feedback game__feedback--${answerStatus}`}>
-            {answerStatus === 'correct'
-              ? "🎉 Yes! That's right!"
-              : `😢 Nope! It was ${currentPokemon.name}!`}
-          </p>
-        )}
 
         <div className="game__buttons">
           {choices.map((pokemon, i) => (
